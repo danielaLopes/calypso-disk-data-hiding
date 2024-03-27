@@ -1,0 +1,1 @@
+cmd_/home/daniela/vboxshare/thesis/kernel_modules/block_dev2/sbull_hello.mod := { echo  /home/daniela/vboxshare/thesis/kernel_modules/block_dev2/sbull_hello.o; echo; } > /home/daniela/vboxshare/thesis/kernel_modules/block_dev2/sbull_hello.mod

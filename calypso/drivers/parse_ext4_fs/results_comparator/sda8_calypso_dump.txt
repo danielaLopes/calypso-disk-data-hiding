@@ -1,0 +1,2849 @@
+[    0.000000] Linux version 5.8.0-44-generic (buildd@lgw01-amd64-054) (gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0, GNU ld (GNU Binutils for Ubuntu) 2.34) #50~20.04.1-Ubuntu SMP Wed Feb 10 21:07:30 UTC 2021 (Ubuntu 5.8.0-44.50~20.04.1-generic 5.8.18)
+[    0.000000] Command line: BOOT_IMAGE=/vmlinuz-5.8.0-44-generic root=UUID=f83601ce-4910-4755-b528-5f7590e929f8 ro quiet splash
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Hygon HygonGenuine
+[    0.000000]   Centaur CentaurHauls
+[    0.000000]   zhaoxin   Shanghai  
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[    0.000000] x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000dffeffff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000dfff0000-0x00000000dfffffff] ACPI data
+[    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000011fffffff] usable
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] SMBIOS 2.5 present.
+[    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[    0.000000] Hypervisor detected: KVM
+[    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+[    0.000000] kvm-clock: cpu 0, msr 4d801001, primary cpu clock
+[    0.000000] kvm-clock: using sched offset of 4298377039 cycles
+[    0.000003] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.000005] tsc: Detected 2591.998 MHz processor
+[    0.001222] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.001224] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.001229] last_pfn = 0x120000 max_arch_pfn = 0x400000000
+[    0.001241] MTRR default type: uncachable
+[    0.001242] MTRR variable ranges disabled:
+[    0.001244] Disabled
+[    0.001245] x86/PAT: MTRRs disabled, skipping PAT initialization too.
+[    0.001247] CPU MTRRs all blank - virtualized system.
+[    0.001250] x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC  
+[    0.001255] last_pfn = 0xdfff0 max_arch_pfn = 0x400000000
+[    0.001327] found SMP MP-table at [mem 0x0009fff0-0x0009ffff]
+[    0.182911] check: Scanning 1 areas for low memory corruption
+[    0.184033] RAMDISK: [mem 0x31ca1000-0x34e47fff]
+[    0.184048] ACPI: Early table checksum verification disabled
+[    0.184052] ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+[    0.184056] ACPI: XSDT 0x00000000DFFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+[    0.184061] ACPI: FACP 0x00000000DFFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+[    0.184067] ACPI: DSDT 0x00000000DFFF0470 002325 (v02 VBOX   VBOXBIOS 00000002 INTL 20120111)
+[    0.184071] ACPI: FACS 0x00000000DFFF0200 000040
+[    0.184073] ACPI: FACS 0x00000000DFFF0200 000040
+[    0.184076] ACPI: APIC 0x00000000DFFF0240 000054 (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+[    0.184079] ACPI: SSDT 0x00000000DFFF02A0 0001CC (v01 VBOX   VBOXCPUT 00000002 INTL 20120111)
+[    0.184090] ACPI: Local APIC address 0xfee00000
+[    0.184498] No NUMA configuration found
+[    0.184499] Faking a node at [mem 0x0000000000000000-0x000000011fffffff]
+[    0.184507] NODE_DATA(0) allocated [mem 0x11ffd2000-0x11fffbfff]
+[    0.184783] Zone ranges:
+[    0.184784]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.184785]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[    0.184786]   Normal   [mem 0x0000000100000000-0x000000011fffffff]
+[    0.184787]   Device   empty
+[    0.184787] Movable zone start for each node
+[    0.184789] Early memory node ranges
+[    0.184790]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[    0.184791]   node   0: [mem 0x0000000000100000-0x00000000dffeffff]
+[    0.184792]   node   0: [mem 0x0000000100000000-0x000000011fffffff]
+[    0.186180] Zeroed struct page in unavailable ranges: 114 pages
+[    0.186181] Initmem setup node 0 [mem 0x0000000000001000-0x000000011fffffff]
+[    0.186183] On node 0 totalpages: 1048462
+[    0.186184]   DMA zone: 64 pages used for memmap
+[    0.186184]   DMA zone: 21 pages reserved
+[    0.186185]   DMA zone: 3998 pages, LIFO batch:0
+[    0.186204]   DMA32 zone: 14272 pages used for memmap
+[    0.186204]   DMA32 zone: 913392 pages, LIFO batch:63
+[    0.208634]   Normal zone: 2048 pages used for memmap
+[    0.208636]   Normal zone: 131072 pages, LIFO batch:31
+[    0.213080] ACPI: PM-Timer IO Port: 0x4008
+[    0.213085] ACPI: Local APIC address 0xfee00000
+[    0.213149] IOAPIC[0]: apic_id 1, version 32, address 0xfec00000, GSI 0-23
+[    0.213153] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.213154] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+[    0.213156] ACPI: IRQ0 used by override.
+[    0.213157] ACPI: IRQ9 used by override.
+[    0.213159] Using ACPI (MADT) for SMP configuration information
+[    0.213166] smpboot: Allowing 1 CPUs, 0 hotplug CPUs
+[    0.213188] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.213189] PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[    0.213189] PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000effff]
+[    0.213190] PM: hibernation: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+[    0.213190] PM: hibernation: Registered nosave memory: [mem 0xdfff0000-0xdfffffff]
+[    0.213191] PM: hibernation: Registered nosave memory: [mem 0xe0000000-0xfebfffff]
+[    0.213191] PM: hibernation: Registered nosave memory: [mem 0xfec00000-0xfec00fff]
+[    0.213192] PM: hibernation: Registered nosave memory: [mem 0xfec01000-0xfedfffff]
+[    0.213192] PM: hibernation: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
+[    0.213193] PM: hibernation: Registered nosave memory: [mem 0xfee01000-0xfffbffff]
+[    0.213193] PM: hibernation: Registered nosave memory: [mem 0xfffc0000-0xffffffff]
+[    0.213195] [mem 0xe0000000-0xfebfffff] available for PCI devices
+[    0.213196] Booting paravirtualized kernel on KVM
+[    0.213198] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+[    0.213203] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:1 nr_cpu_ids:1 nr_node_ids:1
+[    0.214115] percpu: Embedded 56 pages/cpu s192512 r8192 d28672 u2097152
+[    0.214122] pcpu-alloc: s192512 r8192 d28672 u2097152 alloc=1*2097152
+[    0.214124] pcpu-alloc: [0] 0 
+[    0.214158] Built 1 zonelists, mobility grouping on.  Total pages: 1032057
+[    0.214159] Policy zone: Normal
+[    0.214160] Kernel command line: BOOT_IMAGE=/vmlinuz-5.8.0-44-generic root=UUID=f83601ce-4910-4755-b528-5f7590e929f8 ro quiet splash
+[    0.216267] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    0.217030] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.217183] mem auto-init: stack:off, heap alloc:on, heap free:off
+[    0.240178] Memory: 3972040K/4193848K available (14339K kernel code, 2537K rwdata, 5388K rodata, 2640K init, 4920K bss, 221808K reserved, 0K cma-reserved)
+[    0.240186] random: get_random_u64 called from kmem_cache_open+0x2d/0x410 with crng_init=0
+[    0.241285] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.241302] Kernel/User page tables isolation: enabled
+[    0.241313] ftrace: allocating 46218 entries in 181 pages
+[    0.258770] ftrace: allocated 181 pages with 5 groups
+[    0.259653] rcu: Hierarchical RCU implementation.
+[    0.259654] rcu: 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=1.
+[    0.259655] 	Trampoline variant of Tasks RCU enabled.
+[    0.259655] 	Rude variant of Tasks RCU enabled.
+[    0.259655] 	Tracing variant of Tasks RCU enabled.
+[    0.259656] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.259657] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.262891] NR_IRQS: 524544, nr_irqs: 256, preallocated irqs: 16
+[    0.263385] random: crng done (trusting CPU's manufacturer)
+[    0.272469] Console: colour VGA+ 80x25
+[    0.272473] printk: console [tty0] enabled
+[    0.272498] ACPI: Core revision 20200528
+[    0.272615] APIC: Switch to symmetric I/O mode setup
+[    0.272783] x2apic enabled
+[    0.272939] Switched APIC routing to physical x2apic.
+[    0.273888] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.273909] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x255cb518234, max_idle_ns: 440795279333 ns
+[    0.273928] Calibrating delay loop (skipped) preset value.. 5183.99 BogoMIPS (lpj=10367992)
+[    0.273930] pid_max: default: 32768 minimum: 301
+[    0.273958] LSM: Security Framework initializing
+[    0.273968] Yama: becoming mindful.
+[    0.274015] AppArmor: AppArmor initialized
+[    0.274048] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.274054] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.274374] unchecked MSR access error: WRMSR to 0x3a (tried to write 0x0000000000000001) at rIP: 0xffffffffbb276314 (native_write_msr+0x4/0x30)
+[    0.274375] Call Trace:
+[    0.274378]  ? init_ia32_feat_ctl+0x69/0xf0
+[    0.274381]  init_intel+0xdd/0x400
+[    0.274382]  identify_cpu+0x2f3/0x530
+[    0.274385]  identify_boot_cpu+0x10/0x9a
+[    0.274386]  check_bugs+0x2a/0x8a4
+[    0.274387]  start_kernel+0x6b3/0x6ed
+[    0.274389]  x86_64_start_reservations+0x24/0x26
+[    0.274390]  x86_64_start_kernel+0x8b/0x8f
+[    0.274392]  secondary_startup_64+0xb6/0xc0
+[    0.274476] process: using mwait in idle threads
+[    0.274481] Last level iTLB entries: 4KB 64, 2MB 8, 4MB 8
+[    0.274481] Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0, 1GB 4
+[    0.274484] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.274484] Spectre V2 : Mitigation: Full generic retpoline
+[    0.274485] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.274485] Speculative Store Bypass: Vulnerable
+[    0.274488] SRBDS: Unknown: Dependent on hypervisor status
+[    0.274488] MDS: Mitigation: Clear CPU buffers
+[    0.282212] Freeing SMP alternatives memory: 40K
+[    0.393069] smpboot: CPU0: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz (family: 0x6, model: 0x9e, stepping: 0xa)
+[    0.393252] Performance Events: unsupported p6 CPU model 158 no PMU driver, software events only.
+[    0.393280] rcu: Hierarchical SRCU implementation.
+[    0.393911] NMI watchdog: Perf NMI watchdog permanently disabled
+[    0.393911] smp: Bringing up secondary CPUs ...
+[    0.393911] smp: Brought up 1 node, 1 CPU
+[    0.393911] smpboot: Max logical packages: 1
+[    0.393911] smpboot: Total of 1 processors activated (5183.99 BogoMIPS)
+[    0.393911] devtmpfs: initialized
+[    0.393911] x86/mm: Memory block size: 128MB
+[    0.393911] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.393911] futex hash table entries: 256 (order: 2, 16384 bytes, linear)
+[    0.393911] pinctrl core: initialized pinctrl subsystem
+[    0.393911] PM: RTC time: 19:44:31, date: 2021-03-18
+[    0.393911] thermal_sys: Registered thermal governor 'fair_share'
+[    0.393911] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.393911] thermal_sys: Registered thermal governor 'step_wise'
+[    0.393911] thermal_sys: Registered thermal governor 'user_space'
+[    0.393911] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.393911] NET: Registered protocol family 16
+[    0.393911] DMA: preallocated 512 KiB GFP_KERNEL pool for atomic allocations
+[    0.393911] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.393911] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.393911] audit: initializing netlink subsys (disabled)
+[    0.393911] EISA bus registered
+[    0.393911] cpuidle: using governor ladder
+[    0.393911] cpuidle: using governor menu
+[    0.393911] ACPI: bus type PCI registered
+[    0.393911] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.393911] PCI: Using configuration type 1 for base access
+[    0.395231] audit: type=2000 audit(1616096677.679:1): state=initialized audit_enabled=0 res=1
+[    0.395322] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.396978] ACPI: Added _OSI(Module Device)
+[    0.396979] ACPI: Added _OSI(Processor Device)
+[    0.396980] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.397005] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.397006] ACPI: Added _OSI(Linux-Dell-Video)
+[    0.397007] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[    0.397008] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+[    0.399211] ACPI: 2 ACPI AML tables successfully acquired and loaded
+[    0.400920] ACPI: Interpreter enabled
+[    0.400927] ACPI: (supports S0 S5)
+[    0.400928] ACPI: Using IOAPIC for interrupt routing
+[    0.401099] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.401213] ACPI: Enabled 2 GPEs in block 00 to 07
+[    0.407124] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.407129] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI HPX-Type3]
+[    0.407648] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+[    0.407656] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+[    0.408203] PCI host bridge to bus 0000:00
+[    0.408222] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.408223] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.408224] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.408225] pci_bus 0000:00: root bus resource [mem 0xe0000000-0xfdffffff window]
+[    0.408227] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.408291] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+[    0.409658] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+[    0.410869] pci 0000:00:01.1: [8086:7111] type 00 class 0x01018a
+[    0.411465] pci 0000:00:01.1: reg 0x20: [io  0xd000-0xd00f]
+[    0.411715] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+[    0.411716] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+[    0.411717] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+[    0.411717] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+[    0.412379] pci 0000:00:02.0: [15ad:0405] type 00 class 0x030000
+[    0.414279] pci 0000:00:02.0: reg 0x10: [io  0xd010-0xd01f]
+[    0.416080] pci 0000:00:02.0: reg 0x14: [mem 0xe0000000-0xe0ffffff pref]
+[    0.418274] pci 0000:00:02.0: reg 0x18: [mem 0xf0000000-0xf01fffff]
+[    0.426345] pci 0000:00:03.0: [8086:100e] type 00 class 0x020000
+[    0.428105] pci 0000:00:03.0: reg 0x10: [mem 0xf0200000-0xf021ffff]
+[    0.430076] pci 0000:00:03.0: reg 0x18: [io  0xd020-0xd027]
+[    0.438065] pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000
+[    0.439705] pci 0000:00:04.0: reg 0x10: [io  0xd040-0xd05f]
+[    0.441207] pci 0000:00:04.0: reg 0x14: [mem 0xf0400000-0xf07fffff]
+[    0.442090] pci 0000:00:04.0: reg 0x18: [mem 0xf0800000-0xf0803fff pref]
+[    0.449953] pci 0000:00:05.0: [8086:2415] type 00 class 0x040100
+[    0.450121] pci 0000:00:05.0: reg 0x10: [io  0xd100-0xd1ff]
+[    0.450201] pci 0000:00:05.0: reg 0x14: [io  0xd200-0xd23f]
+[    0.451203] pci 0000:00:06.0: [106b:003f] type 00 class 0x0c0310
+[    0.452756] pci 0000:00:06.0: reg 0x10: [mem 0xf0804000-0xf0804fff]
+[    0.463111] pci 0000:00:07.0: [8086:7113] type 00 class 0x068000
+[    0.464051] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+[    0.464068] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+[    0.465980] pci 0000:00:0b.0: [8086:265c] type 00 class 0x0c0320
+[    0.467633] pci 0000:00:0b.0: reg 0x10: [mem 0xf0805000-0xf0805fff]
+[    0.478030] pci 0000:00:0d.0: [8086:2829] type 00 class 0x010601
+[    0.479699] pci 0000:00:0d.0: reg 0x10: [io  0xd240-0xd247]
+[    0.481260] pci 0000:00:0d.0: reg 0x14: [io  0xd248-0xd24b]
+[    0.482053] pci 0000:00:0d.0: reg 0x18: [io  0xd250-0xd257]
+[    0.483487] pci 0000:00:0d.0: reg 0x1c: [io  0xd258-0xd25b]
+[    0.484913] pci 0000:00:0d.0: reg 0x20: [io  0xd260-0xd26f]
+[    0.487361] pci 0000:00:0d.0: reg 0x24: [mem 0xf0806000-0xf0807fff]
+[    0.498225] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
+[    0.498598] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 *10 11)
+[    0.498758] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 *9 10 11)
+[    0.498932] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 10 *11)
+[    0.499293] iommu: Default domain type: Translated 
+[    0.499514] SCSI subsystem initialized
+[    0.499553] libata version 3.00 loaded.
+[    0.499620] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    0.499622] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    0.499624] pci 0000:00:02.0: vgaarb: bridge control possible
+[    0.499625] vgaarb: loaded
+[    0.499651] ACPI: bus type USB registered
+[    0.499665] usbcore: registered new interface driver usbfs
+[    0.499671] usbcore: registered new interface driver hub
+[    0.499677] usbcore: registered new device driver usb
+[    0.499694] pps_core: LinuxPPS API ver. 1 registered
+[    0.499695] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.499696] PTP clock support registered
+[    0.499762] EDAC MC: Ver: 3.0.0
+[    0.500406] NetLabel: Initializing
+[    0.500407] NetLabel:  domain hash size = 128
+[    0.500407] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.500423] NetLabel:  unlabeled traffic allowed by default
+[    0.500458] PCI: Using ACPI for IRQ routing
+[    0.500459] PCI: pci_cache_line_size set to 64 bytes
+[    0.500827] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+[    0.500831] e820: reserve RAM buffer [mem 0xdfff0000-0xdfffffff]
+[    0.501838] clocksource: Switched to clocksource kvm-clock
+[    0.516045] VFS: Disk quotas dquot_6.6.0
+[    0.516056] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.516141] AppArmor: AppArmor Filesystem Enabled
+[    0.516162] pnp: PnP ACPI init
+[    0.516243] pnp 00:00: Plug and Play ACPI device, IDs PNP0303 (active)
+[    0.516305] pnp 00:01: Plug and Play ACPI device, IDs PNP0f03 (active)
+[    0.517572] pnp: PnP ACPI: found 2 devices
+[    0.523702] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    0.523858] NET: Registered protocol family 2
+[    0.524099] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+[    0.524920] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.524970] TCP bind hash table entries: 32768 (order: 7, 524288 bytes, linear)
+[    0.525010] TCP: Hash tables configured (established 32768 bind 32768)
+[    0.525134] UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+[    0.525144] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+[    0.525183] NET: Registered protocol family 1
+[    0.525191] NET: Registered protocol family 44
+[    0.525202] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    0.525204] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    0.525205] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[    0.525206] pci_bus 0000:00: resource 7 [mem 0xe0000000-0xfdffffff window]
+[    0.525292] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    0.525313] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+[    0.525422] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    0.528322] PCI: CLS 0 bytes, default 64
+[    0.528371] Trying to unpack rootfs image as initramfs...
+[    0.712606] Freeing initrd memory: 50844K
+[    0.712650] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    0.712652] software IO TLB: mapped [mem 0xdbff0000-0xdfff0000] (64MB)
+[    0.712690] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x255cb518234, max_idle_ns: 440795279333 ns
+[    0.712698] clocksource: Switched to clocksource tsc
+[    0.712731] platform rtc_cmos: registered platform RTC device (no PNP device found)
+[    0.712747] check: Scanning for low memory corruption every 60 seconds
+[    0.712982] Initialise system trusted keyrings
+[    0.712993] Key type blacklist registered
+[    0.713031] workingset: timestamp_bits=36 max_order=20 bucket_order=0
+[    0.714032] zbud: loaded
+[    0.714225] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.714243] fuse: init (API version 7.31)
+[    0.714243] integrity: Platform Keyring initialized
+[    0.721192] Key type asymmetric registered
+[    0.721192] Asymmetric key parser 'x509' registered
+[    0.721199] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 244)
+[    0.721230] io scheduler mq-deadline registered
+[    0.721306] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[    0.721715] ACPI: AC Adapter [AC] (on-line)
+[    0.721754] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    0.721778] ACPI: Power Button [PWRF]
+[    0.721881] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+[    0.721893] ACPI: Sleep Button [SLPF]
+[    0.723443] battery: ACPI: Battery Slot [BAT0] (battery present)
+[    0.723480] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    0.724428] Linux agpgart interface v0.103
+[    0.725594] loop: module loaded
+[    0.725682] ata_piix 0000:00:01.1: version 2.13
+[    0.726047] scsi host0: ata_piix
+[    0.726109] scsi host1: ata_piix
+[    0.726131] ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
+[    0.726132] ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
+[    0.726220] libphy: Fixed MDIO Bus: probed
+[    0.726221] tun: Universal TUN/TAP device driver, 1.6
+[    0.726491] PPP generic driver version 2.4.2
+[    0.726555] VFIO - User Level meta-driver version: 0.3
+[    0.726926] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.726928] ehci-pci: EHCI PCI platform driver
+[    0.727483] ehci-pci 0000:00:0b.0: EHCI Host Controller
+[    0.727487] ehci-pci 0000:00:0b.0: new USB bus registered, assigned bus number 1
+[    0.727718] ehci-pci 0000:00:0b.0: irq 19, io mem 0xf0805000
+[    0.742560] ehci-pci 0000:00:0b.0: USB 2.0 started, EHCI 1.00
+[    0.742616] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.08
+[    0.742617] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.742619] usb usb1: Product: EHCI Host Controller
+[    0.742619] usb usb1: Manufacturer: Linux 5.8.0-44-generic ehci_hcd
+[    0.742620] usb usb1: SerialNumber: 0000:00:0b.0
+[    0.742713] hub 1-0:1.0: USB hub found
+[    0.742719] hub 1-0:1.0: 12 ports detected
+[    0.742900] ehci-platform: EHCI generic platform driver
+[    0.742911] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    0.742913] ohci-pci: OHCI PCI platform driver
+[    0.743727] ohci-pci 0000:00:06.0: OHCI PCI host controller
+[    0.743732] ohci-pci 0000:00:06.0: new USB bus registered, assigned bus number 2
+[    0.743792] ohci-pci 0000:00:06.0: irq 22, io mem 0xf0804000
+[    0.802969] usb usb2: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.08
+[    0.802972] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.802973] usb usb2: Product: OHCI PCI host controller
+[    0.802974] usb usb2: Manufacturer: Linux 5.8.0-44-generic ohci_hcd
+[    0.802975] usb usb2: SerialNumber: 0000:00:06.0
+[    0.803090] hub 2-0:1.0: USB hub found
+[    0.803104] hub 2-0:1.0: 12 ports detected
+[    0.803611] ohci-platform: OHCI generic platform driver
+[    0.803625] uhci_hcd: USB Universal Host Controller Interface driver
+[    0.803680] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+[    0.804269] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    0.804275] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    0.804427] mousedev: PS/2 mouse device common for all mice
+[    0.804676] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+[    0.805238] rtc_cmos rtc_cmos: registered as rtc0
+[    0.805262] rtc_cmos rtc_cmos: setting system clock to 2021-03-18T19:44:32 UTC (1616096672)
+[    0.805272] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+[    0.805276] i2c /dev entries driver
+[    0.805314] device-mapper: uevent: version 1.0.3
+[    0.805353] device-mapper: ioctl: 4.42.0-ioctl (2020-02-27) initialised: dm-devel@redhat.com
+[    0.805365] platform eisa.0: Probing EISA bus 0
+[    0.805367] platform eisa.0: EISA: Cannot allocate resource for mainboard
+[    0.805368] platform eisa.0: Cannot allocate resource for EISA slot 1
+[    0.805368] platform eisa.0: Cannot allocate resource for EISA slot 2
+[    0.805369] platform eisa.0: Cannot allocate resource for EISA slot 3
+[    0.805370] platform eisa.0: Cannot allocate resource for EISA slot 4
+[    0.805370] platform eisa.0: Cannot allocate resource for EISA slot 5
+[    0.805371] platform eisa.0: Cannot allocate resource for EISA slot 6
+[    0.805372] platform eisa.0: Cannot allocate resource for EISA slot 7
+[    0.805372] platform eisa.0: Cannot allocate resource for EISA slot 8
+[    0.805373] platform eisa.0: EISA: Detected 0 cards
+[    0.805375] intel_pstate: CPU model not supported
+[    0.805381] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.805455] intel_pmc_core intel_pmc_core.0:  initialized
+[    0.805481] drop_monitor: Initializing network drop monitor service
+[    0.805593] NET: Registered protocol family 10
+[    0.810631] Segment Routing with IPv6
+[    0.810648] NET: Registered protocol family 17
+[    0.810682] Key type dns_resolver registered
+[    0.810773] IPI shorthand broadcast: enabled
+[    0.810779] sched_clock: Marking stable (799337438, 10781863)->(816422506, -6303205)
+[    0.810823] registered taskstats version 1
+[    0.810832] Loading compiled-in X.509 certificates
+[    0.811387] Loaded X.509 cert 'Build time autogenerated kernel key: a3e9eb9032099963d398e4d4d5991ce491952397'
+[    0.811399] zswap: loaded using pool lzo/zbud
+[    0.811462] Key type ._fscrypt registered
+[    0.811462] Key type .fscrypt registered
+[    0.811463] Key type fscrypt-provisioning registered
+[    0.813828] Key type encrypted registered
+[    0.813830] AppArmor: AppArmor sha1 policy hashing enabled
+[    0.813834] ima: No TPM chip found, activating TPM-bypass!
+[    0.813838] ima: Allocated hash algorithm: sha1
+[    0.813843] ima: No architecture policies found
+[    0.813850] evm: Initialising EVM extended attributes:
+[    0.813851] evm: security.selinux
+[    0.813851] evm: security.SMACK64
+[    0.813852] evm: security.SMACK64EXEC
+[    0.813852] evm: security.SMACK64TRANSMUTE
+[    0.813853] evm: security.SMACK64MMAP
+[    0.813853] evm: security.apparmor
+[    0.813853] evm: security.ima
+[    0.813854] evm: security.capability
+[    0.813854] evm: HMAC attrs: 0x1
+[    0.814173] PM:   Magic number: 13:35:749
+[    0.814187] tty ttyS0: hash matches
+[    0.814283] RAS: Correctable Errors collector initialized.
+[    0.897892] ata2.00: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
+[    0.898816] scsi 1:0:0:0: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
+[    0.899529] sr 1:0:0:0: [sr0] scsi3-mmc drive: 32x/32x xa/form2 tray
+[    0.899531] cdrom: Uniform CD-ROM driver Revision: 3.20
+[    0.899662] sr 1:0:0:0: Attached scsi CD-ROM sr0
+[    0.899809] sr 1:0:0:0: Attached scsi generic sg0 type 5
+[    0.901009] Freeing unused decrypted memory: 2040K
+[    0.901296] Freeing unused kernel image (initmem) memory: 2640K
+[    0.909941] Write protecting the kernel read-only data: 22528k
+[    0.910296] Freeing unused kernel image (text/rodata gap) memory: 2044K
+[    0.910412] Freeing unused kernel image (rodata/data gap) memory: 756K
+[    0.956930] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    0.956931] x86/mm: Checking user space page tables
+[    0.995278] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    0.995284] Run /init as init process
+[    0.995285]   with arguments:
+[    0.995285]     /init
+[    0.995286]     splash
+[    0.995286]   with environment:
+[    0.995286]     HOME=/
+[    0.995287]     TERM=linux
+[    0.995287]     BOOT_IMAGE=/vmlinuz-5.8.0-44-generic
+[    1.089621] ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+[    1.089703] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input4
+[    1.102726] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+[    1.102726] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    1.108134] piix4_smbus 0000:00:07.0: SMBus Host Controller at 0x4100, revision 0
+[    1.110491] ahci 0000:00:0d.0: version 3.0
+[    1.111003] ahci 0000:00:0d.0: SSS flag set, parallel bus scan disabled
+[    1.111109] ahci 0000:00:0d.0: AHCI 0001.0100 32 slots 1 ports 3 Gbps 0x1 impl SATA mode
+[    1.111111] ahci 0000:00:0d.0: flags: 64bit ncq stag only ccc 
+[    1.117817] scsi host2: ahci
+[    1.117873] ata3: SATA max UDMA/133 abar m8192@0xf0806000 port 0xf0806100 irq 21
+[    1.327144] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input5
+[    1.436833] ata3: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[    1.437039] ata3.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+[    1.437040] ata3.00: 63377408 sectors, multi 128: LBA48 NCQ (depth 32)
+[    1.446042] ata3.00: configured for UDMA/133
+[    1.446122] scsi 2:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+[    1.446261] sd 2:0:0:0: [sda] 63377408 512-byte logical blocks: (32.4 GB/30.2 GiB)
+[    1.446265] sd 2:0:0:0: [sda] Write Protect is off
+[    1.446266] sd 2:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    1.446272] sd 2:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    1.446395] sd 2:0:0:0: Attached scsi generic sg1 type 0
+[    1.470642]  sda: sda1 sda2 < sda5 sda6 sda7 sda8 >
+[    1.471003] sd 2:0:0:0: [sda] Attached SCSI disk
+[    1.543583] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 08:00:27:85:5a:08
+[    1.543587] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+[    1.544546] e1000 0000:00:03.0 enp0s3: renamed from eth0
+[    1.716920] EXT4-fs (sda6): mounted filesystem with ordered data mode. Opts: (null)
+[    1.856159] systemd[1]: Inserted module 'autofs4'
+[    1.868355] systemd[1]: systemd 245.4-4ubuntu3.4 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=hybrid)
+[    1.868379] systemd[1]: Detected virtualization oracle.
+[    1.868382] systemd[1]: Detected architecture x86-64.
+[    1.869385] systemd[1]: Set hostname to <daniela-VirtualBox>.
+[    1.991559] systemd[1]: /lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+[    2.068442] systemd[1]: Created slice system-modprobe.slice.
+[    2.068602] systemd[1]: Created slice system-systemd\x2dfsck.slice.
+[    2.068734] systemd[1]: Created slice User and Session Slice.
+[    2.068775] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    2.068888] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[    2.068919] systemd[1]: Reached target User and Group Name Lookups.
+[    2.068932] systemd[1]: Reached target Remote File Systems.
+[    2.068939] systemd[1]: Reached target Slices.
+[    2.068951] systemd[1]: Reached target System Time Set.
+[    2.068959] systemd[1]: Reached target System Time Synchronized.
+[    2.069041] systemd[1]: Listening on Syslog Socket.
+[    2.069101] systemd[1]: Listening on fsck to fsckd communication Socket.
+[    2.069141] systemd[1]: Listening on initctl Compatibility Named Pipe.
+[    2.069265] systemd[1]: Listening on Journal Audit Socket.
+[    2.069318] systemd[1]: Listening on Journal Socket (/dev/log).
+[    2.069383] systemd[1]: Listening on Journal Socket.
+[    2.069446] systemd[1]: Listening on udev Control Socket.
+[    2.069495] systemd[1]: Listening on udev Kernel Socket.
+[    2.070170] systemd[1]: Mounting Huge Pages File System...
+[    2.070786] systemd[1]: Mounting POSIX Message Queue File System...
+[    2.071433] systemd[1]: Mounting Kernel Debug File System...
+[    2.072070] systemd[1]: Mounting Kernel Trace File System...
+[    2.073608] systemd[1]: Starting Journal Service...
+[    2.077953] systemd[1]: Starting Set the console keyboard layout...
+[    2.091689] systemd[1]: Starting Create list of static device nodes for the current kernel...
+[    2.095944] systemd[1]: Starting Load Kernel Module drm...
+[    2.099890] systemd[1]: Condition check resulted in Set Up Additional Binary Formats being skipped.
+[    2.099919] systemd[1]: Condition check resulted in File System Check on Root Device being skipped.
+[    2.113558] systemd[1]: Starting Load Kernel Modules...
+[    2.118475] systemd[1]: Starting Remount Root and Kernel File Systems...
+[    2.130627] systemd[1]: Starting udev Coldplug all Devices...
+[    2.143483] EXT4-fs (sda6): re-mounted. Opts: errors=remount-ro
+[    2.148723] systemd[1]: Starting Uncomplicated firewall...
+[    2.155251] systemd[1]: Mounted Huge Pages File System.
+[    2.155401] systemd[1]: Mounted POSIX Message Queue File System.
+[    2.155512] systemd[1]: Mounted Kernel Debug File System.
+[    2.155584] systemd[1]: Mounted Kernel Trace File System.
+[    2.159487] systemd[1]: Finished Create list of static device nodes for the current kernel.
+[    2.160641] systemd[1]: modprobe@drm.service: Succeeded.
+[    2.162096] systemd[1]: Finished Load Kernel Module drm.
+[    2.162427] systemd[1]: Finished Remount Root and Kernel File Systems.
+[    2.163813] systemd[1]: Finished Uncomplicated firewall.
+[    2.176181] lp: driver loaded but no devices found
+[    2.176403] systemd[1]: Condition check resulted in Rebuild Hardware Database being skipped.
+[    2.176442] systemd[1]: Condition check resulted in Platform Persistent Storage Archival being skipped.
+[    2.177452] systemd[1]: Starting Load/Save Random Seed...
+[    2.178189] systemd[1]: Starting Create System Users...
+[    2.198183] systemd[1]: Finished Load/Save Random Seed.
+[    2.202680] ppdev: user-space parallel port driver
+[    2.216360] systemd[1]: Finished Create System Users.
+[    2.217997] systemd[1]: Starting Create Static Device Nodes in /dev...
+[    2.267780] systemd[1]: Finished Create Static Device Nodes in /dev.
+[    2.268942] systemd[1]: Starting udev Kernel Device Manager...
+[    2.318006] [drm] DMA map mode: Caching DMA mappings.
+[    2.318071] [drm] Capabilities:
+[    2.318071] [drm]   Cursor.
+[    2.318071] [drm]   Cursor bypass 2.
+[    2.318072] [drm]   Alpha cursor.
+[    2.318072] [drm]   3D.
+[    2.318072] [drm]   Extended Fifo.
+[    2.318072] [drm]   Pitchlock.
+[    2.318073] [drm]   Irq mask.
+[    2.318073] [drm]   GMR.
+[    2.318073] [drm]   Traces.
+[    2.318073] [drm]   GMR2.
+[    2.318074] [drm]   Screen Object 2.
+[    2.318074] [drm] Max GMR ids is 8192
+[    2.318075] [drm] Max number of GMR pages is 1048576
+[    2.318075] [drm] Max dedicated hypervisor surface memory is 507904 kiB
+[    2.318076] [drm] Maximum display memory size is 16384 kiB
+[    2.318076] [drm] VRAM at 0xe0000000 size is 16384 kiB
+[    2.318076] [drm] MMIO at 0xf0000000 size is 2048 kiB
+[    2.328155] [TTM] Zone  kernel: Available graphics memory: 2015202 KiB
+[    2.328156] [TTM] Initializing pool allocator
+[    2.328159] [TTM] Initializing DMA pool allocator
+[    2.328180] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    2.328230] [drm] Screen Objects Display Unit initialized
+[    2.328316] [drm] width 720
+[    2.328328] [drm] height 400
+[    2.328340] [drm] bpp 32
+[    2.328653] [drm] Fifo max 0x00200000 min 0x00001000 cap 0x00000355
+[    2.328661] [drm] Atomic: yes.
+[    2.328676] [drm:vmw_host_log [vmwgfx]] *ERROR* Failed to send host log message.
+[    2.329593] [drm:vmw_host_log [vmwgfx]] *ERROR* Failed to send host log message.
+[    2.334593] fbcon: svgadrmfb (fb0) is primary device
+[    2.336520] Console: switching to colour frame buffer device 100x37
+[    2.350563] [drm] Initialized vmwgfx 2.18.0 20200114 for 0000:00:02.0 on minor 0
+[    2.355179] systemd[1]: Finished Load Kernel Modules.
+[    2.356033] systemd[1]: Mounting FUSE Control File System...
+[    2.357062] systemd[1]: Mounting Kernel Configuration File System...
+[    2.367116] systemd[1]: Starting Apply Kernel Variables...
+[    2.383463] systemd[1]: Finished udev Coldplug all Devices.
+[    2.384829] systemd[1]: Mounted FUSE Control File System.
+[    2.384886] systemd[1]: Condition check resulted in VMware vmblock fuse mount being skipped.
+[    2.390614] systemd[1]: Mounted Kernel Configuration File System.
+[    2.394025] systemd[1]: Finished Apply Kernel Variables.
+[    2.399016] systemd[1]: Finished Set the console keyboard layout.
+[    2.399114] systemd[1]: Reached target Local File Systems (Pre).
+[    2.401613] systemd[1]: Mounting Mount unit for core18, revision 1880...
+[    2.402883] systemd[1]: Mounting Mount unit for core18, revision 1988...
+[    2.415408] systemd[1]: Mounting Mount unit for gnome-3-34-1804, revision 36...
+[    2.417660] systemd[1]: Mounting Mount unit for gnome-3-34-1804, revision 66...
+[    2.421034] /var/lib/snapd/snaps/core18_1880.snap: Can't open blockdev
+[    2.427511] systemd[1]: Mounting Mount unit for gtk-common-themes, revision 1506...
+[    2.433324] /var/lib/snapd/snaps/core18_1988.snap: Can't open blockdev
+[    2.436411] systemd[1]: Mounting Mount unit for gtk-common-themes, revision 1514...
+[    2.439685] /var/lib/snapd/snaps/gnome-3-34-1804_36.snap: Can't open blockdev
+[    2.445373] /var/lib/snapd/snaps/gtk-common-themes_1506.snap: Can't open blockdev
+[    2.445903] /var/lib/snapd/snaps/gnome-3-34-1804_66.snap: Can't open blockdev
+[    2.447942] systemd[1]: Mounting Mount unit for snap-store, revision 467...
+[    2.453846] systemd[1]: Mounting Mount unit for snap-store, revision 518...
+[    2.463351] /var/lib/snapd/snaps/gtk-common-themes_1514.snap: Can't open blockdev
+[    2.464818] systemd[1]: Mounting Mount unit for snapd, revision 11107...
+[    2.465629] /var/lib/snapd/snaps/snap-store_467.snap: Can't open blockdev
+[    2.470972] systemd[1]: Mounting Mount unit for snapd, revision 8542...
+[    2.471265] systemd[1]: Started Journal Service.
+[    2.478191] /var/lib/snapd/snaps/snap-store_518.snap: Can't open blockdev
+[    2.478442] /var/lib/snapd/snaps/snapd_11107.snap: Can't open blockdev
+[    2.480783] /var/lib/snapd/snaps/snapd_8542.snap: Can't open blockdev
+[    2.519626] systemd-journald[229]: Received client request to flush runtime journal.
+[    2.849312] vboxguest: loading out-of-tree module taints kernel.
+[    2.849438] vboxguest: module verification failed: signature and/or required key missing - tainting kernel
+[    2.904066] vgdrvHeartbeatInit: Setting up heartbeat to trigger every 2000 milliseconds
+[    2.904189] input: Unspecified device as /devices/pci0000:00/0000:00:04.0/input/input6
+[    2.910279] vboxguest: Successfully loaded version 6.1.18
+[    2.910308] vboxguest: misc device minor 58, IRQ 20, I/O port d040, MMIO at 00000000f0400000 (size 0x400000)
+[    2.910309] vboxguest: Successfully loaded version 6.1.18 (interface 0x00010004)
+[    2.963747] RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 10737418240 ms ovfl timer
+[    3.039265] cryptd: max_cpu_qlen set to 1000
+[    3.064463] AVX2 version of gcm_enc/dec engaged.
+[    3.064464] AES CTR mode by8 optimization enabled
+[    3.536982] Adding 1998844k swap on /dev/sda5.  Priority:-2 extents:1 across:1998844k FS
+[    3.605423] EXT4-fs (sda8): mounted filesystem with ordered data mode. Opts: (null)
+[    3.617672] EXT4-fs (sda7): mounted filesystem with ordered data mode. Opts: (null)
+[    3.895544] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+[    4.072297] audit: type=1400 audit(1616096675.764:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/man" pid=485 comm="apparmor_parser"
+[    4.072299] audit: type=1400 audit(1616096675.764:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_filter" pid=485 comm="apparmor_parser"
+[    4.072301] audit: type=1400 audit(1616096675.764:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_groff" pid=485 comm="apparmor_parser"
+[    4.090159] audit: type=1400 audit(1616096675.784:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe" pid=487 comm="apparmor_parser"
+[    4.090161] audit: type=1400 audit(1616096675.784:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe//kmod" pid=487 comm="apparmor_parser"
+[    4.154943] audit: type=1400 audit(1616096675.848:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="ippusbxd" pid=489 comm="apparmor_parser"
+[    4.171073] audit: type=1400 audit(1616096675.864:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/cups-browsed" pid=491 comm="apparmor_parser"
+[    4.336170] audit: type=1400 audit(1616096676.028:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince" pid=492 comm="apparmor_parser"
+[    4.336173] audit: type=1400 audit(1616096676.028:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince//sanitized_helper" pid=492 comm="apparmor_parser"
+[    4.615548] snd_intel8x0 0000:00:05.0: white list rate for 1028:0177 is 48000
+[    5.748782] kauditd_printk_skb: 33 callbacks suppressed
+[    5.748783] audit: type=1400 audit(1616096677.436:44): apparmor="DENIED" operation="capable" profile="/usr/sbin/cups-browsed" pid=671 comm="cups-browsed" capability=23  capname="sys_nice"
+[    6.107567] e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+[    6.107799] IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+[    6.712749] 19:44:38.407417 main     VBoxService 6.1.18 r142142 (verbosity: 0) linux.amd64 (Jan  7 2021 17:26:51) release log
+               19:44:38.407419 main     Log opened 2021-03-18T19:44:38.407411000Z
+[    6.712799] 19:44:38.407511 main     OS Product: Linux
+[    6.712830] 19:44:38.407550 main     OS Release: 5.8.0-44-generic
+[    6.712860] 19:44:38.407581 main     OS Version: #50~20.04.1-Ubuntu SMP Wed Feb 10 21:07:30 UTC 2021
+[    6.712897] 19:44:38.407610 main     Executable: /opt/VBoxGuestAdditions-6.1.18/sbin/VBoxService
+               19:44:38.407610 main     Process ID: 854
+               19:44:38.407611 main     Package type: LINUX_64BITS_GENERIC
+[    6.716725] 19:44:38.411410 main     6.1.18 r142142 started. Verbose level = 0
+[    6.718406] 19:44:38.413101 main     vbglR3GuestCtrlDetectPeekGetCancelSupport: Supported (#1)
+[    9.440279] rfkill: input handler disabled
+[ 2066.833928] rfkill: input handler enabled
+[ 2070.913810] ISO 9660 Extensions: Microsoft Joliet Level 3
+[ 2070.946600] ISO 9660 Extensions: RRIP_1991A
+[ 2071.999505] rfkill: input handler disabled
+[ 2151.076655] vboxsf: g_fHostFeatures=0x8000000f g_fSfFeatures=0x1 g_uSfLastFunction=29
+[ 2151.076857] vboxsf: Successfully loaded version 6.1.18
+[ 2151.077104] vboxsf: Successfully loaded version 6.1.18 (LINUX_VERSION_CODE=0x50812)
+[ 2216.812460] calypso: [calypso_init] Initializing Calypso in mode 0
+[ 2216.812462] calypso: [calypso_dev_init] Allocated memory for device struct
+[ 2216.812492] calypso: [calypso_dev_init] Allocated memory buffer for device
+[ 2216.812492] calypso: [calypso_init] Calypso driver is initialized
+[ 2216.812523] calypso: [calypso_init_ram] Allocated memory for RAM device
+[ 2216.812523] calypso: [calypso_init] RAM device is initialized
+[ 2216.812525] calypso: [calypso_dev_no_queue_setup] Registered block device with major 252
+[ 2216.812543] calypso: [calypso_dev_no_queue_setup] calypso_dev->queue->limits.physical_block_size: 512
+[ 2216.812543] calypso: [calypso_dev_no_queue_setup] Set up request queue
+[ 2216.812546] calypso: [calypso_dev_no_queue_setup] Allocated disk
+[ 2216.813519] calypso: [calypso_dev_no_queue_setup] Calypso device initialised
+[ 2216.813520] calypso: [calypso_init] Calypso driver is set up
+[ 2216.813521] calypso: [calypso_open_physical_disk] Before open physical device: /dev/sda8
+[ 2216.813527] calypso: [calypso_init] Opened physical disk /dev/sda8
+[ 2216.813527] calypso: [calypso_link_physical_virtual_disk] Device real capacity: 63377408
+[ 2216.813528] calypso: [calypso_link_physical_virtual_disk] Max sectors: 65535
+[ 2216.813529] calypso: [calypso_link_physical_virtual_disk] Done linking physical and virtual devices
+[ 2216.813530] calypso: [calypso_snoop_io_requests_to_physical_dev] physical_dev_queue->make_request_fn: 0000000000000000
+[ 2216.813531] calypso: [calypso_snoop_io_requests_to_physical_dev] snoop_physical_make_request_fn: 00000000da53e2ac
+[ 2216.813532] calypso: [calypso_snoop_io_requests_to_physical_dev] physical_dev_queue->make_request_fn: 0000000000000000
+[ 2216.813532] calypso: [calypso_snoop_io_requests_to_physical_dev] physical_dev_queue->make_request_fn: 0000000000000000
+[ 2216.813538] calypso: [calypso_partition_fs_info] The file system installed on /dev/sda8 is ext4
+[ 2216.813540] calypso: [calypso_partition_fs_info] -------- INFO ON ext4_super_block: --------
+                                                    Partition /dev/sda8 has 1104384 blocks
+                                                    55218 reserved blocks
+                                                    622204 free blocks
+                                                    cluster size is 2
+                                                    32768 blocks per group
+[ 2216.813541] calypso: [calypso_iterate_partition_blocks_groups] Iterating through 34 groups
+[ 2216.813542] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 0 ------
+[ 2216.813549] bitmap_for_each_clear_region
+[ 2216.813549] nbits 32768
+[ 2216.813550] free_count 20611 ; rs 12157 ; re 32768
+[ 2216.813551] Empty blocks from block #12157 to block #32768
+[ 2216.813552] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 0: stored = 20611, counted = 20611
+[ 2216.813552] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 0 ------
+[ 2216.813553] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 1 ------
+[ 2216.813555] bitmap_for_each_clear_region
+[ 2216.813555] nbits 32768
+[ 2216.813556] free_count 384 ; rs 11776 ; re 12160
+[ 2216.813556] Empty blocks from block #44544 to block #44928
+[ 2216.813557] free_count 512 ; rs 16128 ; re 16256
+[ 2216.813557] Empty blocks from block #48896 to block #49024
+[ 2216.813558] free_count 640 ; rs 18048 ; re 18176
+[ 2216.813558] Empty blocks from block #50816 to block #50944
+[ 2216.813559] free_count 896 ; rs 18432 ; re 18688
+[ 2216.813559] Empty blocks from block #51200 to block #51456
+[ 2216.813560] free_count 1024 ; rs 18816 ; re 18944
+[ 2216.813560] Empty blocks from block #51584 to block #51712
+[ 2216.813561] free_count 1152 ; rs 22400 ; re 22528
+[ 2216.813561] Empty blocks from block #55168 to block #55296
+[ 2216.813562] free_count 1600 ; rs 25792 ; re 26240
+[ 2216.813562] Empty blocks from block #58560 to block #59008
+[ 2216.813563] free_count 1601 ; rs 27870 ; re 27871
+[ 2216.813563] Empty blocks from block #60638 to block #60639
+[ 2216.813564] free_count 1602 ; rs 27919 ; re 27920
+[ 2216.813564] Empty blocks from block #60687 to block #60688
+[ 2216.813565] free_count 1606 ; rs 27924 ; re 27928
+[ 2216.813565] Empty blocks from block #60692 to block #60696
+[ 2216.813565] free_count 1607 ; rs 27939 ; re 27940
+[ 2216.813566] Empty blocks from block #60707 to block #60708
+[ 2216.813566] free_count 1608 ; rs 27944 ; re 27945
+[ 2216.813567] Empty blocks from block #60712 to block #60713
+[ 2216.813567] free_count 1609 ; rs 28011 ; re 28012
+[ 2216.813568] Empty blocks from block #60779 to block #60780
+[ 2216.813568] free_count 1617 ; rs 28016 ; re 28024
+[ 2216.813569] Empty blocks from block #60784 to block #60792
+[ 2216.813569] free_count 1618 ; rs 28026 ; re 28027
+[ 2216.813569] Empty blocks from block #60794 to block #60795
+[ 2216.813570] free_count 1619 ; rs 28075 ; re 28076
+[ 2216.813570] Empty blocks from block #60843 to block #60844
+[ 2216.813571] free_count 1660 ; rs 28080 ; re 28121
+[ 2216.813571] Empty blocks from block #60848 to block #60889
+[ 2216.813572] free_count 1661 ; rs 28123 ; re 28124
+[ 2216.813572] Empty blocks from block #60891 to block #60892
+[ 2216.813573] free_count 1710 ; rs 28128 ; re 28177
+[ 2216.813573] Empty blocks from block #60896 to block #60945
+[ 2216.813574] free_count 1711 ; rs 28185 ; re 28186
+[ 2216.813574] Empty blocks from block #60953 to block #60954
+[ 2216.813574] free_count 1728 ; rs 28192 ; re 28209
+[ 2216.813575] Empty blocks from block #60960 to block #60977
+[ 2216.813575] free_count 1729 ; rs 28217 ; re 28218
+[ 2216.813576] Empty blocks from block #60985 to block #60986
+[ 2216.813576] free_count 1745 ; rs 28224 ; re 28240
+[ 2216.813577] Empty blocks from block #60992 to block #61008
+[ 2216.813577] free_count 1747 ; rs 28245 ; re 28247
+[ 2216.813577] Empty blocks from block #61013 to block #61015
+[ 2216.813578] free_count 1748 ; rs 28255 ; re 28256
+[ 2216.813578] Empty blocks from block #61023 to block #61024
+[ 2216.813579] free_count 1749 ; rs 28258 ; re 28259
+[ 2216.813579] Empty blocks from block #61026 to block #61027
+[ 2216.813580] free_count 1765 ; rs 28272 ; re 28288
+[ 2216.813580] Empty blocks from block #61040 to block #61056
+[ 2216.813581] free_count 1766 ; rs 28291 ; re 28292
+[ 2216.813581] Empty blocks from block #61059 to block #61060
+[ 2216.813582] free_count 1774 ; rs 28296 ; re 28304
+[ 2216.813582] Empty blocks from block #61064 to block #61072
+[ 2216.813582] free_count 1775 ; rs 28308 ; re 28309
+[ 2216.813583] Empty blocks from block #61076 to block #61077
+[ 2216.813583] free_count 1776 ; rs 28321 ; re 28322
+[ 2216.813584] Empty blocks from block #61089 to block #61090
+[ 2216.813584] free_count 1777 ; rs 28324 ; re 28325
+[ 2216.813585] Empty blocks from block #61092 to block #61093
+[ 2216.813585] free_count 1778 ; rs 28345 ; re 28346
+[ 2216.813586] Empty blocks from block #61113 to block #61114
+[ 2216.813586] free_count 1779 ; rs 28352 ; re 28353
+[ 2216.813586] Empty blocks from block #61120 to block #61121
+[ 2216.813587] free_count 1843 ; rs 28368 ; re 28432
+[ 2216.813587] Empty blocks from block #61136 to block #61200
+[ 2216.813588] free_count 1844 ; rs 28434 ; re 28435
+[ 2216.813588] Empty blocks from block #61202 to block #61203
+[ 2216.813589] free_count 1853 ; rs 28456 ; re 28465
+[ 2216.813589] Empty blocks from block #61224 to block #61233
+[ 2216.813590] free_count 1854 ; rs 28476 ; re 28477
+[ 2216.813590] Empty blocks from block #61244 to block #61245
+[ 2216.813590] free_count 1855 ; rs 28695 ; re 28696
+[ 2216.813591] Empty blocks from block #61463 to block #61464
+[ 2216.813591] free_count 1856 ; rs 28723 ; re 28724
+[ 2216.813592] Empty blocks from block #61491 to block #61492
+[ 2216.813592] free_count 1857 ; rs 28730 ; re 28731
+[ 2216.813593] Empty blocks from block #61498 to block #61499
+[ 2216.813593] free_count 1858 ; rs 28745 ; re 28746
+[ 2216.813594] Empty blocks from block #61513 to block #61514
+[ 2216.813594] free_count 1859 ; rs 28756 ; re 28757
+[ 2216.813594] Empty blocks from block #61524 to block #61525
+[ 2216.813595] free_count 1860 ; rs 29019 ; re 29020
+[ 2216.813595] Empty blocks from block #61787 to block #61788
+[ 2216.813596] free_count 1861 ; rs 29022 ; re 29023
+[ 2216.813596] Empty blocks from block #61790 to block #61791
+[ 2216.813597] free_count 1871 ; rs 29055 ; re 29065
+[ 2216.813597] Empty blocks from block #61823 to block #61833
+[ 2216.813598] free_count 1887 ; rs 29096 ; re 29112
+[ 2216.813598] Empty blocks from block #61864 to block #61880
+[ 2216.813598] free_count 1896 ; rs 29120 ; re 29129
+[ 2216.813599] Empty blocks from block #61888 to block #61897
+[ 2216.813599] free_count 1897 ; rs 29139 ; re 29140
+[ 2216.813600] Empty blocks from block #61907 to block #61908
+[ 2216.813600] free_count 1913 ; rs 29144 ; re 29160
+[ 2216.813601] Empty blocks from block #61912 to block #61928
+[ 2216.813601] free_count 1914 ; rs 29164 ; re 29165
+[ 2216.813602] Empty blocks from block #61932 to block #61933
+[ 2216.813602] free_count 1915 ; rs 29207 ; re 29208
+[ 2216.813602] Empty blocks from block #61975 to block #61976
+[ 2216.813603] free_count 1916 ; rs 29214 ; re 29215
+[ 2216.813603] Empty blocks from block #61982 to block #61983
+[ 2216.813604] free_count 1917 ; rs 29235 ; re 29236
+[ 2216.813604] Empty blocks from block #62003 to block #62004
+[ 2216.813605] free_count 1918 ; rs 29258 ; re 29259
+[ 2216.813605] Empty blocks from block #62026 to block #62027
+[ 2216.813606] free_count 1919 ; rs 29275 ; re 29276
+[ 2216.813606] Empty blocks from block #62043 to block #62044
+[ 2216.813606] free_count 1928 ; rs 29280 ; re 29289
+[ 2216.813607] Empty blocks from block #62048 to block #62057
+[ 2216.813607] free_count 1929 ; rs 29319 ; re 29320
+[ 2216.813608] Empty blocks from block #62087 to block #62088
+[ 2216.813608] free_count 1930 ; rs 29359 ; re 29360
+[ 2216.813609] Empty blocks from block #62127 to block #62128
+[ 2216.813609] free_count 1931 ; rs 29362 ; re 29363
+[ 2216.813610] Empty blocks from block #62130 to block #62131
+[ 2216.813610] free_count 1971 ; rs 29384 ; re 29424
+[ 2216.813610] Empty blocks from block #62152 to block #62192
+[ 2216.813611] free_count 1972 ; rs 29535 ; re 29536
+[ 2216.813611] Empty blocks from block #62303 to block #62304
+[ 2216.813612] free_count 1973 ; rs 29546 ; re 29547
+[ 2216.813612] Empty blocks from block #62314 to block #62315
+[ 2216.813613] free_count 1974 ; rs 29568 ; re 29569
+[ 2216.813613] Empty blocks from block #62336 to block #62337
+[ 2216.813614] free_count 1998 ; rs 29640 ; re 29664
+[ 2216.813614] Empty blocks from block #62408 to block #62432
+[ 2216.813615] free_count 1999 ; rs 29670 ; re 29671
+[ 2216.813615] Empty blocks from block #62438 to block #62439
+[ 2216.813615] free_count 2023 ; rs 29696 ; re 29720
+[ 2216.813616] Empty blocks from block #62464 to block #62488
+[ 2216.813616] free_count 2024 ; rs 29731 ; re 29732
+[ 2216.813617] Empty blocks from block #62499 to block #62500
+[ 2216.813617] free_count 2025 ; rs 29740 ; re 29741
+[ 2216.813618] Empty blocks from block #62508 to block #62509
+[ 2216.813618] free_count 2026 ; rs 29750 ; re 29751
+[ 2216.813619] Empty blocks from block #62518 to block #62519
+[ 2216.813619] free_count 2050 ; rs 29760 ; re 29784
+[ 2216.813619] Empty blocks from block #62528 to block #62552
+[ 2216.813620] free_count 2051 ; rs 29801 ; re 29802
+[ 2216.813620] Empty blocks from block #62569 to block #62570
+[ 2216.813621] free_count 2091 ; rs 29808 ; re 29848
+[ 2216.813621] Empty blocks from block #62576 to block #62616
+[ 2216.813622] free_count 2092 ; rs 29850 ; re 29851
+[ 2216.813622] Empty blocks from block #62618 to block #62619
+[ 2216.813623] free_count 2100 ; rs 29896 ; re 29904
+[ 2216.813623] Empty blocks from block #62664 to block #62672
+[ 2216.813623] free_count 2133 ; rs 29951 ; re 29984
+[ 2216.813624] Empty blocks from block #62719 to block #62752
+[ 2216.813624] free_count 2134 ; rs 29994 ; re 29995
+[ 2216.813625] Empty blocks from block #62762 to block #62763
+[ 2216.813625] free_count 2143 ; rs 30016 ; re 30025
+[ 2216.813626] Empty blocks from block #62784 to block #62793
+[ 2216.813626] free_count 2144 ; rs 30083 ; re 30084
+[ 2216.813626] Empty blocks from block #62851 to block #62852
+[ 2216.813627] free_count 2152 ; rs 30088 ; re 30096
+[ 2216.813627] Empty blocks from block #62856 to block #62864
+[ 2216.813628] free_count 2153 ; rs 30102 ; re 30103
+[ 2216.813628] Empty blocks from block #62870 to block #62871
+[ 2216.813629] free_count 2154 ; rs 30113 ; re 30114
+[ 2216.813629] Empty blocks from block #62881 to block #62882
+[ 2216.813630] free_count 2170 ; rs 30120 ; re 30136
+[ 2216.813630] Empty blocks from block #62888 to block #62904
+[ 2216.813631] free_count 2186 ; rs 30144 ; re 30160
+[ 2216.813631] Empty blocks from block #62912 to block #62928
+[ 2216.813631] free_count 2194 ; rs 30232 ; re 30240
+[ 2216.813632] Empty blocks from block #63000 to block #63008
+[ 2216.813632] free_count 2210 ; rs 30248 ; re 30264
+[ 2216.813633] Empty blocks from block #63016 to block #63032
+[ 2216.813633] free_count 2650 ; rs 30280 ; re 30720
+[ 2216.813634] Empty blocks from block #63048 to block #63488
+[ 2216.813634] free_count 2651 ; rs 30722 ; re 30723
+[ 2216.813635] Empty blocks from block #63490 to block #63491
+[ 2216.813635] free_count 2652 ; rs 30725 ; re 30726
+[ 2216.813635] Empty blocks from block #63493 to block #63494
+[ 2216.813636] free_count 2717 ; rs 30728 ; re 30793
+[ 2216.813636] Empty blocks from block #63496 to block #63561
+[ 2216.813637] free_count 2821 ; rs 30800 ; re 30904
+[ 2216.813637] Empty blocks from block #63568 to block #63672
+[ 2216.813638] free_count 2822 ; rs 30910 ; re 30911
+[ 2216.813638] Empty blocks from block #63678 to block #63679
+[ 2216.813639] free_count 3878 ; rs 30912 ; re 31968
+[ 2216.813639] Empty blocks from block #63680 to block #64736
+[ 2216.813640] free_count 3879 ; rs 31970 ; re 31971
+[ 2216.813640] Empty blocks from block #64738 to block #64739
+[ 2216.813641] free_count 3880 ; rs 31977 ; re 31978
+[ 2216.813641] Empty blocks from block #64745 to block #64746
+[ 2216.813641] free_count 3888 ; rs 31984 ; re 31992
+[ 2216.813642] Empty blocks from block #64752 to block #64760
+[ 2216.813642] free_count 3889 ; rs 32005 ; re 32006
+[ 2216.813643] Empty blocks from block #64773 to block #64774
+[ 2216.813643] free_count 3897 ; rs 32008 ; re 32016
+[ 2216.813644] Empty blocks from block #64776 to block #64784
+[ 2216.813644] free_count 3898 ; rs 32052 ; re 32053
+[ 2216.813645] Empty blocks from block #64820 to block #64821
+[ 2216.813645] free_count 3899 ; rs 32057 ; re 32058
+[ 2216.813645] Empty blocks from block #64825 to block #64826
+[ 2216.813646] free_count 3988 ; rs 32064 ; re 32153
+[ 2216.813646] Empty blocks from block #64832 to block #64921
+[ 2216.813647] free_count 3989 ; rs 32215 ; re 32216
+[ 2216.813647] Empty blocks from block #64983 to block #64984
+[ 2216.813648] free_count 3990 ; rs 32220 ; re 32221
+[ 2216.813648] Empty blocks from block #64988 to block #64989
+[ 2216.813649] free_count 3998 ; rs 32248 ; re 32256
+[ 2216.813649] Empty blocks from block #65016 to block #65024
+[ 2216.813650] free_count 3999 ; rs 32260 ; re 32261
+[ 2216.813650] Empty blocks from block #65028 to block #65029
+[ 2216.813650] free_count 4000 ; rs 32265 ; re 32266
+[ 2216.813651] Empty blocks from block #65033 to block #65034
+[ 2216.813651] free_count 4009 ; rs 32279 ; re 32288
+[ 2216.813652] Empty blocks from block #65047 to block #65056
+[ 2216.813652] free_count 4010 ; rs 32357 ; re 32358
+[ 2216.813653] Empty blocks from block #65125 to block #65126
+[ 2216.813653] free_count 4082 ; rs 32360 ; re 32432
+[ 2216.813653] Empty blocks from block #65128 to block #65200
+[ 2216.813654] free_count 4083 ; rs 32434 ; re 32435
+[ 2216.813654] Empty blocks from block #65202 to block #65203
+[ 2216.813655] free_count 4187 ; rs 32440 ; re 32544
+[ 2216.813655] Empty blocks from block #65208 to block #65312
+[ 2216.813656] free_count 4188 ; rs 32551 ; re 32552
+[ 2216.813656] Empty blocks from block #65319 to block #65320
+[ 2216.813657] free_count 4189 ; rs 32565 ; re 32566
+[ 2216.813657] Empty blocks from block #65333 to block #65334
+[ 2216.813658] free_count 4197 ; rs 32568 ; re 32576
+[ 2216.813658] Empty blocks from block #65336 to block #65344
+[ 2216.813658] free_count 4198 ; rs 32677 ; re 32678
+[ 2216.813659] Empty blocks from block #65445 to block #65446
+[ 2216.813659] free_count 4199 ; rs 32692 ; re 32693
+[ 2216.813660] Empty blocks from block #65460 to block #65461
+[ 2216.813660] free_count 4215 ; rs 32712 ; re 32728
+[ 2216.813661] Empty blocks from block #65480 to block #65496
+[ 2216.813661] free_count 4216 ; rs 32757 ; re 32758
+[ 2216.813662] Empty blocks from block #65525 to block #65526
+[ 2216.813662] free_count 4217 ; rs 32762 ; re 32763
+[ 2216.813662] Empty blocks from block #65530 to block #65531
+[ 2216.813663] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 1: stored = 4217, counted = 4217
+[ 2216.813663] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 1: stored = 4217, counted = 4217
+[ 2216.813664] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 1 ------
+START GROUP # 2 ------
+[ 2216.813664] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 2 ------
+[ 2216.813666] bitmap_for_each_clear_region
+[ 2216.813666] nbits 32768
+[ 2216.813667] free_count 2 ; rs 22 ; re 24
+[ 2216.813667] Empty blocks from block #65558 to block #65560
+[ 2216.813668] free_count 8 ; rs 67 ; re 73
+[ 2216.813668] Empty blocks from block #65603 to block #65609
+[ 2216.813669] free_count 9 ; rs 74 ; re 75
+[ 2216.813669] Empty blocks from block #65610 to block #65611
+[ 2216.813670] free_count 24 ; rs 99 ; re 114
+[ 2216.813670] Empty blocks from block #65635 to block #65650
+[ 2216.813671] free_count 27 ; rs 125 ; re 128
+[ 2216.813671] Empty blocks from block #65661 to block #65664
+[ 2216.813672] free_count 2190 ; rs 235 ; re 2398
+[ 2216.813672] Empty blocks from block #65771 to block #67934
+[ 2216.813673] free_count 2338 ; rs 2399 ; re 2547
+[ 2216.813673] Empty blocks from block #67935 to block #68083
+[ 2216.813674] free_count 2465 ; rs 2549 ; re 2676
+[ 2216.813674] Empty blocks from block #68085 to block #68212
+[ 2216.813675] free_count 2901 ; rs 3267 ; re 3703
+[ 2216.813675] Empty blocks from block #68803 to block #69239
+[ 2216.813676] free_count 2942 ; rs 3743 ; re 3784
+[ 2216.813676] Empty blocks from block #69279 to block #69320
+[ 2216.813677] free_count 2960 ; rs 3810 ; re 3828
+[ 2216.813677] Empty blocks from block #69346 to block #69364
+[ 2216.813678] free_count 2964 ; rs 3838 ; re 3842
+[ 2216.813678] Empty blocks from block #69374 to block #69378
+[ 2216.813678] free_count 2969 ; rs 3853 ; re 3858
+[ 2216.813679] Empty blocks from block #69389 to block #69394
+[ 2216.813679] free_count 2974 ; rs 3914 ; re 3919
+[ 2216.813680] Empty blocks from block #69450 to block #69455
+[ 2216.813680] free_count 3017 ; rs 3940 ; re 3983
+[ 2216.813681] Empty blocks from block #69476 to block #69519
+[ 2216.813681] free_count 3022 ; rs 4007 ; re 4012
+[ 2216.813682] Empty blocks from block #69543 to block #69548
+[ 2216.813682] free_count 3047 ; rs 4017 ; re 4042
+[ 2216.813682] Empty blocks from block #69553 to block #69578
+[ 2216.813683] free_count 3059 ; rs 4062 ; re 4074
+[ 2216.813683] Empty blocks from block #69598 to block #69610
+[ 2216.813684] free_count 3078 ; rs 4085 ; re 4104
+[ 2216.813684] Empty blocks from block #69621 to block #69640
+[ 2216.813685] free_count 3079 ; rs 4105 ; re 4106
+[ 2216.813685] Empty blocks from block #69641 to block #69642
+[ 2216.813686] free_count 3087 ; rs 4108 ; re 4116
+[ 2216.813686] Empty blocks from block #69644 to block #69652
+[ 2216.813687] free_count 3095 ; rs 4341 ; re 4349
+[ 2216.813687] Empty blocks from block #69877 to block #69885
+[ 2216.813688] free_count 3100 ; rs 4426 ; re 4431
+[ 2216.813688] Empty blocks from block #69962 to block #69967
+[ 2216.813688] free_count 3142 ; rs 4442 ; re 4484
+[ 2216.813689] Empty blocks from block #69978 to block #70020
+[ 2216.813689] free_count 3206 ; rs 4491 ; re 4555
+[ 2216.813690] Empty blocks from block #70027 to block #70091
+[ 2216.813690] free_count 3208 ; rs 5591 ; re 5593
+[ 2216.813691] Empty blocks from block #71127 to block #71129
+[ 2216.813691] free_count 3210 ; rs 5600 ; re 5602
+[ 2216.813692] Empty blocks from block #71136 to block #71138
+[ 2216.813692] free_count 3245 ; rs 5870 ; re 5905
+[ 2216.813692] Empty blocks from block #71406 to block #71441
+[ 2216.813693] free_count 3247 ; rs 5923 ; re 5925
+[ 2216.813693] Empty blocks from block #71459 to block #71461
+[ 2216.813694] free_count 3251 ; rs 5935 ; re 5939
+[ 2216.813694] Empty blocks from block #71471 to block #71475
+[ 2216.813695] free_count 3263 ; rs 5942 ; re 5954
+[ 2216.813695] Empty blocks from block #71478 to block #71490
+[ 2216.813696] free_count 3278 ; rs 5956 ; re 5971
+[ 2216.813696] Empty blocks from block #71492 to block #71507
+[ 2216.813697] free_count 3298 ; rs 6004 ; re 6024
+[ 2216.813697] Empty blocks from block #71540 to block #71560
+[ 2216.813697] free_count 3302 ; rs 6041 ; re 6045
+[ 2216.813698] Empty blocks from block #71577 to block #71581
+[ 2216.813698] free_count 3309 ; rs 6047 ; re 6054
+[ 2216.813699] Empty blocks from block #71583 to block #71590
+[ 2216.813699] free_count 3315 ; rs 6062 ; re 6068
+[ 2216.813700] Empty blocks from block #71598 to block #71604
+[ 2216.813700] free_count 3333 ; rs 6075 ; re 6093
+[ 2216.813701] Empty blocks from block #71611 to block #71629
+[ 2216.813701] free_count 3335 ; rs 6102 ; re 6104
+[ 2216.813701] Empty blocks from block #71638 to block #71640
+[ 2216.813702] free_count 3346 ; rs 6126 ; re 6137
+[ 2216.813702] Empty blocks from block #71662 to block #71673
+[ 2216.813703] free_count 3356 ; rs 6153 ; re 6163
+[ 2216.813703] Empty blocks from block #71689 to block #71699
+[ 2216.813704] free_count 3369 ; rs 6176 ; re 6189
+[ 2216.813704] Empty blocks from block #71712 to block #71725
+[ 2216.813705] free_count 3384 ; rs 6226 ; re 6241
+[ 2216.813705] Empty blocks from block #71762 to block #71777
+[ 2216.813706] free_count 3450 ; rs 6269 ; re 6335
+[ 2216.813706] Empty blocks from block #71805 to block #71871
+[ 2216.813707] free_count 3457 ; rs 6337 ; re 6344
+[ 2216.813707] Empty blocks from block #71873 to block #71880
+[ 2216.813707] free_count 3476 ; rs 6357 ; re 6376
+[ 2216.813708] Empty blocks from block #71893 to block #71912
+[ 2216.813708] free_count 3491 ; rs 6413 ; re 6428
+[ 2216.813709] Empty blocks from block #71949 to block #71964
+[ 2216.813709] free_count 3530 ; rs 6485 ; re 6524
+[ 2216.813710] Empty blocks from block #72021 to block #72060
+[ 2216.813710] free_count 3541 ; rs 6553 ; re 6564
+[ 2216.813711] Empty blocks from block #72089 to block #72100
+[ 2216.813711] free_count 3546 ; rs 6566 ; re 6571
+[ 2216.813711] Empty blocks from block #72102 to block #72107
+[ 2216.813712] free_count 3550 ; rs 6599 ; re 6603
+[ 2216.813712] Empty blocks from block #72135 to block #72139
+[ 2216.813713] free_count 3568 ; rs 6607 ; re 6625
+[ 2216.813713] Empty blocks from block #72143 to block #72161
+[ 2216.813714] free_count 3577 ; rs 6640 ; re 6649
+[ 2216.813714] Empty blocks from block #72176 to block #72185
+[ 2216.813715] free_count 3585 ; rs 6739 ; re 6747
+[ 2216.813715] Empty blocks from block #72275 to block #72283
+[ 2216.813716] free_count 3586 ; rs 6751 ; re 6752
+[ 2216.813716] Empty blocks from block #72287 to block #72288
+[ 2216.813716] free_count 3593 ; rs 6755 ; re 6762
+[ 2216.813717] Empty blocks from block #72291 to block #72298
+[ 2216.813717] free_count 3600 ; rs 6766 ; re 6773
+[ 2216.813718] Empty blocks from block #72302 to block #72309
+[ 2216.813718] free_count 3604 ; rs 6777 ; re 6781
+[ 2216.813719] Empty blocks from block #72313 to block #72317
+[ 2216.813719] free_count 3606 ; rs 6826 ; re 6828
+[ 2216.813720] Empty blocks from block #72362 to block #72364
+[ 2216.813720] free_count 3609 ; rs 6832 ; re 6835
+[ 2216.813720] Empty blocks from block #72368 to block #72371
+[ 2216.813721] free_count 3611 ; rs 6906 ; re 6908
+[ 2216.813721] Empty blocks from block #72442 to block #72444
+[ 2216.813722] free_count 3615 ; rs 6966 ; re 6970
+[ 2216.813722] Empty blocks from block #72502 to block #72506
+[ 2216.813723] free_count 3627 ; rs 6987 ; re 6999
+[ 2216.813723] Empty blocks from block #72523 to block #72535
+[ 2216.813724] free_count 3637 ; rs 7015 ; re 7025
+[ 2216.813724] Empty blocks from block #72551 to block #72561
+[ 2216.813725] free_count 3639 ; rs 7031 ; re 7033
+[ 2216.813725] Empty blocks from block #72567 to block #72569
+[ 2216.813725] free_count 3686 ; rs 7037 ; re 7084
+[ 2216.813726] Empty blocks from block #72573 to block #72620
+[ 2216.813726] free_count 3695 ; rs 7090 ; re 7099
+[ 2216.813727] Empty blocks from block #72626 to block #72635
+[ 2216.813727] free_count 3712 ; rs 7113 ; re 7130
+[ 2216.813728] Empty blocks from block #72649 to block #72666
+[ 2216.813728] free_count 3720 ; rs 7136 ; re 7144
+[ 2216.813729] Empty blocks from block #72672 to block #72680
+[ 2216.813729] free_count 3764 ; rs 7184 ; re 7228
+[ 2216.813729] Empty blocks from block #72720 to block #72764
+[ 2216.813730] free_count 3770 ; rs 7245 ; re 7251
+[ 2216.813730] Empty blocks from block #72781 to block #72787
+[ 2216.813731] free_count 3777 ; rs 7266 ; re 7273
+[ 2216.813731] Empty blocks from block #72802 to block #72809
+[ 2216.813732] free_count 3817 ; rs 7279 ; re 7319
+[ 2216.813732] Empty blocks from block #72815 to block #72855
+[ 2216.813733] free_count 3837 ; rs 7320 ; re 7340
+[ 2216.813733] Empty blocks from block #72856 to block #72876
+[ 2216.813734] free_count 3841 ; rs 7341 ; re 7345
+[ 2216.813734] Empty blocks from block #72877 to block #72881
+[ 2216.813734] free_count 3843 ; rs 7350 ; re 7352
+[ 2216.813735] Empty blocks from block #72886 to block #72888
+[ 2216.813735] free_count 3897 ; rs 7357 ; re 7411
+[ 2216.813736] Empty blocks from block #72893 to block #72947
+[ 2216.813736] free_count 3913 ; rs 7413 ; re 7429
+[ 2216.813737] Empty blocks from block #72949 to block #72965
+[ 2216.813737] free_count 4104 ; rs 7446 ; re 7637
+[ 2216.813738] Empty blocks from block #72982 to block #73173
+[ 2216.813738] free_count 4112 ; rs 7640 ; re 7648
+[ 2216.813739] Empty blocks from block #73176 to block #73184
+[ 2216.813739] free_count 4114 ; rs 7665 ; re 7667
+[ 2216.813739] Empty blocks from block #73201 to block #73203
+[ 2216.813740] free_count 4118 ; rs 7668 ; re 7672
+[ 2216.813740] Empty blocks from block #73204 to block #73208
+[ 2216.813741] free_count 4120 ; rs 7690 ; re 7692
+[ 2216.813741] Empty blocks from block #73226 to block #73228
+[ 2216.813742] free_count 4125 ; rs 7721 ; re 7726
+[ 2216.813742] Empty blocks from block #73257 to block #73262
+[ 2216.813743] free_count 4132 ; rs 7752 ; re 7759
+[ 2216.813743] Empty blocks from block #73288 to block #73295
+[ 2216.813744] free_count 4148 ; rs 7765 ; re 7781
+[ 2216.813744] Empty blocks from block #73301 to block #73317
+[ 2216.813744] free_count 4150 ; rs 7818 ; re 7820
+[ 2216.813745] Empty blocks from block #73354 to block #73356
+[ 2216.813745] free_count 4443 ; rs 7822 ; re 8115
+[ 2216.813746] Empty blocks from block #73358 to block #73651
+[ 2216.813746] free_count 4462 ; rs 8145 ; re 8164
+[ 2216.813747] Empty blocks from block #73681 to block #73700
+[ 2216.813747] free_count 4475 ; rs 8166 ; re 8179
+[ 2216.813748] Empty blocks from block #73702 to block #73715
+[ 2216.813748] free_count 4476 ; rs 8181 ; re 8182
+[ 2216.813748] Empty blocks from block #73717 to block #73718
+[ 2216.813749] free_count 4478 ; rs 8184 ; re 8186
+[ 2216.813749] Empty blocks from block #73720 to block #73722
+[ 2216.813750] free_count 4479 ; rs 8188 ; re 8189
+[ 2216.813750] Empty blocks from block #73724 to block #73725
+[ 2216.813751] free_count 6553 ; rs 8192 ; re 10266
+[ 2216.813751] Empty blocks from block #73728 to block #75802
+[ 2216.813752] free_count 6563 ; rs 10272 ; re 10282
+[ 2216.813752] Empty blocks from block #75808 to block #75818
+[ 2216.813753] free_count 7238 ; rs 10287 ; re 10962
+[ 2216.813753] Empty blocks from block #75823 to block #76498
+[ 2216.813754] free_count 7239 ; rs 10982 ; re 10983
+[ 2216.813754] Empty blocks from block #76518 to block #76519
+[ 2216.813754] free_count 7245 ; rs 10987 ; re 10993
+[ 2216.813755] Empty blocks from block #76523 to block #76529
+[ 2216.813755] free_count 7248 ; rs 10995 ; re 10998
+[ 2216.813756] Empty blocks from block #76531 to block #76534
+[ 2216.813756] free_count 7249 ; rs 11001 ; re 11002
+[ 2216.813757] Empty blocks from block #76537 to block #76538
+[ 2216.813757] free_count 7254 ; rs 11004 ; re 11009
+[ 2216.813758] Empty blocks from block #76540 to block #76545
+[ 2216.813758] free_count 7259 ; rs 11010 ; re 11015
+[ 2216.813758] Empty blocks from block #76546 to block #76551
+[ 2216.813759] free_count 7260 ; rs 11026 ; re 11027
+[ 2216.813759] Empty blocks from block #76562 to block #76563
+[ 2216.813760] free_count 7264 ; rs 11043 ; re 11047
+[ 2216.813760] Empty blocks from block #76579 to block #76583
+[ 2216.813761] free_count 7266 ; rs 11053 ; re 11055
+[ 2216.813761] Empty blocks from block #76589 to block #76591
+[ 2216.813762] free_count 7267 ; rs 11056 ; re 11057
+[ 2216.813762] Empty blocks from block #76592 to block #76593
+[ 2216.813762] free_count 7268 ; rs 11058 ; re 11059
+[ 2216.813763] Empty blocks from block #76594 to block #76595
+[ 2216.813763] free_count 7270 ; rs 11060 ; re 11062
+[ 2216.813764] Empty blocks from block #76596 to block #76598
+[ 2216.813764] free_count 7271 ; rs 11063 ; re 11064
+[ 2216.813765] Empty blocks from block #76599 to block #76600
+[ 2216.813765] free_count 7276 ; rs 11065 ; re 11070
+[ 2216.813766] Empty blocks from block #76601 to block #76606
+[ 2216.813766] free_count 7278 ; rs 11071 ; re 11073
+[ 2216.813766] Empty blocks from block #76607 to block #76609
+[ 2216.813767] free_count 7279 ; rs 11082 ; re 11083
+[ 2216.813767] Empty blocks from block #76618 to block #76619
+[ 2216.813768] free_count 7283 ; rs 11086 ; re 11090
+[ 2216.813768] Empty blocks from block #76622 to block #76626
+[ 2216.813769] free_count 7285 ; rs 11091 ; re 11093
+[ 2216.813769] Empty blocks from block #76627 to block #76629
+[ 2216.813770] free_count 7290 ; rs 11098 ; re 11103
+[ 2216.813770] Empty blocks from block #76634 to block #76639
+[ 2216.813770] free_count 7292 ; rs 11106 ; re 11108
+[ 2216.813771] Empty blocks from block #76642 to block #76644
+[ 2216.813771] free_count 7293 ; rs 11112 ; re 11113
+[ 2216.813772] Empty blocks from block #76648 to block #76649
+[ 2216.813772] free_count 7297 ; rs 11128 ; re 11132
+[ 2216.813773] Empty blocks from block #76664 to block #76668
+[ 2216.813773] free_count 7299 ; rs 11133 ; re 11135
+[ 2216.813774] Empty blocks from block #76669 to block #76671
+[ 2216.813774] free_count 7300 ; rs 11137 ; re 11138
+[ 2216.813774] Empty blocks from block #76673 to block #76674
+[ 2216.813775] free_count 7301 ; rs 11140 ; re 11141
+[ 2216.813775] Empty blocks from block #76676 to block #76677
+[ 2216.813776] free_count 7303 ; rs 11142 ; re 11144
+[ 2216.813776] Empty blocks from block #76678 to block #76680
+[ 2216.813777] free_count 7304 ; rs 11145 ; re 11146
+[ 2216.813777] Empty blocks from block #76681 to block #76682
+[ 2216.813778] free_count 7305 ; rs 11148 ; re 11149
+[ 2216.813778] Empty blocks from block #76684 to block #76685
+[ 2216.813778] free_count 7307 ; rs 11150 ; re 11152
+[ 2216.813779] Empty blocks from block #76686 to block #76688
+[ 2216.813779] free_count 7308 ; rs 11153 ; re 11154
+[ 2216.813780] Empty blocks from block #76689 to block #76690
+[ 2216.813780] free_count 7309 ; rs 11156 ; re 11157
+[ 2216.813781] Empty blocks from block #76692 to block #76693
+[ 2216.813781] free_count 7311 ; rs 11158 ; re 11160
+[ 2216.813782] Empty blocks from block #76694 to block #76696
+[ 2216.813782] free_count 7312 ; rs 11161 ; re 11162
+[ 2216.813782] Empty blocks from block #76697 to block #76698
+[ 2216.813783] free_count 7315 ; rs 11163 ; re 11166
+[ 2216.813783] Empty blocks from block #76699 to block #76702
+[ 2216.813784] free_count 7316 ; rs 11169 ; re 11170
+[ 2216.813784] Empty blocks from block #76705 to block #76706
+[ 2216.813785] free_count 7317 ; rs 11173 ; re 11174
+[ 2216.813785] Empty blocks from block #76709 to block #76710
+[ 2216.813786] free_count 7319 ; rs 11176 ; re 11178
+[ 2216.813786] Empty blocks from block #76712 to block #76714
+[ 2216.813786] free_count 7320 ; rs 11179 ; re 11180
+[ 2216.813787] Empty blocks from block #76715 to block #76716
+[ 2216.813787] free_count 7323 ; rs 11181 ; re 11184
+[ 2216.813788] Empty blocks from block #76717 to block #76720
+[ 2216.813788] free_count 7328 ; rs 11185 ; re 11190
+[ 2216.813789] Empty blocks from block #76721 to block #76726
+[ 2216.813789] free_count 7330 ; rs 11191 ; re 11193
+[ 2216.813790] Empty blocks from block #76727 to block #76729
+[ 2216.813790] free_count 7335 ; rs 11194 ; re 11199
+[ 2216.813790] Empty blocks from block #76730 to block #76735
+[ 2216.813791] free_count 7341 ; rs 11200 ; re 11206
+[ 2216.813791] Empty blocks from block #76736 to block #76742
+[ 2216.813792] free_count 7345 ; rs 11207 ; re 11211
+[ 2216.813792] Empty blocks from block #76743 to block #76747
+[ 2216.813793] free_count 7350 ; rs 11212 ; re 11217
+[ 2216.813793] Empty blocks from block #76748 to block #76753
+[ 2216.813794] free_count 7352 ; rs 11218 ; re 11220
+[ 2216.813794] Empty blocks from block #76754 to block #76756
+[ 2216.813794] free_count 7353 ; rs 11223 ; re 11224
+[ 2216.813795] Empty blocks from block #76759 to block #76760
+[ 2216.813795] free_count 7354 ; rs 11229 ; re 11230
+[ 2216.813796] Empty blocks from block #76765 to block #76766
+[ 2216.813796] free_count 7356 ; rs 11232 ; re 11234
+[ 2216.813797] Empty blocks from block #76768 to block #76770
+[ 2216.813797] free_count 7357 ; rs 11236 ; re 11237
+[ 2216.813798] Empty blocks from block #76772 to block #76773
+[ 2216.813798] free_count 7358 ; rs 11240 ; re 11241
+[ 2216.813798] Empty blocks from block #76776 to block #76777
+[ 2216.813799] free_count 7368 ; rs 11242 ; re 11252
+[ 2216.813799] Empty blocks from block #76778 to block #76788
+[ 2216.813800] free_count 7370 ; rs 11253 ; re 11255
+[ 2216.813800] Empty blocks from block #76789 to block #76791
+[ 2216.813801] free_count 7804 ; rs 11256 ; re 11690
+[ 2216.813801] Empty blocks from block #76792 to block #77226
+[ 2216.813802] free_count 7807 ; rs 11707 ; re 11710
+[ 2216.813802] Empty blocks from block #77243 to block #77246
+[ 2216.813803] free_count 7810 ; rs 11834 ; re 11837
+[ 2216.813803] Empty blocks from block #77370 to block #77373
+[ 2216.813803] free_count 7812 ; rs 11840 ; re 11842
+[ 2216.813804] Empty blocks from block #77376 to block #77378
+[ 2216.813804] free_count 7822 ; rs 11861 ; re 11871
+[ 2216.813805] Empty blocks from block #77397 to block #77407
+[ 2216.813805] free_count 7835 ; rs 11895 ; re 11908
+[ 2216.813806] Empty blocks from block #77431 to block #77444
+[ 2216.813806] free_count 7860 ; rs 11922 ; re 11947
+[ 2216.813806] Empty blocks from block #77458 to block #77483
+[ 2216.813807] free_count 7873 ; rs 11954 ; re 11967
+[ 2216.813807] Empty blocks from block #77490 to block #77503
+[ 2216.813808] free_count 8015 ; rs 11985 ; re 12127
+[ 2216.813808] Empty blocks from block #77521 to block #77663
+[ 2216.813809] free_count 8017 ; rs 12141 ; re 12143
+[ 2216.813809] Empty blocks from block #77677 to block #77679
+[ 2216.813810] free_count 8023 ; rs 12149 ; re 12155
+[ 2216.813810] Empty blocks from block #77685 to block #77691
+[ 2216.813811] free_count 8029 ; rs 12161 ; re 12167
+[ 2216.813811] Empty blocks from block #77697 to block #77703
+[ 2216.813811] free_count 8039 ; rs 12176 ; re 12186
+[ 2216.813812] Empty blocks from block #77712 to block #77722
+[ 2216.813812] free_count 8081 ; rs 12191 ; re 12233
+[ 2216.813813] Empty blocks from block #77727 to block #77769
+[ 2216.813813] free_count 8084 ; rs 12288 ; re 12291
+[ 2216.813814] Empty blocks from block #77824 to block #77827
+[ 2216.813814] free_count 8092 ; rs 12292 ; re 12300
+[ 2216.813815] Empty blocks from block #77828 to block #77836
+[ 2216.813815] free_count 8096 ; rs 12303 ; re 12307
+[ 2216.813815] Empty blocks from block #77839 to block #77843
+[ 2216.813850] free_count 8132 ; rs 12324 ; re 12360
+[ 2216.813850] Empty blocks from block #77860 to block #77896
+[ 2216.813851] free_count 8134 ; rs 12366 ; re 12368
+[ 2216.813851] Empty blocks from block #77902 to block #77904
+[ 2216.813852] free_count 8136 ; rs 12374 ; re 12376
+[ 2216.813852] Empty blocks from block #77910 to block #77912
+[ 2216.813852] free_count 8138 ; rs 12378 ; re 12380
+[ 2216.813853] Empty blocks from block #77914 to block #77916
+[ 2216.813853] free_count 8140 ; rs 12381 ; re 12383
+[ 2216.813854] Empty blocks from block #77917 to block #77919
+[ 2216.813854] free_count 8142 ; rs 12387 ; re 12389
+[ 2216.813855] Empty blocks from block #77923 to block #77925
+[ 2216.813855] free_count 8143 ; rs 12390 ; re 12391
+[ 2216.813856] Empty blocks from block #77926 to block #77927
+[ 2216.813856] free_count 8144 ; rs 12393 ; re 12394
+[ 2216.813856] Empty blocks from block #77929 to block #77930
+[ 2216.813857] free_count 8145 ; rs 12395 ; re 12396
+[ 2216.813857] Empty blocks from block #77931 to block #77932
+[ 2216.813858] free_count 8146 ; rs 12397 ; re 12398
+[ 2216.813858] Empty blocks from block #77933 to block #77934
+[ 2216.813859] free_count 8155 ; rs 12400 ; re 12409
+[ 2216.813859] Empty blocks from block #77936 to block #77945
+[ 2216.813860] free_count 8158 ; rs 12411 ; re 12414
+[ 2216.813860] Empty blocks from block #77947 to block #77950
+[ 2216.813860] free_count 8159 ; rs 12416 ; re 12417
+[ 2216.813861] Empty blocks from block #77952 to block #77953
+[ 2216.813861] free_count 8177 ; rs 12418 ; re 12436
+[ 2216.813862] Empty blocks from block #77954 to block #77972
+[ 2216.813862] free_count 8184 ; rs 12437 ; re 12444
+[ 2216.813863] Empty blocks from block #77973 to block #77980
+[ 2216.813863] free_count 8194 ; rs 12447 ; re 12457
+[ 2216.813864] Empty blocks from block #77983 to block #77993
+[ 2216.813864] free_count 8195 ; rs 12467 ; re 12468
+[ 2216.813865] Empty blocks from block #78003 to block #78004
+[ 2216.813865] free_count 8196 ; rs 12474 ; re 12475
+[ 2216.813865] Empty blocks from block #78010 to block #78011
+[ 2216.813866] free_count 8199 ; rs 12714 ; re 12717
+[ 2216.813866] Empty blocks from block #78250 to block #78253
+[ 2216.813867] free_count 8209 ; rs 12726 ; re 12736
+[ 2216.813867] Empty blocks from block #78262 to block #78272
+[ 2216.813868] free_count 8223 ; rs 12738 ; re 12752
+[ 2216.813868] Empty blocks from block #78274 to block #78288
+[ 2216.813869] free_count 8244 ; rs 12776 ; re 12797
+[ 2216.813869] Empty blocks from block #78312 to block #78333
+[ 2216.813869] free_count 8251 ; rs 12812 ; re 12819
+[ 2216.813870] Empty blocks from block #78348 to block #78355
+[ 2216.813870] free_count 8261 ; rs 12846 ; re 12856
+[ 2216.813871] Empty blocks from block #78382 to block #78392
+[ 2216.813871] free_count 8310 ; rs 12864 ; re 12913
+[ 2216.813872] Empty blocks from block #78400 to block #78449
+[ 2216.813872] free_count 8341 ; rs 12933 ; re 12964
+[ 2216.813873] Empty blocks from block #78469 to block #78500
+[ 2216.813873] free_count 8346 ; rs 12966 ; re 12971
+[ 2216.813873] Empty blocks from block #78502 to block #78507
+[ 2216.813874] free_count 8348 ; rs 12972 ; re 12974
+[ 2216.813874] Empty blocks from block #78508 to block #78510
+[ 2216.813875] free_count 8349 ; rs 12989 ; re 12990
+[ 2216.813875] Empty blocks from block #78525 to block #78526
+[ 2216.813876] free_count 8352 ; rs 12991 ; re 12994
+[ 2216.813876] Empty blocks from block #78527 to block #78530
+[ 2216.813877] free_count 8353 ; rs 12995 ; re 12996
+[ 2216.813877] Empty blocks from block #78531 to block #78532
+[ 2216.813877] free_count 8355 ; rs 13005 ; re 13007
+[ 2216.813878] Empty blocks from block #78541 to block #78543
+[ 2216.813878] free_count 8360 ; rs 13008 ; re 13013
+[ 2216.813879] Empty blocks from block #78544 to block #78549
+[ 2216.813879] free_count 8362 ; rs 13014 ; re 13016
+[ 2216.813880] Empty blocks from block #78550 to block #78552
+[ 2216.813880] free_count 8363 ; rs 13017 ; re 13018
+[ 2216.813880] Empty blocks from block #78553 to block #78554
+[ 2216.813881] free_count 8369 ; rs 13019 ; re 13025
+[ 2216.813881] Empty blocks from block #78555 to block #78561
+[ 2216.813882] free_count 8374 ; rs 13026 ; re 13031
+[ 2216.813882] Empty blocks from block #78562 to block #78567
+[ 2216.813883] free_count 8403 ; rs 13032 ; re 13061
+[ 2216.813883] Empty blocks from block #78568 to block #78597
+[ 2216.813884] free_count 8445 ; rs 13069 ; re 13111
+[ 2216.813884] Empty blocks from block #78605 to block #78647
+[ 2216.813885] free_count 8644 ; rs 13113 ; re 13312
+[ 2216.813885] Empty blocks from block #78649 to block #78848
+[ 2216.813885] free_count 9133 ; rs 13420 ; re 13909
+[ 2216.813886] Empty blocks from block #78956 to block #79445
+[ 2216.813886] free_count 9259 ; rs 13910 ; re 14036
+[ 2216.813887] Empty blocks from block #79446 to block #79572
+[ 2216.813887] free_count 9403 ; rs 14037 ; re 14181
+[ 2216.813888] Empty blocks from block #79573 to block #79717
+[ 2216.813888] free_count 9419 ; rs 14182 ; re 14198
+[ 2216.813889] Empty blocks from block #79718 to block #79734
+[ 2216.813889] free_count 9483 ; rs 14210 ; re 14274
+[ 2216.813889] Empty blocks from block #79746 to block #79810
+[ 2216.813890] free_count 9486 ; rs 14287 ; re 14290
+[ 2216.813890] Empty blocks from block #79823 to block #79826
+[ 2216.813891] free_count 9506 ; rs 14291 ; re 14311
+[ 2216.813891] Empty blocks from block #79827 to block #79847
+[ 2216.813892] free_count 9528 ; rs 14314 ; re 14336
+[ 2216.813892] Empty blocks from block #79850 to block #79872
+[ 2216.813893] free_count 9533 ; rs 28405 ; re 28410
+[ 2216.813893] Empty blocks from block #93941 to block #93946
+[ 2216.813894] free_count 9534 ; rs 28412 ; re 28413
+[ 2216.813894] Empty blocks from block #93948 to block #93949
+[ 2216.813895] free_count 9535 ; rs 28415 ; re 28416
+[ 2216.813895] Empty blocks from block #93951 to block #93952
+[ 2216.813896] free_count 9536 ; rs 28567 ; re 28568
+[ 2216.813896] Empty blocks from block #94103 to block #94104
+[ 2216.813897] free_count 9606 ; rs 28602 ; re 28672
+[ 2216.813897] Empty blocks from block #94138 to block #94208
+[ 2216.813898] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 2: stored = 9606, counted = 9606
+[ 2216.813899] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 2 ------
+[ 2216.813899] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 3 ------
+[ 2216.813902] bitmap_for_each_clear_region
+[ 2216.813902] nbits 32768
+[ 2216.813903] free_count 15 ; rs 817 ; re 832
+[ 2216.813903] Empty blocks from block #99121 to block #99136
+[ 2216.813904] free_count 37 ; rs 874 ; re 896
+[ 2216.813904] Empty blocks from block #99178 to block #99200
+[ 2216.813905] free_count 41 ; rs 988 ; re 992
+[ 2216.813905] Empty blocks from block #99292 to block #99296
+[ 2216.813905] free_count 45 ; rs 1020 ; re 1024
+[ 2216.813906] Empty blocks from block #99324 to block #99328
+[ 2216.813906] free_count 76 ; rs 1313 ; re 1344
+[ 2216.813907] Empty blocks from block #99617 to block #99648
+[ 2216.813907] free_count 174 ; rs 1406 ; re 1504
+[ 2216.813908] Empty blocks from block #99710 to block #99808
+[ 2216.813908] free_count 181 ; rs 1529 ; re 1536
+[ 2216.813909] Empty blocks from block #99833 to block #99840
+[ 2216.813909] free_count 202 ; rs 1995 ; re 2016
+[ 2216.813910] Empty blocks from block #100299 to block #100320
+[ 2216.813910] free_count 211 ; rs 2039 ; re 2048
+[ 2216.813911] Empty blocks from block #100343 to block #100352
+[ 2216.813911] free_count 218 ; rs 12665 ; re 12672
+[ 2216.813912] Empty blocks from block #110969 to block #110976
+[ 2216.813912] free_count 281 ; rs 12737 ; re 12800
+[ 2216.813913] Empty blocks from block #111041 to block #111104
+[ 2216.813913] free_count 396 ; rs 13197 ; re 13312
+[ 2216.813914] Empty blocks from block #111501 to block #111616
+[ 2216.813914] free_count 1069 ; rs 13663 ; re 14336
+[ 2216.813915] Empty blocks from block #111967 to block #112640
+[ 2216.813916] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 3: stored = 1069, counted = 1069
+[ 2216.813916] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 3 ------
+[ 2216.813917] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 4 ------
+[ 2216.813919] bitmap_for_each_clear_region
+[ 2216.813919] nbits 32768
+[ 2216.813920] free_count 9 ; rs 26135 ; re 26144
+[ 2216.813920] Empty blocks from block #157207 to block #157216
+[ 2216.813921] free_count 16 ; rs 26169 ; re 26176
+[ 2216.813921] Empty blocks from block #157241 to block #157248
+[ 2216.813922] free_count 246 ; rs 26394 ; re 26624
+[ 2216.813922] Empty blocks from block #157466 to block #157696
+[ 2216.813923] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 4: stored = 246, counted = 246
+[ 2216.813924] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 4 ------
+[ 2216.813924] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 5 ------
+[ 2216.813926] bitmap_for_each_clear_region
+[ 2216.813926] nbits 32768
+[ 2216.813927] free_count 125 ; rs 1923 ; re 2048
+[ 2216.813927] Empty blocks from block #165763 to block #165888
+[ 2216.813928] free_count 158 ; rs 14303 ; re 14336
+[ 2216.813928] Empty blocks from block #178143 to block #178176
+[ 2216.813930] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 5: stored = 158, counted = 158
+[ 2216.813930] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 5 ------
+[ 2216.813931] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 6 ------
+[ 2216.813932] bitmap_for_each_clear_region
+[ 2216.813932] nbits 32768
+[ 2216.813933] free_count 60 ; rs 8196 ; re 8256
+[ 2216.813934] Empty blocks from block #204804 to block #204864
+[ 2216.813934] free_count 161 ; rs 8571 ; re 8672
+[ 2216.813934] Empty blocks from block #205179 to block #205280
+[ 2216.813935] free_count 195 ; rs 10206 ; re 10240
+[ 2216.813935] Empty blocks from block #206814 to block #206848
+[ 2216.813936] free_count 226 ; rs 10471 ; re 10502
+[ 2216.813936] Empty blocks from block #207079 to block #207110
+[ 2216.813937] free_count 1909 ; rs 10605 ; re 12288
+[ 2216.813937] Empty blocks from block #207213 to block #208896
+[ 2216.813938] free_count 1988 ; rs 12657 ; re 12736
+[ 2216.813938] Empty blocks from block #209265 to block #209344
+[ 2216.813939] free_count 2003 ; rs 12785 ; re 12800
+[ 2216.813939] Empty blocks from block #209393 to block #209408
+[ 2216.813940] free_count 2010 ; rs 13689 ; re 13696
+[ 2216.813940] Empty blocks from block #210297 to block #210304
+[ 2216.813941] free_count 2563 ; rs 13783 ; re 14336
+[ 2216.813941] Empty blocks from block #210391 to block #210944
+[ 2216.813942] free_count 2708 ; rs 16239 ; re 16384
+[ 2216.813942] Empty blocks from block #212847 to block #212992
+[ 2216.813943] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 6: stored = 2708, counted = 2708
+[ 2216.813944] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 6 ------
+[ 2216.813944] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 7 ------
+[ 2216.813948] bitmap_for_each_clear_region
+[ 2216.813948] nbits 32768
+[ 2216.813949] free_count 17 ; rs 1135 ; re 1152
+[ 2216.813949] Empty blocks from block #230511 to block #230528
+[ 2216.813950] free_count 36 ; rs 1178 ; re 1197
+[ 2216.813950] Empty blocks from block #230554 to block #230573
+[ 2216.813951] free_count 118 ; rs 1198 ; re 1280
+[ 2216.813951] Empty blocks from block #230574 to block #230656
+[ 2216.813952] free_count 148 ; rs 1410 ; re 1440
+[ 2216.813952] Empty blocks from block #230786 to block #230816
+[ 2216.813953] free_count 331 ; rs 1865 ; re 2048
+[ 2216.813953] Empty blocks from block #231241 to block #231424
+[ 2216.813954] free_count 432 ; rs 4267 ; re 4368
+[ 2216.813954] Empty blocks from block #233643 to block #233744
+[ 2216.813955] free_count 1353 ; rs 5223 ; re 6144
+[ 2216.813955] Empty blocks from block #234599 to block #235520
+[ 2216.813956] free_count 18099 ; rs 16022 ; re 32768
+[ 2216.813956] Empty blocks from block #245398 to block #262144
+[ 2216.813957] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 7: stored = 18099, counted = 18099
+[ 2216.813958] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 7 ------
+[ 2216.813958] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 8 ------
+[ 2216.813960] bitmap_for_each_clear_region
+[ 2216.813960] nbits 32768
+[ 2216.813961] free_count 1113 ; rs 0 ; re 1113
+[ 2216.813961] Empty blocks from block #262144 to block #263257
+[ 2216.813962] free_count 12115 ; rs 3334 ; re 14336
+[ 2216.813962] Empty blocks from block #265478 to block #276480
+[ 2216.813963] free_count 28632 ; rs 16251 ; re 32768
+[ 2216.813964] Empty blocks from block #278395 to block #294912
+[ 2216.813965] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 8: stored = 28632, counted = 28632
+[ 2216.813965] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 8 ------
+[ 2216.813966] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 9 ------
+[ 2216.813968] bitmap_for_each_clear_region
+[ 2216.813968] nbits 32768
+[ 2216.813969] free_count 31951 ; rs 817 ; re 32768
+[ 2216.813970] Empty blocks from block #295729 to block #327680
+[ 2216.813970] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 9: stored = 31951, counted = 31951
+[ 2216.813971] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 9 ------
+[ 2216.813971] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 10 ------
+[ 2216.813973] bitmap_for_each_clear_region
+[ 2216.813973] nbits 32768
+[ 2216.813974] free_count 2 ; rs 1630 ; re 1632
+[ 2216.813974] Empty blocks from block #329310 to block #329312
+[ 2216.813975] free_count 13 ; rs 1653 ; re 1664
+[ 2216.813975] Empty blocks from block #329333 to block #329344
+[ 2216.813976] free_count 22 ; rs 1751 ; re 1760
+[ 2216.813976] Empty blocks from block #329431 to block #329440
+[ 2216.813977] free_count 169 ; rs 1781 ; re 1928
+[ 2216.813977] Empty blocks from block #329461 to block #329608
+[ 2216.813978] free_count 170 ; rs 1951 ; re 1952
+[ 2216.813978] Empty blocks from block #329631 to block #329632
+[ 2216.813979] free_count 183 ; rs 1971 ; re 1984
+[ 2216.813979] Empty blocks from block #329651 to block #329664
+[ 2216.813980] free_count 211 ; rs 2020 ; re 2048
+[ 2216.813980] Empty blocks from block #329700 to block #329728
+[ 2216.813981] free_count 434 ; rs 6177 ; re 6400
+[ 2216.813981] Empty blocks from block #333857 to block #334080
+[ 2216.813982] free_count 464 ; rs 6466 ; re 6496
+[ 2216.813982] Empty blocks from block #334146 to block #334176
+[ 2216.813983] free_count 477 ; rs 6515 ; re 6528
+[ 2216.813983] Empty blocks from block #334195 to block #334208
+[ 2216.813983] free_count 483 ; rs 6554 ; re 6560
+[ 2216.813984] Empty blocks from block #334234 to block #334240
+[ 2216.813984] free_count 484 ; rs 6591 ; re 6592
+[ 2216.813985] Empty blocks from block #334271 to block #334272
+[ 2216.813985] free_count 515 ; rs 6625 ; re 6656
+[ 2216.813986] Empty blocks from block #334305 to block #334336
+[ 2216.813986] free_count 614 ; rs 6813 ; re 6912
+[ 2216.813987] Empty blocks from block #334493 to block #334592
+[ 2216.813987] free_count 639 ; rs 7015 ; re 7040
+[ 2216.813988] Empty blocks from block #334695 to block #334720
+[ 2216.813988] free_count 657 ; rs 7086 ; re 7104
+[ 2216.813988] Empty blocks from block #334766 to block #334784
+[ 2216.813989] free_count 676 ; rs 7123 ; re 7142
+[ 2216.813989] Empty blocks from block #334803 to block #334822
+[ 2216.813990] free_count 7541 ; rs 7151 ; re 14016
+[ 2216.813991] Empty blocks from block #334831 to block #341696
+[ 2216.813991] free_count 13966 ; rs 14055 ; re 20480
+[ 2216.813992] Empty blocks from block #341735 to block #348160
+[ 2216.813992] free_count 15737 ; rs 20757 ; re 22528
+[ 2216.813993] Empty blocks from block #348437 to block #350208
+[ 2216.813993] free_count 16169 ; rs 32336 ; re 32768
+[ 2216.813994] Empty blocks from block #360016 to block #360448
+[ 2216.813995] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 10: stored = 16169, counted = 16169
+[ 2216.813995] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 10 ------
+[ 2216.813996] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 11 ------
+[ 2216.813997] bitmap_for_each_clear_region
+[ 2216.813998] nbits 32768
+[ 2216.813998] free_count 2144 ; rs 0 ; re 2144
+[ 2216.813999] Empty blocks from block #360448 to block #362592
+[ 2216.813999] free_count 2151 ; rs 2169 ; re 2176
+[ 2216.814000] Empty blocks from block #362617 to block #362624
+[ 2216.814000] free_count 2163 ; rs 2292 ; re 2304
+[ 2216.814001] Empty blocks from block #362740 to block #362752
+[ 2216.814001] free_count 2186 ; rs 2441 ; re 2464
+[ 2216.814002] Empty blocks from block #362889 to block #362912
+[ 2216.814002] free_count 2198 ; rs 2484 ; re 2496
+[ 2216.814002] Empty blocks from block #362932 to block #362944
+[ 2216.814003] free_count 2227 ; rs 2531 ; re 2560
+[ 2216.814003] Empty blocks from block #362979 to block #363008
+[ 2216.814004] free_count 2302 ; rs 2869 ; re 2944
+[ 2216.814004] Empty blocks from block #363317 to block #363392
+[ 2216.814005] free_count 2693 ; rs 3065 ; re 3456
+[ 2216.814005] Empty blocks from block #363513 to block #363904
+[ 2216.814006] free_count 3235 ; rs 3554 ; re 4096
+[ 2216.814006] Empty blocks from block #364002 to block #364544
+[ 2216.814007] free_count 3274 ; rs 6873 ; re 6912
+[ 2216.814007] Empty blocks from block #367321 to block #367360
+[ 2216.814008] free_count 3310 ; rs 7132 ; re 7168
+[ 2216.814008] Empty blocks from block #367580 to block #367616
+[ 2216.814009] free_count 3438 ; rs 7552 ; re 7680
+[ 2216.814009] Empty blocks from block #368000 to block #368128
+[ 2216.814010] free_count 3634 ; rs 7996 ; re 8192
+[ 2216.814010] Empty blocks from block #368444 to block #368640
+[ 2216.814011] free_count 27995 ; rs 8407 ; re 32768
+[ 2216.814012] Empty blocks from block #368855 to block #393216
+[ 2216.814013] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 11: stored = 27995, counted = 27995
+[ 2216.814013] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 11 ------
+[ 2216.814014] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 12 ------
+[ 2216.814015] bitmap_for_each_clear_region
+[ 2216.814015] nbits 32768
+[ 2216.814016] free_count 2 ; rs 2 ; re 4
+[ 2216.814016] Empty blocks from block #393218 to block #393220
+[ 2216.814017] free_count 3 ; rs 9 ; re 10
+[ 2216.814017] Empty blocks from block #393225 to block #393226
+[ 2216.814018] free_count 4 ; rs 12 ; re 13
+[ 2216.814018] Empty blocks from block #393228 to block #393229
+[ 2216.814019] free_count 5 ; rs 19 ; re 20
+[ 2216.814019] Empty blocks from block #393235 to block #393236
+[ 2216.814020] free_count 9 ; rs 60 ; re 64
+[ 2216.814020] Empty blocks from block #393276 to block #393280
+[ 2216.814021] free_count 13 ; rs 148 ; re 152
+[ 2216.814021] Empty blocks from block #393364 to block #393368
+[ 2216.814022] free_count 14 ; rs 155 ; re 156
+[ 2216.814022] Empty blocks from block #393371 to block #393372
+[ 2216.814023] free_count 43 ; rs 157 ; re 186
+[ 2216.814023] Empty blocks from block #393373 to block #393402
+[ 2216.814024] free_count 44 ; rs 189 ; re 190
+[ 2216.814024] Empty blocks from block #393405 to block #393406
+[ 2216.814025] free_count 46 ; rs 192 ; re 194
+[ 2216.814025] Empty blocks from block #393408 to block #393410
+[ 2216.814026] free_count 64 ; rs 232 ; re 250
+[ 2216.814026] Empty blocks from block #393448 to block #393466
+[ 2216.814026] free_count 68 ; rs 252 ; re 256
+[ 2216.814027] Empty blocks from block #393468 to block #393472
+[ 2216.814027] free_count 76 ; rs 280 ; re 288
+[ 2216.814028] Empty blocks from block #393496 to block #393504
+[ 2216.814028] free_count 88 ; rs 296 ; re 308
+[ 2216.814029] Empty blocks from block #393512 to block #393524
+[ 2216.814029] free_count 148 ; rs 310 ; re 370
+[ 2216.814030] Empty blocks from block #393526 to block #393586
+[ 2216.814030] free_count 149 ; rs 508 ; re 509
+[ 2216.814031] Empty blocks from block #393724 to block #393725
+[ 2216.814031] free_count 150 ; rs 510 ; re 511
+[ 2216.814032] Empty blocks from block #393726 to block #393727
+[ 2216.814032] free_count 174 ; rs 577 ; re 601
+[ 2216.814033] Empty blocks from block #393793 to block #393817
+[ 2216.814033] free_count 209 ; rs 3662 ; re 3697
+[ 2216.814034] Empty blocks from block #396878 to block #396913
+[ 2216.814034] free_count 228 ; rs 4205 ; re 4224
+[ 2216.814035] Empty blocks from block #397421 to block #397440
+[ 2216.814035] free_count 268 ; rs 4248 ; re 4288
+[ 2216.814035] Empty blocks from block #397464 to block #397504
+[ 2216.814036] free_count 318 ; rs 4290 ; re 4340
+[ 2216.814036] Empty blocks from block #397506 to block #397556
+[ 2216.814037] free_count 442 ; rs 4480 ; re 4604
+[ 2216.814037] Empty blocks from block #397696 to block #397820
+[ 2216.814038] free_count 509 ; rs 4605 ; re 4672
+[ 2216.814038] Empty blocks from block #397821 to block #397888
+[ 2216.814039] free_count 664 ; rs 4709 ; re 4864
+[ 2216.814039] Empty blocks from block #397925 to block #398080
+[ 2216.814040] free_count 674 ; rs 4918 ; re 4928
+[ 2216.814040] Empty blocks from block #398134 to block #398144
+[ 2216.814041] free_count 718 ; rs 4948 ; re 4992
+[ 2216.814041] Empty blocks from block #398164 to block #398208
+[ 2216.814042] free_count 1069 ; rs 5083 ; re 5434
+[ 2216.814042] Empty blocks from block #398299 to block #398650
+[ 2216.814043] free_count 1074 ; rs 5435 ; re 5440
+[ 2216.814043] Empty blocks from block #398651 to block #398656
+[ 2216.814043] free_count 1103 ; rs 5475 ; re 5504
+[ 2216.814044] Empty blocks from block #398691 to block #398720
+[ 2216.814044] free_count 1441 ; rs 5550 ; re 5888
+[ 2216.814045] Empty blocks from block #398766 to block #399104
+[ 2216.814052] free_count 1616 ; rs 5968 ; re 6143
+[ 2216.814053] Empty blocks from block #399184 to block #399359
+[ 2216.814053] free_count 1856 ; rs 6144 ; re 6384
+[ 2216.814053] Empty blocks from block #399360 to block #399600
+[ 2216.814054] free_count 1857 ; rs 6403 ; re 6404
+[ 2216.814054] Empty blocks from block #399619 to block #399620
+[ 2216.814055] free_count 1861 ; rs 6408 ; re 6412
+[ 2216.814055] Empty blocks from block #399624 to block #399628
+[ 2216.814056] free_count 1862 ; rs 6413 ; re 6414
+[ 2216.814056] Empty blocks from block #399629 to block #399630
+[ 2216.814057] free_count 1864 ; rs 6417 ; re 6419
+[ 2216.814057] Empty blocks from block #399633 to block #399635
+[ 2216.814058] free_count 1866 ; rs 6420 ; re 6422
+[ 2216.814058] Empty blocks from block #399636 to block #399638
+[ 2216.814059] free_count 1868 ; rs 6423 ; re 6425
+[ 2216.814059] Empty blocks from block #399639 to block #399641
+[ 2216.814060] free_count 1876 ; rs 6426 ; re 6434
+[ 2216.814060] Empty blocks from block #399642 to block #399650
+[ 2216.814061] free_count 1882 ; rs 6442 ; re 6448
+[ 2216.814061] Empty blocks from block #399658 to block #399664
+[ 2216.814061] free_count 1891 ; rs 6478 ; re 6487
+[ 2216.814062] Empty blocks from block #399694 to block #399703
+[ 2216.814062] free_count 1896 ; rs 6643 ; re 6648
+[ 2216.814063] Empty blocks from block #399859 to block #399864
+[ 2216.814063] free_count 1899 ; rs 6653 ; re 6656
+[ 2216.814064] Empty blocks from block #399869 to block #399872
+[ 2216.814064] free_count 2377 ; rs 6690 ; re 7168
+[ 2216.814065] Empty blocks from block #399906 to block #400384
+[ 2216.814065] free_count 2487 ; rs 8594 ; re 8704
+[ 2216.814066] Empty blocks from block #401810 to block #401920
+[ 2216.814066] free_count 2505 ; rs 8705 ; re 8723
+[ 2216.814067] Empty blocks from block #401921 to block #401939
+[ 2216.814067] free_count 2535 ; rs 8725 ; re 8755
+[ 2216.814068] Empty blocks from block #401941 to block #401971
+[ 2216.814068] free_count 2598 ; rs 8756 ; re 8819
+[ 2216.814069] Empty blocks from block #401972 to block #402035
+[ 2216.814069] free_count 2711 ; rs 8820 ; re 8933
+[ 2216.814069] Empty blocks from block #402036 to block #402149
+[ 2216.814070] free_count 2993 ; rs 8934 ; re 9216
+[ 2216.814070] Empty blocks from block #402150 to block #402432
+[ 2216.814071] free_count 5041 ; rs 10240 ; re 12288
+[ 2216.814071] Empty blocks from block #403456 to block #405504
+[ 2216.814072] free_count 5340 ; rs 15573 ; re 15872
+[ 2216.814072] Empty blocks from block #408789 to block #409088
+[ 2216.814073] free_count 5944 ; rs 20900 ; re 21504
+[ 2216.814074] Empty blocks from block #414116 to block #414720
+[ 2216.814074] free_count 6320 ; rs 21640 ; re 22016
+[ 2216.814074] Empty blocks from block #414856 to block #415232
+[ 2216.814075] free_count 16424 ; rs 22664 ; re 32768
+[ 2216.814076] Empty blocks from block #415880 to block #425984
+[ 2216.814077] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 12: stored = 16424, counted = 16424
+[ 2216.814077] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 12 ------
+[ 2216.814078] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 13 ------
+[ 2216.814079] bitmap_for_each_clear_region
+[ 2216.814080] nbits 32768
+[ 2216.814080] free_count 1696 ; rs 0 ; re 1696
+[ 2216.814081] Empty blocks from block #425984 to block #427680
+[ 2216.814081] free_count 1706 ; rs 1718 ; re 1728
+[ 2216.814082] Empty blocks from block #427702 to block #427712
+[ 2216.814082] free_count 1731 ; rs 1991 ; re 2016
+[ 2216.814083] Empty blocks from block #427975 to block #428000
+[ 2216.814083] free_count 11974 ; rs 2045 ; re 12288
+[ 2216.814084] Empty blocks from block #428029 to block #438272
+[ 2216.814084] free_count 12000 ; rs 12838 ; re 12864
+[ 2216.814085] Empty blocks from block #438822 to block #438848
+[ 2216.814085] free_count 12019 ; rs 12909 ; re 12928
+[ 2216.814086] Empty blocks from block #438893 to block #438912
+[ 2216.814086] free_count 12033 ; rs 13010 ; re 13024
+[ 2216.814087] Empty blocks from block #438994 to block #439008
+[ 2216.814087] free_count 12041 ; rs 13048 ; re 13056
+[ 2216.814088] Empty blocks from block #439032 to block #439040
+[ 2216.814088] free_count 12070 ; rs 13123 ; re 13152
+[ 2216.814089] Empty blocks from block #439107 to block #439136
+[ 2216.814089] free_count 12079 ; rs 13175 ; re 13184
+[ 2216.814090] Empty blocks from block #439159 to block #439168
+[ 2216.814090] free_count 12094 ; rs 13265 ; re 13280
+[ 2216.814090] Empty blocks from block #439249 to block #439264
+[ 2216.814091] free_count 12095 ; rs 13311 ; re 13312
+[ 2216.814091] Empty blocks from block #439295 to block #439296
+[ 2216.814092] free_count 12126 ; rs 14241 ; re 14272
+[ 2216.814092] Empty blocks from block #440225 to block #440256
+[ 2216.814093] free_count 12137 ; rs 14325 ; re 14336
+[ 2216.814093] Empty blocks from block #440309 to block #440320
+[ 2216.814094] free_count 12157 ; rs 14540 ; re 14560
+[ 2216.814094] Empty blocks from block #440524 to block #440544
+[ 2216.814095] free_count 12163 ; rs 14586 ; re 14592
+[ 2216.814095] Empty blocks from block #440570 to block #440576
+[ 2216.814096] free_count 12173 ; rs 14710 ; re 14720
+[ 2216.814096] Empty blocks from block #440694 to block #440704
+[ 2216.814097] free_count 12183 ; rs 14838 ; re 14848
+[ 2216.814097] Empty blocks from block #440822 to block #440832
+[ 2216.814098] free_count 12188 ; rs 15163 ; re 15168
+[ 2216.814098] Empty blocks from block #441147 to block #441152
+[ 2216.814099] free_count 12195 ; rs 15225 ; re 15232
+[ 2216.814099] Empty blocks from block #441209 to block #441216
+[ 2216.814099] free_count 12205 ; rs 15350 ; re 15360
+[ 2216.814100] Empty blocks from block #441334 to block #441344
+[ 2216.814100] free_count 12220 ; rs 15409 ; re 15424
+[ 2216.814101] Empty blocks from block #441393 to block #441408
+[ 2216.814101] free_count 12246 ; rs 15462 ; re 15488
+[ 2216.814102] Empty blocks from block #441446 to block #441472
+[ 2216.814102] free_count 12269 ; rs 15593 ; re 15616
+[ 2216.814103] Empty blocks from block #441577 to block #441600
+[ 2216.814103] free_count 12286 ; rs 15791 ; re 15808
+[ 2216.814104] Empty blocks from block #441775 to block #441792
+[ 2216.814104] free_count 12311 ; rs 15847 ; re 15872
+[ 2216.814105] Empty blocks from block #441831 to block #441856
+[ 2216.814105] free_count 12327 ; rs 16336 ; re 16352
+[ 2216.814106] Empty blocks from block #442320 to block #442336
+[ 2216.814106] free_count 12340 ; rs 16371 ; re 16384
+[ 2216.814106] Empty blocks from block #442355 to block #442368
+[ 2216.814107] free_count 12349 ; rs 16439 ; re 16448
+[ 2216.814107] Empty blocks from block #442423 to block #442432
+[ 2216.814108] free_count 12362 ; rs 16499 ; re 16512
+[ 2216.814108] Empty blocks from block #442483 to block #442496
+[ 2216.814109] free_count 12390 ; rs 16580 ; re 16608
+[ 2216.814109] Empty blocks from block #442564 to block #442592
+[ 2216.814110] free_count 12396 ; rs 16634 ; re 16640
+[ 2216.814110] Empty blocks from block #442618 to block #442624
+[ 2216.814111] free_count 12413 ; rs 16879 ; re 16896
+[ 2216.814111] Empty blocks from block #442863 to block #442880
+[ 2216.814112] free_count 12434 ; rs 17195 ; re 17216
+[ 2216.814112] Empty blocks from block #443179 to block #443200
+[ 2216.814113] free_count 12448 ; rs 17266 ; re 17280
+[ 2216.814113] Empty blocks from block #443250 to block #443264
+[ 2216.814113] free_count 12477 ; rs 17315 ; re 17344
+[ 2216.814114] Empty blocks from block #443299 to block #443328
+[ 2216.814114] free_count 12486 ; rs 17399 ; re 17408
+[ 2216.814115] Empty blocks from block #443383 to block #443392
+[ 2216.814115] free_count 12506 ; rs 17996 ; re 18016
+[ 2216.814116] Empty blocks from block #443980 to block #444000
+[ 2216.814116] free_count 12517 ; rs 18037 ; re 18048
+[ 2216.814117] Empty blocks from block #444021 to block #444032
+[ 2216.814117] free_count 12519 ; rs 18174 ; re 18176
+[ 2216.814118] Empty blocks from block #444158 to block #444160
+[ 2216.814118] free_count 12525 ; rs 18426 ; re 18432
+[ 2216.814119] Empty blocks from block #444410 to block #444416
+[ 2216.814119] free_count 12547 ; rs 19722 ; re 19744
+[ 2216.814120] Empty blocks from block #445706 to block #445728
+[ 2216.814120] free_count 12575 ; rs 19812 ; re 19840
+[ 2216.814121] Empty blocks from block #445796 to block #445824
+[ 2216.814121] free_count 12598 ; rs 19913 ; re 19936
+[ 2216.814121] Empty blocks from block #445897 to block #445920
+[ 2216.814122] free_count 12609 ; rs 19957 ; re 19968
+[ 2216.814122] Empty blocks from block #445941 to block #445952
+[ 2216.814123] free_count 12634 ; rs 20103 ; re 20128
+[ 2216.814123] Empty blocks from block #446087 to block #446112
+[ 2216.814124] free_count 12646 ; rs 20148 ; re 20160
+[ 2216.814124] Empty blocks from block #446132 to block #446144
+[ 2216.814125] free_count 12667 ; rs 20203 ; re 20224
+[ 2216.814125] Empty blocks from block #446187 to block #446208
+[ 2216.814126] free_count 12675 ; rs 20376 ; re 20384
+[ 2216.814126] Empty blocks from block #446360 to block #446368
+[ 2216.814127] free_count 12682 ; rs 20409 ; re 20416
+[ 2216.814127] Empty blocks from block #446393 to block #446400
+[ 2216.814128] free_count 12713 ; rs 20449 ; re 20480
+[ 2216.814128] Empty blocks from block #446433 to block #446464
+[ 2216.814129] free_count 12718 ; rs 20667 ; re 20672
+[ 2216.814129] Empty blocks from block #446651 to block #446656
+[ 2216.814130] free_count 12743 ; rs 20711 ; re 20736
+[ 2216.814130] Empty blocks from block #446695 to block #446720
+[ 2216.814130] free_count 12767 ; rs 20968 ; re 20992
+[ 2216.814131] Empty blocks from block #446952 to block #446976
+[ 2216.814131] free_count 12782 ; rs 21265 ; re 21280
+[ 2216.814132] Empty blocks from block #447249 to block #447264
+[ 2216.814132] free_count 12787 ; rs 21307 ; re 21312
+[ 2216.814133] Empty blocks from block #447291 to block #447296
+[ 2216.814133] free_count 12789 ; rs 21374 ; re 21376
+[ 2216.814134] Empty blocks from block #447358 to block #447360
+[ 2216.814134] free_count 12818 ; rs 21443 ; re 21472
+[ 2216.814135] Empty blocks from block #447427 to block #447456
+[ 2216.814135] free_count 12821 ; rs 21501 ; re 21504
+[ 2216.814136] Empty blocks from block #447485 to block #447488
+[ 2216.814136] free_count 12849 ; rs 21668 ; re 21696
+[ 2216.814136] Empty blocks from block #447652 to block #447680
+[ 2216.814137] free_count 12860 ; rs 21717 ; re 21728
+[ 2216.814137] Empty blocks from block #447701 to block #447712
+[ 2216.814138] free_count 12891 ; rs 21793 ; re 21824
+[ 2216.814138] Empty blocks from block #447777 to block #447808
+[ 2216.814139] free_count 12893 ; rs 21886 ; re 21888
+[ 2216.814139] Empty blocks from block #447870 to block #447872
+[ 2216.814140] free_count 13437 ; rs 21984 ; re 22528
+[ 2216.814140] Empty blocks from block #447968 to block #448512
+[ 2216.814141] free_count 13527 ; rs 24358 ; re 24448
+[ 2216.814141] Empty blocks from block #450342 to block #450432
+[ 2216.814142] free_count 13578 ; rs 24525 ; re 24576
+[ 2216.814142] Empty blocks from block #450509 to block #450560
+[ 2216.814143] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 13: stored = 13578, counted = 13578
+[ 2216.814144] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 13 ------
+[ 2216.814144] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 14 ------
+[ 2216.814146] bitmap_for_each_clear_region
+[ 2216.814146] nbits 32768
+[ 2216.814147] free_count 25 ; rs 5575 ; re 5600
+[ 2216.814147] Empty blocks from block #464327 to block #464352
+[ 2216.814148] free_count 37 ; rs 5620 ; re 5632
+[ 2216.814148] Empty blocks from block #464372 to block #464384
+[ 2216.814149] free_count 46 ; rs 5655 ; re 5664
+[ 2216.814149] Empty blocks from block #464407 to block #464416
+[ 2216.814149] free_count 51 ; rs 5691 ; re 5696
+[ 2216.814150] Empty blocks from block #464443 to block #464448
+[ 2216.814150] free_count 60 ; rs 5751 ; re 5760
+[ 2216.814151] Empty blocks from block #464503 to block #464512
+[ 2216.814151] free_count 76 ; rs 5840 ; re 5856
+[ 2216.814152] Empty blocks from block #464592 to block #464608
+[ 2216.814152] free_count 89 ; rs 5875 ; re 5888
+[ 2216.814153] Empty blocks from block #464627 to block #464640
+[ 2216.814153] free_count 114 ; rs 6055 ; re 6080
+[ 2216.814154] Empty blocks from block #464807 to block #464832
+[ 2216.814154] free_count 133 ; rs 6125 ; re 6144
+[ 2216.814155] Empty blocks from block #464877 to block #464896
+[ 2216.814155] free_count 146 ; rs 6931 ; re 6944
+[ 2216.814156] Empty blocks from block #465683 to block #465696
+[ 2216.814156] free_count 158 ; rs 6964 ; re 6976
+[ 2216.814156] Empty blocks from block #465716 to block #465728
+[ 2216.814157] free_count 173 ; rs 7025 ; re 7040
+[ 2216.814157] Empty blocks from block #465777 to block #465792
+[ 2216.814158] free_count 201 ; rs 7140 ; re 7168
+[ 2216.814158] Empty blocks from block #465892 to block #465920
+[ 2216.814159] free_count 214 ; rs 7699 ; re 7712
+[ 2216.814159] Empty blocks from block #466451 to block #466464
+[ 2216.814160] free_count 226 ; rs 7732 ; re 7744
+[ 2216.814160] Empty blocks from block #466484 to block #466496
+[ 2216.814161] free_count 240 ; rs 7762 ; re 7776
+[ 2216.814161] Empty blocks from block #466514 to block #466528
+[ 2216.814162] free_count 253 ; rs 7795 ; re 7808
+[ 2216.814162] Empty blocks from block #466547 to block #466560
+[ 2216.814163] free_count 314 ; rs 7875 ; re 7936
+[ 2216.814163] Empty blocks from block #466627 to block #466688
+[ 2216.814164] free_count 339 ; rs 8167 ; re 8192
+[ 2216.814164] Empty blocks from block #466919 to block #466944
+[ 2216.814164] free_count 368 ; rs 8611 ; re 8640
+[ 2216.814165] Empty blocks from block #467363 to block #467392
+[ 2216.814165] free_count 370 ; rs 8702 ; re 8704
+[ 2216.814166] Empty blocks from block #467454 to block #467456
+[ 2216.814166] free_count 585 ; rs 9001 ; re 9216
+[ 2216.814167] Empty blocks from block #467753 to block #467968
+[ 2216.814167] free_count 1232 ; rs 9593 ; re 10240
+[ 2216.814168] Empty blocks from block #468345 to block #468992
+[ 2216.814169] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 14: stored = 1232, counted = 1232
+[ 2216.814169] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 14 ------
+[ 2216.814170] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 15 ------
+[ 2216.814173] bitmap_for_each_clear_region
+[ 2216.814173] nbits 32768
+[ 2216.814174] free_count 30 ; rs 2562 ; re 2592
+[ 2216.814174] Empty blocks from block #494082 to block #494112
+[ 2216.814174] free_count 44 ; rs 2610 ; re 2624
+[ 2216.814175] Empty blocks from block #494130 to block #494144
+[ 2216.814175] free_count 56 ; rs 2676 ; re 2688
+[ 2216.814176] Empty blocks from block #494196 to block #494208
+[ 2216.814176] free_count 63 ; rs 2777 ; re 2784
+[ 2216.814177] Empty blocks from block #494297 to block #494304
+[ 2216.814177] free_count 73 ; rs 2806 ; re 2816
+[ 2216.814178] Empty blocks from block #494326 to block #494336
+[ 2216.814178] free_count 82 ; rs 3063 ; re 3072
+[ 2216.814179] Empty blocks from block #494583 to block #494592
+[ 2216.814179] free_count 86 ; rs 3996 ; re 4000
+[ 2216.814180] Empty blocks from block #495516 to block #495520
+[ 2216.814180] free_count 97 ; rs 4021 ; re 4032
+[ 2216.814180] Empty blocks from block #495541 to block #495552
+[ 2216.814181] free_count 113 ; rs 4080 ; re 4096
+[ 2216.814181] Empty blocks from block #495600 to block #495616
+[ 2216.814182] free_count 139 ; rs 11078 ; re 11104
+[ 2216.814182] Empty blocks from block #502598 to block #502624
+[ 2216.814183] free_count 148 ; rs 11127 ; re 11136
+[ 2216.814183] Empty blocks from block #502647 to block #502656
+[ 2216.814184] free_count 161 ; rs 11219 ; re 11232
+[ 2216.814184] Empty blocks from block #502739 to block #502752
+[ 2216.814185] free_count 168 ; rs 11257 ; re 11264
+[ 2216.814185] Empty blocks from block #502777 to block #502784
+[ 2216.814186] free_count 180 ; rs 11476 ; re 11488
+[ 2216.814186] Empty blocks from block #502996 to block #503008
+[ 2216.814187] free_count 439 ; rs 11517 ; re 11776
+[ 2216.814187] Empty blocks from block #503037 to block #503296
+[ 2216.814188] free_count 440 ; rs 15647 ; re 15648
+[ 2216.814188] Empty blocks from block #507167 to block #507168
+[ 2216.814189] free_count 455 ; rs 15665 ; re 15680
+[ 2216.814189] Empty blocks from block #507185 to block #507200
+[ 2216.814190] free_count 485 ; rs 15714 ; re 15744
+[ 2216.814190] Empty blocks from block #507234 to block #507264
+[ 2216.814191] free_count 512 ; rs 15845 ; re 15872
+[ 2216.814191] Empty blocks from block #507365 to block #507392
+[ 2216.814192] free_count 514 ; rs 16030 ; re 16032
+[ 2216.814192] Empty blocks from block #507550 to block #507552
+[ 2216.814192] free_count 519 ; rs 16059 ; re 16064
+[ 2216.814193] Empty blocks from block #507579 to block #507584
+[ 2216.814193] free_count 991 ; rs 16104 ; re 16576
+[ 2216.814194] Empty blocks from block #507624 to block #508096
+[ 2216.814194] free_count 3181 ; rs 16626 ; re 18816
+[ 2216.814195] Empty blocks from block #508146 to block #510336
+[ 2216.814196] free_count 17033 ; rs 18916 ; re 32768
+[ 2216.814196] Empty blocks from block #510436 to block #524288
+[ 2216.814197] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 15: stored = 17033, counted = 17033
+[ 2216.814197] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 15 ------
+[ 2216.814198] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 16 ------
+[ 2216.814200] bitmap_for_each_clear_region
+[ 2216.814200] nbits 32768
+[ 2216.814201] free_count 5 ; rs 8301 ; re 8306
+[ 2216.814201] Empty blocks from block #532589 to block #532594
+[ 2216.814202] free_count 13 ; rs 8320 ; re 8328
+[ 2216.814202] Empty blocks from block #532608 to block #532616
+[ 2216.814202] free_count 33 ; rs 8348 ; re 8368
+[ 2216.814203] Empty blocks from block #532636 to block #532656
+[ 2216.814203] free_count 39 ; rs 8374 ; re 8380
+[ 2216.814204] Empty blocks from block #532662 to block #532668
+[ 2216.814204] free_count 40 ; rs 8384 ; re 8385
+[ 2216.814205] Empty blocks from block #532672 to block #532673
+[ 2216.814205] free_count 41 ; rs 8391 ; re 8392
+[ 2216.814206] Empty blocks from block #532679 to block #532680
+[ 2216.814206] free_count 93 ; rs 8404 ; re 8456
+[ 2216.814207] Empty blocks from block #532692 to block #532744
+[ 2216.814207] free_count 94 ; rs 8459 ; re 8460
+[ 2216.814207] Empty blocks from block #532747 to block #532748
+[ 2216.814208] free_count 95 ; rs 8461 ; re 8462
+[ 2216.814208] Empty blocks from block #532749 to block #532750
+[ 2216.814209] free_count 22331 ; rs 10532 ; re 32768
+[ 2216.814210] Empty blocks from block #534820 to block #557056
+[ 2216.814211] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 16: stored = 22331, counted = 22331
+[ 2216.814211] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 16 ------
+[ 2216.814212] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 17 ------
+[ 2216.814213] bitmap_for_each_clear_region
+[ 2216.814213] nbits 32768
+[ 2216.814214] free_count 1 ; rs 16792 ; re 16793
+[ 2216.814215] Empty blocks from block #573848 to block #573849
+[ 2216.814215] free_count 2 ; rs 16817 ; re 16818
+[ 2216.814216] Empty blocks from block #573873 to block #573874
+[ 2216.814216] free_count 3 ; rs 16852 ; re 16853
+[ 2216.814217] Empty blocks from block #573908 to block #573909
+[ 2216.814217] free_count 4 ; rs 16886 ; re 16887
+[ 2216.814218] Empty blocks from block #573942 to block #573943
+[ 2216.814218] free_count 16 ; rs 17272 ; re 17284
+[ 2216.814219] Empty blocks from block #574328 to block #574340
+[ 2216.814219] free_count 17 ; rs 17294 ; re 17295
+[ 2216.814219] Empty blocks from block #574350 to block #574351
+[ 2216.814220] free_count 19 ; rs 17304 ; re 17306
+[ 2216.814220] Empty blocks from block #574360 to block #574362
+[ 2216.814221] free_count 20 ; rs 17308 ; re 17309
+[ 2216.814221] Empty blocks from block #574364 to block #574365
+[ 2216.814222] free_count 24 ; rs 17312 ; re 17316
+[ 2216.814222] Empty blocks from block #574368 to block #574372
+[ 2216.814223] free_count 28 ; rs 17318 ; re 17322
+[ 2216.814223] Empty blocks from block #574374 to block #574378
+[ 2216.814224] free_count 32 ; rs 17328 ; re 17332
+[ 2216.814224] Empty blocks from block #574384 to block #574388
+[ 2216.814225] free_count 37 ; rs 17333 ; re 17338
+[ 2216.814225] Empty blocks from block #574389 to block #574394
+[ 2216.814225] free_count 38 ; rs 17340 ; re 17341
+[ 2216.814226] Empty blocks from block #574396 to block #574397
+[ 2216.814226] free_count 41 ; rs 17344 ; re 17347
+[ 2216.814227] Empty blocks from block #574400 to block #574403
+[ 2216.814227] free_count 43 ; rs 17348 ; re 17350
+[ 2216.814228] Empty blocks from block #574404 to block #574406
+[ 2216.814228] free_count 44 ; rs 17352 ; re 17353
+[ 2216.814229] Empty blocks from block #574408 to block #574409
+[ 2216.814229] free_count 48 ; rs 17356 ; re 17360
+[ 2216.814230] Empty blocks from block #574412 to block #574416
+[ 2216.814230] free_count 53 ; rs 17361 ; re 17366
+[ 2216.814230] Empty blocks from block #574417 to block #574422
+[ 2216.814231] free_count 54 ; rs 17380 ; re 17381
+[ 2216.814231] Empty blocks from block #574436 to block #574437
+[ 2216.814232] free_count 58 ; rs 17385 ; re 17389
+[ 2216.814232] Empty blocks from block #574441 to block #574445
+[ 2216.814233] free_count 64 ; rs 17393 ; re 17399
+[ 2216.814233] Empty blocks from block #574449 to block #574455
+[ 2216.814234] free_count 65 ; rs 17403 ; re 17404
+[ 2216.814234] Empty blocks from block #574459 to block #574460
+[ 2216.814235] free_count 66 ; rs 17407 ; re 17408
+[ 2216.814235] Empty blocks from block #574463 to block #574464
+[ 2216.814235] free_count 71 ; rs 17409 ; re 17414
+[ 2216.814236] Empty blocks from block #574465 to block #574470
+[ 2216.814236] free_count 73 ; rs 17415 ; re 17417
+[ 2216.814237] Empty blocks from block #574471 to block #574473
+[ 2216.814237] free_count 79 ; rs 17419 ; re 17425
+[ 2216.814238] Empty blocks from block #574475 to block #574481
+[ 2216.814238] free_count 81 ; rs 17426 ; re 17428
+[ 2216.814239] Empty blocks from block #574482 to block #574484
+[ 2216.814239] free_count 82 ; rs 17432 ; re 17433
+[ 2216.814239] Empty blocks from block #574488 to block #574489
+[ 2216.814240] free_count 86 ; rs 17445 ; re 17449
+[ 2216.814240] Empty blocks from block #574501 to block #574505
+[ 2216.814241] free_count 91 ; rs 17450 ; re 17455
+[ 2216.814241] Empty blocks from block #574506 to block #574511
+[ 2216.814242] free_count 96 ; rs 17456 ; re 17461
+[ 2216.814242] Empty blocks from block #574512 to block #574517
+[ 2216.814243] free_count 101 ; rs 17462 ; re 17467
+[ 2216.814243] Empty blocks from block #574518 to block #574523
+[ 2216.814244] free_count 102 ; rs 17471 ; re 17472
+[ 2216.814244] Empty blocks from block #574527 to block #574528
+[ 2216.814245] free_count 106 ; rs 17478 ; re 17482
+[ 2216.814245] Empty blocks from block #574534 to block #574538
+[ 2216.814245] free_count 119 ; rs 17484 ; re 17497
+[ 2216.814246] Empty blocks from block #574540 to block #574553
+[ 2216.814246] free_count 120 ; rs 17499 ; re 17500
+[ 2216.814247] Empty blocks from block #574555 to block #574556
+[ 2216.814247] free_count 124 ; rs 17512 ; re 17516
+[ 2216.814248] Empty blocks from block #574568 to block #574572
+[ 2216.814248] free_count 144 ; rs 17517 ; re 17537
+[ 2216.814249] Empty blocks from block #574573 to block #574593
+[ 2216.814249] free_count 145 ; rs 17542 ; re 17543
+[ 2216.814250] Empty blocks from block #574598 to block #574599
+[ 2216.814250] free_count 148 ; rs 17546 ; re 17549
+[ 2216.814250] Empty blocks from block #574602 to block #574605
+[ 2216.814251] free_count 149 ; rs 17550 ; re 17551
+[ 2216.814251] Empty blocks from block #574606 to block #574607
+[ 2216.814252] free_count 151 ; rs 17553 ; re 17555
+[ 2216.814252] Empty blocks from block #574609 to block #574611
+[ 2216.814253] free_count 152 ; rs 17563 ; re 17564
+[ 2216.814253] Empty blocks from block #574619 to block #574620
+[ 2216.814254] free_count 156 ; rs 17569 ; re 17573
+[ 2216.814254] Empty blocks from block #574625 to block #574629
+[ 2216.814255] free_count 158 ; rs 17575 ; re 17577
+[ 2216.814255] Empty blocks from block #574631 to block #574633
+[ 2216.814255] free_count 159 ; rs 17579 ; re 17580
+[ 2216.814256] Empty blocks from block #574635 to block #574636
+[ 2216.814256] free_count 163 ; rs 17582 ; re 17586
+[ 2216.814257] Empty blocks from block #574638 to block #574642
+[ 2216.814257] free_count 165 ; rs 17587 ; re 17589
+[ 2216.814258] Empty blocks from block #574643 to block #574645
+[ 2216.814258] free_count 166 ; rs 17595 ; re 17596
+[ 2216.814259] Empty blocks from block #574651 to block #574652
+[ 2216.814259] free_count 170 ; rs 17598 ; re 17602
+[ 2216.814260] Empty blocks from block #574654 to block #574658
+[ 2216.814260] free_count 172 ; rs 17603 ; re 17605
+[ 2216.814260] Empty blocks from block #574659 to block #574661
+[ 2216.814261] free_count 173 ; rs 17607 ; re 17608
+[ 2216.814261] Empty blocks from block #574663 to block #574664
+[ 2216.814262] free_count 177 ; rs 17610 ; re 17614
+[ 2216.814262] Empty blocks from block #574666 to block #574670
+[ 2216.814263] free_count 179 ; rs 17615 ; re 17617
+[ 2216.814263] Empty blocks from block #574671 to block #574673
+[ 2216.814264] free_count 180 ; rs 17619 ; re 17620
+[ 2216.814264] Empty blocks from block #574675 to block #574676
+[ 2216.814265] free_count 184 ; rs 17623 ; re 17627
+[ 2216.814265] Empty blocks from block #574679 to block #574683
+[ 2216.814265] free_count 186 ; rs 17628 ; re 17630
+[ 2216.814266] Empty blocks from block #574684 to block #574686
+[ 2216.814266] free_count 187 ; rs 17632 ; re 17633
+[ 2216.814267] Empty blocks from block #574688 to block #574689
+[ 2216.814267] free_count 191 ; rs 17634 ; re 17638
+[ 2216.814268] Empty blocks from block #574690 to block #574694
+[ 2216.814268] free_count 193 ; rs 17639 ; re 17641
+[ 2216.814269] Empty blocks from block #574695 to block #574697
+[ 2216.814269] free_count 194 ; rs 17642 ; re 17643
+[ 2216.814269] Empty blocks from block #574698 to block #574699
+[ 2216.814270] free_count 198 ; rs 17645 ; re 17649
+[ 2216.814270] Empty blocks from block #574701 to block #574705
+[ 2216.814271] free_count 200 ; rs 17650 ; re 17652
+[ 2216.814271] Empty blocks from block #574706 to block #574708
+[ 2216.814272] free_count 205 ; rs 17653 ; re 17658
+[ 2216.814272] Empty blocks from block #574709 to block #574714
+[ 2216.814273] free_count 207 ; rs 17659 ; re 17661
+[ 2216.814273] Empty blocks from block #574715 to block #574717
+[ 2216.814274] free_count 208 ; rs 17664 ; re 17665
+[ 2216.814274] Empty blocks from block #574720 to block #574721
+[ 2216.814275] free_count 212 ; rs 17666 ; re 17670
+[ 2216.814275] Empty blocks from block #574722 to block #574726
+[ 2216.814275] free_count 214 ; rs 17672 ; re 17674
+[ 2216.814276] Empty blocks from block #574728 to block #574730
+[ 2216.814276] free_count 215 ; rs 17677 ; re 17678
+[ 2216.814277] Empty blocks from block #574733 to block #574734
+[ 2216.814277] free_count 219 ; rs 17680 ; re 17684
+[ 2216.814278] Empty blocks from block #574736 to block #574740
+[ 2216.814278] free_count 221 ; rs 17685 ; re 17687
+[ 2216.814279] Empty blocks from block #574741 to block #574743
+[ 2216.814279] free_count 226 ; rs 17688 ; re 17693
+[ 2216.814279] Empty blocks from block #574744 to block #574749
+[ 2216.814280] free_count 228 ; rs 17694 ; re 17696
+[ 2216.814280] Empty blocks from block #574750 to block #574752
+[ 2216.814281] free_count 233 ; rs 17697 ; re 17702
+[ 2216.814281] Empty blocks from block #574753 to block #574758
+[ 2216.814282] free_count 235 ; rs 17703 ; re 17705
+[ 2216.814282] Empty blocks from block #574759 to block #574761
+[ 2216.814283] free_count 240 ; rs 17707 ; re 17712
+[ 2216.814283] Empty blocks from block #574763 to block #574768
+[ 2216.814284] free_count 242 ; rs 17713 ; re 17715
+[ 2216.814284] Empty blocks from block #574769 to block #574771
+[ 2216.814284] free_count 243 ; rs 17717 ; re 17718
+[ 2216.814285] Empty blocks from block #574773 to block #574774
+[ 2216.814285] free_count 247 ; rs 17720 ; re 17724
+[ 2216.814286] Empty blocks from block #574776 to block #574780
+[ 2216.814286] free_count 249 ; rs 17725 ; re 17727
+[ 2216.814287] Empty blocks from block #574781 to block #574783
+[ 2216.814287] free_count 254 ; rs 17728 ; re 17733
+[ 2216.814288] Empty blocks from block #574784 to block #574789
+[ 2216.814288] free_count 256 ; rs 17734 ; re 17736
+[ 2216.814289] Empty blocks from block #574790 to block #574792
+[ 2216.814289] free_count 257 ; rs 17738 ; re 17739
+[ 2216.814289] Empty blocks from block #574794 to block #574795
+[ 2216.814290] free_count 261 ; rs 17741 ; re 17745
+[ 2216.814290] Empty blocks from block #574797 to block #574801
+[ 2216.814291] free_count 263 ; rs 17746 ; re 17748
+[ 2216.814291] Empty blocks from block #574802 to block #574804
+[ 2216.814292] free_count 268 ; rs 17749 ; re 17754
+[ 2216.814292] Empty blocks from block #574805 to block #574810
+[ 2216.814293] free_count 270 ; rs 17755 ; re 17757
+[ 2216.814293] Empty blocks from block #574811 to block #574813
+[ 2216.814294] free_count 275 ; rs 17758 ; re 17763
+[ 2216.814294] Empty blocks from block #574814 to block #574819
+[ 2216.814294] free_count 277 ; rs 17764 ; re 17766
+[ 2216.814295] Empty blocks from block #574820 to block #574822
+[ 2216.814295] free_count 282 ; rs 17770 ; re 17775
+[ 2216.814296] Empty blocks from block #574826 to block #574831
+[ 2216.814296] free_count 284 ; rs 17778 ; re 17780
+[ 2216.814297] Empty blocks from block #574834 to block #574836
+[ 2216.814297] free_count 285 ; rs 17782 ; re 17783
+[ 2216.814298] Empty blocks from block #574838 to block #574839
+[ 2216.814298] free_count 289 ; rs 17785 ; re 17789
+[ 2216.814298] Empty blocks from block #574841 to block #574845
+[ 2216.814299] free_count 291 ; rs 17790 ; re 17792
+[ 2216.814299] Empty blocks from block #574846 to block #574848
+[ 2216.814300] free_count 292 ; rs 17793 ; re 17794
+[ 2216.814300] Empty blocks from block #574849 to block #574850
+[ 2216.814301] free_count 296 ; rs 17796 ; re 17800
+[ 2216.814301] Empty blocks from block #574852 to block #574856
+[ 2216.814302] free_count 298 ; rs 17801 ; re 17803
+[ 2216.814302] Empty blocks from block #574857 to block #574859
+[ 2216.814303] free_count 303 ; rs 17805 ; re 17810
+[ 2216.814303] Empty blocks from block #574861 to block #574866
+[ 2216.814304] free_count 305 ; rs 17811 ; re 17813
+[ 2216.814304] Empty blocks from block #574867 to block #574869
+[ 2216.814304] free_count 310 ; rs 17814 ; re 17819
+[ 2216.814305] Empty blocks from block #574870 to block #574875
+[ 2216.814305] free_count 312 ; rs 17820 ; re 17822
+[ 2216.814306] Empty blocks from block #574876 to block #574878
+[ 2216.814306] free_count 313 ; rs 17828 ; re 17829
+[ 2216.814307] Empty blocks from block #574884 to block #574885
+[ 2216.814307] free_count 317 ; rs 17831 ; re 17835
+[ 2216.814308] Empty blocks from block #574887 to block #574891
+[ 2216.814308] free_count 319 ; rs 17836 ; re 17838
+[ 2216.814309] Empty blocks from block #574892 to block #574894
+[ 2216.814309] free_count 324 ; rs 17839 ; re 17844
+[ 2216.814309] Empty blocks from block #574895 to block #574900
+[ 2216.814310] free_count 326 ; rs 17845 ; re 17847
+[ 2216.814310] Empty blocks from block #574901 to block #574903
+[ 2216.814311] free_count 327 ; rs 17854 ; re 17855
+[ 2216.814311] Empty blocks from block #574910 to block #574911
+[ 2216.814312] free_count 331 ; rs 17858 ; re 17862
+[ 2216.814312] Empty blocks from block #574914 to block #574918
+[ 2216.814313] free_count 333 ; rs 17865 ; re 17867
+[ 2216.814313] Empty blocks from block #574921 to block #574923
+[ 2216.814314] free_count 334 ; rs 17869 ; re 17870
+[ 2216.814314] Empty blocks from block #574925 to block #574926
+[ 2216.814314] free_count 338 ; rs 17872 ; re 17876
+[ 2216.814315] Empty blocks from block #574928 to block #574932
+[ 2216.814315] free_count 340 ; rs 17877 ; re 17879
+[ 2216.814316] Empty blocks from block #574933 to block #574935
+[ 2216.814316] free_count 341 ; rs 17886 ; re 17887
+[ 2216.814317] Empty blocks from block #574942 to block #574943
+[ 2216.814317] free_count 345 ; rs 17892 ; re 17896
+[ 2216.814318] Empty blocks from block #574948 to block #574952
+[ 2216.814318] free_count 347 ; rs 17897 ; re 17899
+[ 2216.814319] Empty blocks from block #574953 to block #574955
+[ 2216.814319] free_count 348 ; rs 17901 ; re 17902
+[ 2216.814319] Empty blocks from block #574957 to block #574958
+[ 2216.814320] free_count 352 ; rs 17905 ; re 17909
+[ 2216.814320] Empty blocks from block #574961 to block #574965
+[ 2216.814321] free_count 354 ; rs 17910 ; re 17912
+[ 2216.814321] Empty blocks from block #574966 to block #574968
+[ 2216.814322] free_count 355 ; rs 17915 ; re 17916
+[ 2216.814322] Empty blocks from block #574971 to block #574972
+[ 2216.814323] free_count 362 ; rs 17918 ; re 17925
+[ 2216.814323] Empty blocks from block #574974 to block #574981
+[ 2216.814324] free_count 364 ; rs 17926 ; re 17928
+[ 2216.814324] Empty blocks from block #574982 to block #574984
+[ 2216.814324] free_count 365 ; rs 17930 ; re 17931
+[ 2216.814325] Empty blocks from block #574986 to block #574987
+[ 2216.814325] free_count 368 ; rs 17933 ; re 17936
+[ 2216.814326] Empty blocks from block #574989 to block #574992
+[ 2216.814326] free_count 369 ; rs 17937 ; re 17938
+[ 2216.814327] Empty blocks from block #574993 to block #574994
+[ 2216.814327] free_count 371 ; rs 17939 ; re 17941
+[ 2216.814328] Empty blocks from block #574995 to block #574997
+[ 2216.814328] free_count 376 ; rs 17942 ; re 17947
+[ 2216.814328] Empty blocks from block #574998 to block #575003
+[ 2216.814329] free_count 378 ; rs 17948 ; re 17950
+[ 2216.814329] Empty blocks from block #575004 to block #575006
+[ 2216.814330] free_count 383 ; rs 17951 ; re 17956
+[ 2216.814330] Empty blocks from block #575007 to block #575012
+[ 2216.814331] free_count 385 ; rs 17957 ; re 17959
+[ 2216.814331] Empty blocks from block #575013 to block #575015
+[ 2216.814332] free_count 390 ; rs 17960 ; re 17965
+[ 2216.814332] Empty blocks from block #575016 to block #575021
+[ 2216.814333] free_count 392 ; rs 17972 ; re 17974
+[ 2216.814333] Empty blocks from block #575028 to block #575030
+[ 2216.814333] free_count 397 ; rs 17975 ; re 17980
+[ 2216.814334] Empty blocks from block #575031 to block #575036
+[ 2216.814334] free_count 399 ; rs 17981 ; re 17983
+[ 2216.814335] Empty blocks from block #575037 to block #575039
+[ 2216.814335] free_count 400 ; rs 17985 ; re 17986
+[ 2216.814336] Empty blocks from block #575041 to block #575042
+[ 2216.814336] free_count 404 ; rs 17987 ; re 17991
+[ 2216.814337] Empty blocks from block #575043 to block #575047
+[ 2216.814337] free_count 406 ; rs 17992 ; re 17994
+[ 2216.814338] Empty blocks from block #575048 to block #575050
+[ 2216.814338] free_count 407 ; rs 17997 ; re 17998
+[ 2216.814338] Empty blocks from block #575053 to block #575054
+[ 2216.814339] free_count 410 ; rs 18001 ; re 18004
+[ 2216.814339] Empty blocks from block #575057 to block #575060
+[ 2216.814340] free_count 411 ; rs 18005 ; re 18006
+[ 2216.814340] Empty blocks from block #575061 to block #575062
+[ 2216.814341] free_count 413 ; rs 18007 ; re 18009
+[ 2216.814341] Empty blocks from block #575063 to block #575065
+[ 2216.814342] free_count 414 ; rs 18010 ; re 18011
+[ 2216.814342] Empty blocks from block #575066 to block #575067
+[ 2216.814343] free_count 418 ; rs 18013 ; re 18017
+[ 2216.814343] Empty blocks from block #575069 to block #575073
+[ 2216.814343] free_count 420 ; rs 18018 ; re 18020
+[ 2216.814344] Empty blocks from block #575074 to block #575076
+[ 2216.814344] free_count 421 ; rs 18021 ; re 18022
+[ 2216.814345] Empty blocks from block #575077 to block #575078
+[ 2216.814345] free_count 425 ; rs 18024 ; re 18028
+[ 2216.814346] Empty blocks from block #575080 to block #575084
+[ 2216.814346] free_count 427 ; rs 18029 ; re 18031
+[ 2216.814347] Empty blocks from block #575085 to block #575087
+[ 2216.814347] free_count 428 ; rs 18034 ; re 18035
+[ 2216.814347] Empty blocks from block #575090 to block #575091
+[ 2216.814348] free_count 432 ; rs 18037 ; re 18041
+[ 2216.814348] Empty blocks from block #575093 to block #575097
+[ 2216.814349] free_count 434 ; rs 18042 ; re 18044
+[ 2216.814349] Empty blocks from block #575098 to block #575100
+[ 2216.814350] free_count 435 ; rs 18049 ; re 18050
+[ 2216.814350] Empty blocks from block #575105 to block #575106
+[ 2216.814351] free_count 439 ; rs 18052 ; re 18056
+[ 2216.814351] Empty blocks from block #575108 to block #575112
+[ 2216.814352] free_count 441 ; rs 18057 ; re 18059
+[ 2216.814352] Empty blocks from block #575113 to block #575115
+[ 2216.814353] free_count 442 ; rs 18063 ; re 18064
+[ 2216.814353] Empty blocks from block #575119 to block #575120
+[ 2216.814353] free_count 446 ; rs 18066 ; re 18070
+[ 2216.814354] Empty blocks from block #575122 to block #575126
+[ 2216.814354] free_count 448 ; rs 18071 ; re 18073
+[ 2216.814355] Empty blocks from block #575127 to block #575129
+[ 2216.814355] free_count 453 ; rs 18074 ; re 18079
+[ 2216.814356] Empty blocks from block #575130 to block #575135
+[ 2216.814356] free_count 455 ; rs 18080 ; re 18082
+[ 2216.814357] Empty blocks from block #575136 to block #575138
+[ 2216.814357] free_count 456 ; rs 18084 ; re 18085
+[ 2216.814357] Empty blocks from block #575140 to block #575141
+[ 2216.814358] free_count 460 ; rs 18087 ; re 18091
+[ 2216.814358] Empty blocks from block #575143 to block #575147
+[ 2216.814359] free_count 462 ; rs 18092 ; re 18094
+[ 2216.814359] Empty blocks from block #575148 to block #575150
+[ 2216.814360] free_count 463 ; rs 18098 ; re 18099
+[ 2216.814360] Empty blocks from block #575154 to block #575155
+[ 2216.814361] free_count 467 ; rs 18101 ; re 18105
+[ 2216.814361] Empty blocks from block #575157 to block #575161
+[ 2216.814362] free_count 469 ; rs 18106 ; re 18108
+[ 2216.814362] Empty blocks from block #575162 to block #575164
+[ 2216.814363] free_count 474 ; rs 18109 ; re 18114
+[ 2216.814363] Empty blocks from block #575165 to block #575170
+[ 2216.814363] free_count 476 ; rs 18115 ; re 18117
+[ 2216.814364] Empty blocks from block #575171 to block #575173
+[ 2216.814364] free_count 481 ; rs 18118 ; re 18123
+[ 2216.814365] Empty blocks from block #575174 to block #575179
+[ 2216.814365] free_count 483 ; rs 18124 ; re 18126
+[ 2216.814366] Empty blocks from block #575180 to block #575182
+[ 2216.814366] free_count 484 ; rs 18127 ; re 18128
+[ 2216.814367] Empty blocks from block #575183 to block #575184
+[ 2216.814367] free_count 488 ; rs 18130 ; re 18134
+[ 2216.814367] Empty blocks from block #575186 to block #575190
+[ 2216.814368] free_count 490 ; rs 18135 ; re 18137
+[ 2216.814368] Empty blocks from block #575191 to block #575193
+[ 2216.814369] free_count 491 ; rs 18139 ; re 18140
+[ 2216.814369] Empty blocks from block #575195 to block #575196
+[ 2216.814370] free_count 495 ; rs 18142 ; re 18146
+[ 2216.814370] Empty blocks from block #575198 to block #575202
+[ 2216.814371] free_count 497 ; rs 18147 ; re 18149
+[ 2216.814371] Empty blocks from block #575203 to block #575205
+[ 2216.814372] free_count 498 ; rs 18153 ; re 18154
+[ 2216.814372] Empty blocks from block #575209 to block #575210
+[ 2216.814372] free_count 502 ; rs 18156 ; re 18160
+[ 2216.814373] Empty blocks from block #575212 to block #575216
+[ 2216.814373] free_count 504 ; rs 18162 ; re 18164
+[ 2216.814374] Empty blocks from block #575218 to block #575220
+[ 2216.814374] free_count 505 ; rs 18166 ; re 18167
+[ 2216.814375] Empty blocks from block #575222 to block #575223
+[ 2216.814375] free_count 509 ; rs 18169 ; re 18173
+[ 2216.814376] Empty blocks from block #575225 to block #575229
+[ 2216.814376] free_count 511 ; rs 18174 ; re 18176
+[ 2216.814377] Empty blocks from block #575230 to block #575232
+[ 2216.814377] free_count 512 ; rs 18179 ; re 18180
+[ 2216.814377] Empty blocks from block #575235 to block #575236
+[ 2216.814378] free_count 516 ; rs 18182 ; re 18186
+[ 2216.814378] Empty blocks from block #575238 to block #575242
+[ 2216.814379] free_count 520 ; rs 18187 ; re 18191
+[ 2216.814379] Empty blocks from block #575243 to block #575247
+[ 2216.814380] free_count 521 ; rs 18193 ; re 18194
+[ 2216.814380] Empty blocks from block #575249 to block #575250
+[ 2216.814381] free_count 524 ; rs 18196 ; re 18199
+[ 2216.814381] Empty blocks from block #575252 to block #575255
+[ 2216.814382] free_count 526 ; rs 18200 ; re 18202
+[ 2216.814382] Empty blocks from block #575256 to block #575258
+[ 2216.814382] free_count 527 ; rs 18204 ; re 18205
+[ 2216.814383] Empty blocks from block #575260 to block #575261
+[ 2216.814383] free_count 531 ; rs 18207 ; re 18211
+[ 2216.814384] Empty blocks from block #575263 to block #575267
+[ 2216.814384] free_count 533 ; rs 18212 ; re 18214
+[ 2216.814385] Empty blocks from block #575268 to block #575270
+[ 2216.814385] free_count 541 ; rs 18215 ; re 18223
+[ 2216.814386] Empty blocks from block #575271 to block #575279
+[ 2216.814386] free_count 542 ; rs 18225 ; re 18226
+[ 2216.814387] Empty blocks from block #575281 to block #575282
+[ 2216.814387] free_count 546 ; rs 18230 ; re 18234
+[ 2216.814387] Empty blocks from block #575286 to block #575290
+[ 2216.814388] free_count 548 ; rs 18235 ; re 18237
+[ 2216.814388] Empty blocks from block #575291 to block #575293
+[ 2216.814389] free_count 549 ; rs 18238 ; re 18239
+[ 2216.814389] Empty blocks from block #575294 to block #575295
+[ 2216.814390] free_count 553 ; rs 18240 ; re 18244
+[ 2216.814390] Empty blocks from block #575296 to block #575300
+[ 2216.814391] free_count 555 ; rs 18245 ; re 18247
+[ 2216.814391] Empty blocks from block #575301 to block #575303
+[ 2216.814392] free_count 560 ; rs 18248 ; re 18253
+[ 2216.814392] Empty blocks from block #575304 to block #575309
+[ 2216.814392] free_count 562 ; rs 18254 ; re 18256
+[ 2216.814393] Empty blocks from block #575310 to block #575312
+[ 2216.814393] free_count 567 ; rs 18258 ; re 18263
+[ 2216.814394] Empty blocks from block #575314 to block #575319
+[ 2216.814394] free_count 569 ; rs 18264 ; re 18266
+[ 2216.814395] Empty blocks from block #575320 to block #575322
+[ 2216.814395] free_count 570 ; rs 18270 ; re 18271
+[ 2216.814396] Empty blocks from block #575326 to block #575327
+[ 2216.814396] free_count 574 ; rs 18272 ; re 18276
+[ 2216.814396] Empty blocks from block #575328 to block #575332
+[ 2216.814397] free_count 576 ; rs 18278 ; re 18280
+[ 2216.814397] Empty blocks from block #575334 to block #575336
+[ 2216.814398] free_count 577 ; rs 18284 ; re 18285
+[ 2216.814398] Empty blocks from block #575340 to block #575341
+[ 2216.814399] free_count 581 ; rs 18286 ; re 18290
+[ 2216.814399] Empty blocks from block #575342 to block #575346
+[ 2216.814400] free_count 583 ; rs 18292 ; re 18294
+[ 2216.814400] Empty blocks from block #575348 to block #575350
+[ 2216.814401] free_count 584 ; rs 18296 ; re 18297
+[ 2216.814401] Empty blocks from block #575352 to block #575353
+[ 2216.814401] free_count 588 ; rs 18299 ; re 18303
+[ 2216.814402] Empty blocks from block #575355 to block #575359
+[ 2216.814402] free_count 590 ; rs 18304 ; re 18306
+[ 2216.814403] Empty blocks from block #575360 to block #575362
+[ 2216.814403] free_count 591 ; rs 18309 ; re 18310
+[ 2216.814404] Empty blocks from block #575365 to block #575366
+[ 2216.814404] free_count 596 ; rs 18311 ; re 18316
+[ 2216.814405] Empty blocks from block #575367 to block #575372
+[ 2216.814405] free_count 598 ; rs 18317 ; re 18319
+[ 2216.814405] Empty blocks from block #575373 to block #575375
+[ 2216.814406] free_count 599 ; rs 18321 ; re 18322
+[ 2216.814406] Empty blocks from block #575377 to block #575378
+[ 2216.814407] free_count 603 ; rs 18323 ; re 18327
+[ 2216.814407] Empty blocks from block #575379 to block #575383
+[ 2216.814408] free_count 605 ; rs 18328 ; re 18330
+[ 2216.814408] Empty blocks from block #575384 to block #575386
+[ 2216.814409] free_count 606 ; rs 18332 ; re 18333
+[ 2216.814409] Empty blocks from block #575388 to block #575389
+[ 2216.814410] free_count 610 ; rs 18334 ; re 18338
+[ 2216.814410] Empty blocks from block #575390 to block #575394
+[ 2216.814411] free_count 612 ; rs 18339 ; re 18341
+[ 2216.814411] Empty blocks from block #575395 to block #575397
+[ 2216.814411] free_count 617 ; rs 18342 ; re 18347
+[ 2216.814412] Empty blocks from block #575398 to block #575403
+[ 2216.814412] free_count 619 ; rs 18348 ; re 18350
+[ 2216.814413] Empty blocks from block #575404 to block #575406
+[ 2216.814413] free_count 620 ; rs 18356 ; re 18357
+[ 2216.814414] Empty blocks from block #575412 to block #575413
+[ 2216.814414] free_count 624 ; rs 18362 ; re 18366
+[ 2216.814415] Empty blocks from block #575418 to block #575422
+[ 2216.814415] free_count 626 ; rs 18367 ; re 18369
+[ 2216.814415] Empty blocks from block #575423 to block #575425
+[ 2216.814416] free_count 631 ; rs 18370 ; re 18375
+[ 2216.814416] Empty blocks from block #575426 to block #575431
+[ 2216.814417] free_count 633 ; rs 18376 ; re 18378
+[ 2216.814417] Empty blocks from block #575432 to block #575434
+[ 2216.814418] free_count 634 ; rs 18380 ; re 18381
+[ 2216.814418] Empty blocks from block #575436 to block #575437
+[ 2216.814419] free_count 638 ; rs 18384 ; re 18388
+[ 2216.814419] Empty blocks from block #575440 to block #575444
+[ 2216.814420] free_count 640 ; rs 18389 ; re 18391
+[ 2216.814420] Empty blocks from block #575445 to block #575447
+[ 2216.814420] free_count 645 ; rs 18392 ; re 18397
+[ 2216.814421] Empty blocks from block #575448 to block #575453
+[ 2216.814421] free_count 647 ; rs 18398 ; re 18400
+[ 2216.814422] Empty blocks from block #575454 to block #575456
+[ 2216.814422] free_count 652 ; rs 18401 ; re 18406
+[ 2216.814423] Empty blocks from block #575457 to block #575462
+[ 2216.814423] free_count 654 ; rs 18407 ; re 18409
+[ 2216.814424] Empty blocks from block #575463 to block #575465
+[ 2216.814424] free_count 655 ; rs 18413 ; re 18414
+[ 2216.814424] Empty blocks from block #575469 to block #575470
+[ 2216.814425] free_count 659 ; rs 18420 ; re 18424
+[ 2216.814425] Empty blocks from block #575476 to block #575480
+[ 2216.814426] free_count 661 ; rs 18425 ; re 18427
+[ 2216.814426] Empty blocks from block #575481 to block #575483
+[ 2216.814427] free_count 1689 ; rs 18428 ; re 19456
+[ 2216.814427] Empty blocks from block #575484 to block #576512
+[ 2216.814428] free_count 1690 ; rs 19489 ; re 19490
+[ 2216.814428] Empty blocks from block #576545 to block #576546
+[ 2216.814429] free_count 1692 ; rs 19568 ; re 19570
+[ 2216.814429] Empty blocks from block #576624 to block #576626
+[ 2216.814430] free_count 2080 ; rs 19580 ; re 19968
+[ 2216.814430] Empty blocks from block #576636 to block #577024
+[ 2216.814431] free_count 2092 ; rs 20020 ; re 20032
+[ 2216.814431] Empty blocks from block #577076 to block #577088
+[ 2216.814432] free_count 2093 ; rs 21674 ; re 21675
+[ 2216.814432] Empty blocks from block #578730 to block #578731
+[ 2216.814433] free_count 2096 ; rs 21678 ; re 21681
+[ 2216.814433] Empty blocks from block #578734 to block #578737
+[ 2216.814433] free_count 2098 ; rs 21876 ; re 21878
+[ 2216.814434] Empty blocks from block #578932 to block #578934
+[ 2216.814434] free_count 2162 ; rs 21952 ; re 22016
+[ 2216.814435] Empty blocks from block #579008 to block #579072
+[ 2216.814435] free_count 2167 ; rs 22124 ; re 22129
+[ 2216.814436] Empty blocks from block #579180 to block #579185
+[ 2216.814436] free_count 2172 ; rs 22130 ; re 22135
+[ 2216.814437] Empty blocks from block #579186 to block #579191
+[ 2216.814437] free_count 2176 ; rs 22144 ; re 22148
+[ 2216.814438] Empty blocks from block #579200 to block #579204
+[ 2216.814438] free_count 2181 ; rs 22154 ; re 22159
+[ 2216.814439] Empty blocks from block #579210 to block #579215
+[ 2216.814439] free_count 2185 ; rs 22180 ; re 22184
+[ 2216.814439] Empty blocks from block #579236 to block #579240
+[ 2216.814440] free_count 2186 ; rs 22203 ; re 22204
+[ 2216.814440] Empty blocks from block #579259 to block #579260
+[ 2216.814441] free_count 12746 ; rs 22208 ; re 32768
+[ 2216.814442] Empty blocks from block #579264 to block #589824
+[ 2216.814442] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 17: stored = 12746, counted = 12746
+[ 2216.814443] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 17 ------
+[ 2216.814443] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 18 ------
+[ 2216.814453] bitmap_for_each_clear_region
+[ 2216.814453] nbits 32768
+[ 2216.814454] free_count 32768 ; rs 0 ; re 32768
+[ 2216.814455] Empty blocks from block #589824 to block #622592
+[ 2216.814456] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 18: stored = 32768, counted = 32768
+[ 2216.814456] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 18 ------
+[ 2216.814457] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 19 ------
+[ 2216.814460] bitmap_for_each_clear_region
+[ 2216.814460] nbits 32768
+[ 2216.814461] free_count 32768 ; rs 0 ; re 32768
+[ 2216.814462] Empty blocks from block #622592 to block #655360
+[ 2216.814463] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 19: stored = 32768, counted = 32768
+[ 2216.814463] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 19 ------
+[ 2216.814464] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 20 ------
+[ 2216.814465] bitmap_for_each_clear_region
+[ 2216.814466] nbits 32768
+[ 2216.814466] free_count 20 ; rs 269 ; re 289
+[ 2216.814467] Empty blocks from block #655629 to block #655649
+[ 2216.814468] free_count 32484 ; rs 304 ; re 32768
+[ 2216.814468] Empty blocks from block #655664 to block #688128
+[ 2216.814469] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 20: stored = 32484, counted = 32484
+[ 2216.814469] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 20 ------
+[ 2216.814470] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 21 ------
+[ 2216.814472] bitmap_for_each_clear_region
+[ 2216.814472] nbits 32768
+[ 2216.814472] free_count 4 ; rs 0 ; re 4
+[ 2216.814473] Empty blocks from block #688128 to block #688132
+[ 2216.814473] free_count 16 ; rs 8 ; re 20
+[ 2216.814474] Empty blocks from block #688136 to block #688148
+[ 2216.814474] free_count 20 ; rs 24 ; re 28
+[ 2216.814475] Empty blocks from block #688152 to block #688156
+[ 2216.814475] free_count 28 ; rs 40 ; re 48
+[ 2216.814476] Empty blocks from block #688168 to block #688176
+[ 2216.814476] free_count 30 ; rs 52 ; re 54
+[ 2216.814477] Empty blocks from block #688180 to block #688182
+[ 2216.814477] free_count 34 ; rs 55 ; re 59
+[ 2216.814478] Empty blocks from block #688183 to block #688187
+[ 2216.814478] free_count 37 ; rs 62 ; re 65
+[ 2216.814478] Empty blocks from block #688190 to block #688193
+[ 2216.814479] free_count 46 ; rs 66 ; re 75
+[ 2216.814479] Empty blocks from block #688194 to block #688203
+[ 2216.814480] free_count 71 ; rs 76 ; re 101
+[ 2216.814480] Empty blocks from block #688204 to block #688229
+[ 2216.814481] free_count 74 ; rs 102 ; re 105
+[ 2216.814481] Empty blocks from block #688230 to block #688233
+[ 2216.814482] free_count 76 ; rs 106 ; re 108
+[ 2216.814482] Empty blocks from block #688234 to block #688236
+[ 2216.814483] free_count 77 ; rs 109 ; re 110
+[ 2216.814483] Empty blocks from block #688237 to block #688238
+[ 2216.814484] free_count 79 ; rs 112 ; re 114
+[ 2216.814484] Empty blocks from block #688240 to block #688242
+[ 2216.814485] free_count 81 ; rs 115 ; re 117
+[ 2216.814485] Empty blocks from block #688243 to block #688245
+[ 2216.814486] free_count 82 ; rs 119 ; re 120
+[ 2216.814486] Empty blocks from block #688247 to block #688248
+[ 2216.814486] free_count 83 ; rs 121 ; re 122
+[ 2216.814487] Empty blocks from block #688249 to block #688250
+[ 2216.814487] free_count 85 ; rs 123 ; re 125
+[ 2216.814488] Empty blocks from block #688251 to block #688253
+[ 2216.814488] free_count 86 ; rs 127 ; re 128
+[ 2216.814489] Empty blocks from block #688255 to block #688256
+[ 2216.814489] free_count 87 ; rs 129 ; re 130
+[ 2216.814490] Empty blocks from block #688257 to block #688258
+[ 2216.814490] free_count 89 ; rs 131 ; re 133
+[ 2216.814490] Empty blocks from block #688259 to block #688261
+[ 2216.814491] free_count 91 ; rs 137 ; re 139
+[ 2216.814491] Empty blocks from block #688265 to block #688267
+[ 2216.814492] free_count 93 ; rs 142 ; re 144
+[ 2216.814492] Empty blocks from block #688270 to block #688272
+[ 2216.814493] free_count 95 ; rs 145 ; re 147
+[ 2216.814493] Empty blocks from block #688273 to block #688275
+[ 2216.814494] free_count 145 ; rs 191 ; re 241
+[ 2216.814494] Empty blocks from block #688319 to block #688369
+[ 2216.814495] free_count 148 ; rs 242 ; re 245
+[ 2216.814495] Empty blocks from block #688370 to block #688373
+[ 2216.814496] free_count 150 ; rs 246 ; re 248
+[ 2216.814496] Empty blocks from block #688374 to block #688376
+[ 2216.814497] free_count 152 ; rs 263 ; re 265
+[ 2216.814497] Empty blocks from block #688391 to block #688393
+[ 2216.814498] free_count 154 ; rs 273 ; re 275
+[ 2216.814498] Empty blocks from block #688401 to block #688403
+[ 2216.814498] free_count 156 ; rs 276 ; re 278
+[ 2216.814499] Empty blocks from block #688404 to block #688406
+[ 2216.814499] free_count 158 ; rs 279 ; re 281
+[ 2216.814500] Empty blocks from block #688407 to block #688409
+[ 2216.814500] free_count 160 ; rs 291 ; re 293
+[ 2216.814501] Empty blocks from block #688419 to block #688421
+[ 2216.814501] free_count 162 ; rs 299 ; re 301
+[ 2216.814502] Empty blocks from block #688427 to block #688429
+[ 2216.814502] free_count 163 ; rs 304 ; re 305
+[ 2216.814503] Empty blocks from block #688432 to block #688433
+[ 2216.814503] free_count 165 ; rs 307 ; re 309
+[ 2216.814504] Empty blocks from block #688435 to block #688437
+[ 2216.814504] free_count 167 ; rs 310 ; re 312
+[ 2216.814504] Empty blocks from block #688438 to block #688440
+[ 2216.814505] free_count 168 ; rs 314 ; re 315
+[ 2216.814505] Empty blocks from block #688442 to block #688443
+[ 2216.814506] free_count 169 ; rs 317 ; re 318
+[ 2216.814506] Empty blocks from block #688445 to block #688446
+[ 2216.814507] free_count 171 ; rs 319 ; re 321
+[ 2216.814507] Empty blocks from block #688447 to block #688449
+[ 2216.814508] free_count 172 ; rs 338 ; re 339
+[ 2216.814508] Empty blocks from block #688466 to block #688467
+[ 2216.814509] free_count 173 ; rs 341 ; re 342
+[ 2216.814509] Empty blocks from block #688469 to block #688470
+[ 2216.814510] free_count 175 ; rs 343 ; re 345
+[ 2216.814510] Empty blocks from block #688471 to block #688473
+[ 2216.814511] free_count 176 ; rs 348 ; re 349
+[ 2216.814511] Empty blocks from block #688476 to block #688477
+[ 2216.814512] free_count 177 ; rs 351 ; re 352
+[ 2216.814512] Empty blocks from block #688479 to block #688480
+[ 2216.814512] free_count 179 ; rs 353 ; re 355
+[ 2216.814513] Empty blocks from block #688481 to block #688483
+[ 2216.814513] free_count 180 ; rs 356 ; re 357
+[ 2216.814514] Empty blocks from block #688484 to block #688485
+[ 2216.814514] free_count 181 ; rs 359 ; re 360
+[ 2216.814515] Empty blocks from block #688487 to block #688488
+[ 2216.814515] free_count 183 ; rs 361 ; re 363
+[ 2216.814516] Empty blocks from block #688489 to block #688491
+[ 2216.814516] free_count 184 ; rs 366 ; re 367
+[ 2216.814517] Empty blocks from block #688494 to block #688495
+[ 2216.814517] free_count 185 ; rs 369 ; re 370
+[ 2216.814518] Empty blocks from block #688497 to block #688498
+[ 2216.814518] free_count 187 ; rs 371 ; re 373
+[ 2216.814519] Empty blocks from block #688499 to block #688501
+[ 2216.814519] free_count 188 ; rs 375 ; re 376
+[ 2216.814519] Empty blocks from block #688503 to block #688504
+[ 2216.814520] free_count 189 ; rs 378 ; re 379
+[ 2216.814520] Empty blocks from block #688506 to block #688507
+[ 2216.814521] free_count 191 ; rs 380 ; re 382
+[ 2216.814521] Empty blocks from block #688508 to block #688510
+[ 2216.814522] free_count 193 ; rs 385 ; re 387
+[ 2216.814522] Empty blocks from block #688513 to block #688515
+[ 2216.814523] free_count 195 ; rs 389 ; re 391
+[ 2216.814523] Empty blocks from block #688517 to block #688519
+[ 2216.814524] free_count 197 ; rs 392 ; re 394
+[ 2216.814524] Empty blocks from block #688520 to block #688522
+[ 2216.814525] free_count 199 ; rs 395 ; re 397
+[ 2216.814525] Empty blocks from block #688523 to block #688525
+[ 2216.814526] free_count 200 ; rs 399 ; re 400
+[ 2216.814526] Empty blocks from block #688527 to block #688528
+[ 2216.814527] free_count 201 ; rs 401 ; re 402
+[ 2216.814527] Empty blocks from block #688529 to block #688530
+[ 2216.814528] free_count 203 ; rs 403 ; re 405
+[ 2216.814528] Empty blocks from block #688531 to block #688533
+[ 2216.814528] free_count 205 ; rs 421 ; re 423
+[ 2216.814529] Empty blocks from block #688549 to block #688551
+[ 2216.814529] free_count 207 ; rs 433 ; re 435
+[ 2216.814530] Empty blocks from block #688561 to block #688563
+[ 2216.814530] free_count 209 ; rs 436 ; re 438
+[ 2216.814531] Empty blocks from block #688564 to block #688566
+[ 2216.814531] free_count 211 ; rs 439 ; re 441
+[ 2216.814532] Empty blocks from block #688567 to block #688569
+[ 2216.814532] free_count 212 ; rs 442 ; re 443
+[ 2216.814533] Empty blocks from block #688570 to block #688571
+[ 2216.814533] free_count 213 ; rs 444 ; re 445
+[ 2216.814534] Empty blocks from block #688572 to block #688573
+[ 2216.814534] free_count 215 ; rs 446 ; re 448
+[ 2216.814535] Empty blocks from block #688574 to block #688576
+[ 2216.814535] free_count 216 ; rs 452 ; re 453
+[ 2216.814535] Empty blocks from block #688580 to block #688581
+[ 2216.814536] free_count 217 ; rs 454 ; re 455
+[ 2216.814536] Empty blocks from block #688582 to block #688583
+[ 2216.814537] free_count 219 ; rs 458 ; re 460
+[ 2216.814537] Empty blocks from block #688586 to block #688588
+[ 2216.814538] free_count 221 ; rs 461 ; re 463
+[ 2216.814538] Empty blocks from block #688589 to block #688591
+[ 2216.814539] free_count 223 ; rs 464 ; re 466
+[ 2216.814539] Empty blocks from block #688592 to block #688594
+[ 2216.814540] free_count 224 ; rs 467 ; re 468
+[ 2216.814540] Empty blocks from block #688595 to block #688596
+[ 2216.814541] free_count 225 ; rs 471 ; re 472
+[ 2216.814541] Empty blocks from block #688599 to block #688600
+[ 2216.814542] free_count 227 ; rs 473 ; re 475
+[ 2216.814542] Empty blocks from block #688601 to block #688603
+[ 2216.814542] free_count 228 ; rs 477 ; re 478
+[ 2216.814543] Empty blocks from block #688605 to block #688606
+[ 2216.814543] free_count 229 ; rs 479 ; re 480
+[ 2216.814544] Empty blocks from block #688607 to block #688608
+[ 2216.814544] free_count 231 ; rs 481 ; re 483
+[ 2216.814545] Empty blocks from block #688609 to block #688611
+[ 2216.814545] free_count 233 ; rs 484 ; re 486
+[ 2216.814546] Empty blocks from block #688612 to block #688614
+[ 2216.814546] free_count 235 ; rs 487 ; re 489
+[ 2216.814547] Empty blocks from block #688615 to block #688617
+[ 2216.814547] free_count 237 ; rs 490 ; re 492
+[ 2216.814548] Empty blocks from block #688618 to block #688620
+[ 2216.814548] free_count 239 ; rs 493 ; re 495
+[ 2216.814548] Empty blocks from block #688621 to block #688623
+[ 2216.814549] free_count 241 ; rs 496 ; re 498
+[ 2216.814549] Empty blocks from block #688624 to block #688626
+[ 2216.814550] free_count 254 ; rs 499 ; re 512
+[ 2216.814550] Empty blocks from block #688627 to block #688640
+[ 2216.814551] free_count 266 ; rs 532 ; re 544
+[ 2216.814551] Empty blocks from block #688660 to block #688672
+[ 2216.814552] free_count 1688 ; rs 562 ; re 1984
+[ 2216.814552] Empty blocks from block #688690 to block #690112
+[ 2216.814553] free_count 1693 ; rs 2011 ; re 2016
+[ 2216.814553] Empty blocks from block #690139 to block #690144
+[ 2216.814554] free_count 2986 ; rs 2035 ; re 3328
+[ 2216.814554] Empty blocks from block #690163 to block #691456
+[ 2216.814555] free_count 2988 ; rs 3582 ; re 3584
+[ 2216.814555] Empty blocks from block #691710 to block #691712
+[ 2216.814556] free_count 3002 ; rs 3598 ; re 3612
+[ 2216.814556] Empty blocks from block #691726 to block #691740
+[ 2216.814557] free_count 3050 ; rs 3613 ; re 3661
+[ 2216.814557] Empty blocks from block #691741 to block #691789
+[ 2216.814558] free_count 3056 ; rs 3664 ; re 3670
+[ 2216.814558] Empty blocks from block #691792 to block #691798
+[ 2216.814558] free_count 3061 ; rs 3671 ; re 3676
+[ 2216.814559] Empty blocks from block #691799 to block #691804
+[ 2216.814559] free_count 3063 ; rs 3734 ; re 3736
+[ 2216.814560] Empty blocks from block #691862 to block #691864
+[ 2216.814560] free_count 3066 ; rs 3748 ; re 3751
+[ 2216.814561] Empty blocks from block #691876 to block #691879
+[ 2216.814561] free_count 3070 ; rs 3753 ; re 3757
+[ 2216.814562] Empty blocks from block #691881 to block #691885
+[ 2216.814562] free_count 3071 ; rs 3758 ; re 3759
+[ 2216.814563] Empty blocks from block #691886 to block #691887
+[ 2216.814563] free_count 3087 ; rs 3760 ; re 3776
+[ 2216.814564] Empty blocks from block #691888 to block #691904
+[ 2216.814564] free_count 3405 ; rs 3778 ; re 4096
+[ 2216.814565] Empty blocks from block #691906 to block #692224
+[ 2216.814565] free_count 3917 ; rs 6144 ; re 6656
+[ 2216.814566] Empty blocks from block #694272 to block #694784
+[ 2216.814566] free_count 4067 ; rs 7018 ; re 7168
+[ 2216.814566] Empty blocks from block #695146 to block #695296
+[ 2216.814567] free_count 4729 ; rs 7530 ; re 8192
+[ 2216.814567] Empty blocks from block #695658 to block #696320
+[ 2216.814568] free_count 8825 ; rs 20480 ; re 24576
+[ 2216.814569] Empty blocks from block #708608 to block #712704
+[ 2216.814570] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 21: stored = 8825, counted = 8825
+[ 2216.814570] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 21 ------
+[ 2216.814571] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 22 ------
+[ 2216.814572] bitmap_for_each_clear_region
+[ 2216.814573] nbits 32768
+[ 2216.814573] free_count 1 ; rs 5 ; re 6
+[ 2216.814574] Empty blocks from block #720901 to block #720902
+[ 2216.814574] free_count 7 ; rs 11 ; re 17
+[ 2216.814575] Empty blocks from block #720907 to block #720913
+[ 2216.814575] free_count 8 ; rs 18 ; re 19
+[ 2216.814576] Empty blocks from block #720914 to block #720915
+[ 2216.814576] free_count 17 ; rs 24 ; re 33
+[ 2216.814576] Empty blocks from block #720920 to block #720929
+[ 2216.814577] free_count 32 ; rs 36 ; re 51
+[ 2216.814577] Empty blocks from block #720932 to block #720947
+[ 2216.814578] free_count 41 ; rs 52 ; re 61
+[ 2216.814578] Empty blocks from block #720948 to block #720957
+[ 2216.814579] free_count 42 ; rs 62 ; re 63
+[ 2216.814579] Empty blocks from block #720958 to block #720959
+[ 2216.814580] free_count 46 ; rs 66 ; re 70
+[ 2216.814580] Empty blocks from block #720962 to block #720966
+[ 2216.814581] free_count 47 ; rs 79 ; re 80
+[ 2216.814581] Empty blocks from block #720975 to block #720976
+[ 2216.814582] free_count 50 ; rs 95 ; re 98
+[ 2216.814582] Empty blocks from block #720991 to block #720994
+[ 2216.814583] free_count 54 ; rs 100 ; re 104
+[ 2216.814583] Empty blocks from block #720996 to block #721000
+[ 2216.814583] free_count 55 ; rs 107 ; re 108
+[ 2216.814584] Empty blocks from block #721003 to block #721004
+[ 2216.814584] free_count 68 ; rs 113 ; re 126
+[ 2216.814585] Empty blocks from block #721009 to block #721022
+[ 2216.814585] free_count 69 ; rs 133 ; re 134
+[ 2216.814586] Empty blocks from block #721029 to block #721030
+[ 2216.814586] free_count 73 ; rs 135 ; re 139
+[ 2216.814587] Empty blocks from block #721031 to block #721035
+[ 2216.814587] free_count 74 ; rs 154 ; re 155
+[ 2216.814587] Empty blocks from block #721050 to block #721051
+[ 2216.814588] free_count 75 ; rs 160 ; re 161
+[ 2216.814588] Empty blocks from block #721056 to block #721057
+[ 2216.814589] free_count 425 ; rs 162 ; re 512
+[ 2216.814589] Empty blocks from block #721058 to block #721408
+[ 2216.814590] free_count 2381 ; rs 2140 ; re 4096
+[ 2216.814590] Empty blocks from block #723036 to block #724992
+[ 2216.814591] free_count 2447 ; rs 18366 ; re 18432
+[ 2216.814592] Empty blocks from block #739262 to block #739328
+[ 2216.814592] free_count 6543 ; rs 26624 ; re 30720
+[ 2216.814593] Empty blocks from block #747520 to block #751616
+[ 2216.814594] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 22: stored = 6543, counted = 6543
+[ 2216.814594] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 22 ------
+[ 2216.814595] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 23 ------
+[ 2216.814629] bitmap_for_each_clear_region
+[ 2216.814630] nbits 32768
+[ 2216.814631] free_count 3899 ; rs 14533 ; re 18432
+[ 2216.814631] Empty blocks from block #768197 to block #772096
+[ 2216.814632] free_count 5947 ; rs 30720 ; re 32768
+[ 2216.814632] Empty blocks from block #784384 to block #786432
+[ 2216.814633] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 23: stored = 5947, counted = 5947
+[ 2216.814637] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 23 ------
+[ 2216.814638] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 24 ------
+[ 2216.814640] bitmap_for_each_clear_region
+[ 2216.814641] nbits 32768
+[ 2216.814641] free_count 1269 ; rs 779 ; re 2048
+[ 2216.814642] Empty blocks from block #787211 to block #788480
+[ 2216.814643] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 24: stored = 1269, counted = 1269
+[ 2216.814644] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 24 ------
+[ 2216.814644] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 25 ------
+[ 2216.814647] bitmap_for_each_clear_region
+[ 2216.814647] nbits 32768
+[ 2216.814647] free_count 15 ; rs 817 ; re 832
+[ 2216.814648] Empty blocks from block #820017 to block #820032
+[ 2216.814648] free_count 38 ; rs 850 ; re 873
+[ 2216.814649] Empty blocks from block #820050 to block #820073
+[ 2216.814649] free_count 63 ; rs 1639 ; re 1664
+[ 2216.814650] Empty blocks from block #820839 to block #820864
+[ 2216.814650] free_count 83 ; rs 1708 ; re 1728
+[ 2216.814651] Empty blocks from block #820908 to block #820928
+[ 2216.814651] free_count 85 ; rs 1758 ; re 1760
+[ 2216.814652] Empty blocks from block #820958 to block #820960
+[ 2216.814652] free_count 99 ; rs 1778 ; re 1792
+[ 2216.814652] Empty blocks from block #820978 to block #820992
+[ 2216.814653] free_count 145 ; rs 1810 ; re 1856
+[ 2216.814653] Empty blocks from block #821010 to block #821056
+[ 2216.814654] free_count 175 ; rs 1890 ; re 1920
+[ 2216.814654] Empty blocks from block #821090 to block #821120
+[ 2216.814655] free_count 237 ; rs 1986 ; re 2048
+[ 2216.814655] Empty blocks from block #821186 to block #821248
+[ 2216.814656] free_count 365 ; rs 26624 ; re 26752
+[ 2216.814657] Empty blocks from block #845824 to block #845952
+[ 2216.814657] free_count 410 ; rs 26771 ; re 26816
+[ 2216.814658] Empty blocks from block #845971 to block #846016
+[ 2216.814658] free_count 472 ; rs 26818 ; re 26880
+[ 2216.814659] Empty blocks from block #846018 to block #846080
+[ 2216.814659] free_count 534 ; rs 26946 ; re 27008
+[ 2216.814660] Empty blocks from block #846146 to block #846208
+[ 2216.814660] free_count 596 ; rs 27074 ; re 27136
+[ 2216.814661] Empty blocks from block #846274 to block #846336
+[ 2216.814661] free_count 6226 ; rs 27138 ; re 32768
+[ 2216.814662] Empty blocks from block #846338 to block #851968
+[ 2216.814662] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 25: stored = 6226, counted = 6226
+[ 2216.814663] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 25 ------
+[ 2216.814664] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 26 ------
+[ 2216.814666] bitmap_for_each_clear_region
+[ 2216.814667] nbits 32768
+[ 2216.814668] free_count 32768 ; rs 0 ; re 32768
+[ 2216.814668] Empty blocks from block #851968 to block #884736
+[ 2216.814669] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 26: stored = 32768, counted = 32768
+[ 2216.814670] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 26 ------
+[ 2216.814670] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 27 ------
+[ 2216.814676] bitmap_for_each_clear_region
+[ 2216.814676] nbits 32768
+[ 2216.814677] free_count 31951 ; rs 817 ; re 32768
+[ 2216.814678] Empty blocks from block #885553 to block #917504
+[ 2216.814679] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 27: stored = 31951, counted = 31951
+[ 2216.814679] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 27 ------
+[ 2216.814680] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 28 ------
+[ 2216.814683] bitmap_for_each_clear_region
+[ 2216.814683] nbits 32768
+[ 2216.814684] free_count 32768 ; rs 0 ; re 32768
+[ 2216.814684] Empty blocks from block #917504 to block #950272
+[ 2216.814685] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 28: stored = 32768, counted = 32768
+[ 2216.814686] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 28 ------
+[ 2216.814686] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 29 ------
+[ 2216.814689] bitmap_for_each_clear_region
+[ 2216.814689] nbits 32768
+[ 2216.814690] free_count 32768 ; rs 0 ; re 32768
+[ 2216.814691] Empty blocks from block #950272 to block #983040
+[ 2216.814692] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 29: stored = 32768, counted = 32768
+[ 2216.814692] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 29 ------
+[ 2216.814693] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 30 ------
+[ 2216.814695] bitmap_for_each_clear_region
+[ 2216.814696] nbits 32768
+[ 2216.814697] free_count 32768 ; rs 0 ; re 32768
+[ 2216.814697] Empty blocks from block #983040 to block #1015808
+[ 2216.814698] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 30: stored = 32768, counted = 32768
+[ 2216.814699] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 30 ------
+[ 2216.814699] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 31 ------
+[ 2216.814702] bitmap_for_each_clear_region
+[ 2216.814702] nbits 32768
+[ 2216.814703] free_count 32768 ; rs 0 ; re 32768
+[ 2216.814704] Empty blocks from block #1015808 to block #1048576
+[ 2216.814705] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 31: stored = 32768, counted = 32768
+[ 2216.814705] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 31 ------
+[ 2216.814706] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 32 ------
+[ 2216.814707] bitmap_for_each_clear_region
+[ 2216.814708] nbits 32768
+[ 2216.814709] free_count 31738 ; rs 1030 ; re 32768
+[ 2216.814709] Empty blocks from block #1049606 to block #1081344
+[ 2216.814710] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 32: stored = 31738, counted = 31738
+[ 2216.814711] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 32 ------
+[ 2216.814711] calypso: [calypso_iterate_partition_blocks_groups] ------ START GROUP # 33 ------
+[ 2216.814714] bitmap_for_each_clear_region
+[ 2216.814714] nbits 32768
+[ 2216.814715] free_count 23040 ; rs 0 ; re 23040
+[ 2216.814715] Empty blocks from block #1081344 to block #1104384
+[ 2216.814716] calypso: [calypso_iterate_partition_blocks_groups] GROUP # 33: stored = 23040, counted = 23040
+[ 2216.814717] calypso: [calypso_iterate_partition_blocks_groups] ------ END GROUP # 33 ------
+[ 2216.814718] calypso: [calypso_iterate_partition_blocks_groups] ext4_count_free_clusters: stored = 622204, computed = 622204, 622204
+[ 2216.814718] calypso: [calypso_iterate_partition_blocks_groups] last block is in group 33
+[ 2216.814949] calypso: [calypso_dev_open] Device is opened
+[ 2216.861578] calypso: [calypso_dev_close] Device is closed

@@ -1,0 +1,1 @@
+cmd_/home/daniela/vboxshare/thesis/kernel_modules/syscalls/interceptor/interceptor.mod := { echo  /home/daniela/vboxshare/thesis/kernel_modules/syscalls/interceptor/interceptor.o; echo; } > /home/daniela/vboxshare/thesis/kernel_modules/syscalls/interceptor/interceptor.mod

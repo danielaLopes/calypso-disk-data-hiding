@@ -1,0 +1,1 @@
+cmd_/home/daniela/vboxshare/thesis/kernel_modules/block_dev_mq/test_blockdev.mod := { echo  /home/daniela/vboxshare/thesis/kernel_modules/block_dev_mq/blk_mq_driver.o; echo; } > /home/daniela/vboxshare/thesis/kernel_modules/block_dev_mq/test_blockdev.mod

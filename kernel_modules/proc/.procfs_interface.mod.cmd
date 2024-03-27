@@ -1,0 +1,1 @@
+cmd_/home/daniela/vboxshare/thesis/kernel_modules/proc/procfs_interface.mod := { echo  /home/daniela/vboxshare/thesis/kernel_modules/proc/procfs_interface.o; echo; } > /home/daniela/vboxshare/thesis/kernel_modules/proc/procfs_interface.mod

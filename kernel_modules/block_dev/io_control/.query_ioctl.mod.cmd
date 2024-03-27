@@ -1,0 +1,1 @@
+cmd_/home/daniela/vboxshare/thesis/kernel_modules/block_dev/io_control/query_ioctl.mod := { echo  /home/daniela/vboxshare/thesis/kernel_modules/block_dev/io_control/query_ioctl.o; echo; } > /home/daniela/vboxshare/thesis/kernel_modules/block_dev/io_control/query_ioctl.mod

@@ -1,0 +1,1 @@
+cmd_/home/daniela/vboxshare/thesis/kernel_modules/relay_disk/relay_disk.mod := { echo  /home/daniela/vboxshare/thesis/kernel_modules/relay_disk/relay_disk.o; echo; } > /home/daniela/vboxshare/thesis/kernel_modules/relay_disk/relay_disk.mod

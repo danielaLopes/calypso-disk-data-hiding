@@ -1,0 +1,1 @@
+cmd_/home/daniela/vboxshare/thesis/kernel_modules/block_dev2/sbull_ram.mod := { echo  /home/daniela/vboxshare/thesis/kernel_modules/block_dev2/sbull_ram.o; echo; } > /home/daniela/vboxshare/thesis/kernel_modules/block_dev2/sbull_ram.mod

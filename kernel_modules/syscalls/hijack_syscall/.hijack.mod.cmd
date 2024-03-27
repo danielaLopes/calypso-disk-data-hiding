@@ -1,0 +1,1 @@
+cmd_/home/daniela/vboxshare/thesis/kernel_modules/syscalls/hijack_syscall/hijack.mod := { echo  /home/daniela/vboxshare/thesis/kernel_modules/syscalls/hijack_syscall/hijack.o; echo; } > /home/daniela/vboxshare/thesis/kernel_modules/syscalls/hijack_syscall/hijack.mod

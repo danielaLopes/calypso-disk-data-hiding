@@ -1,0 +1,52 @@
+// First step
+function hide_metadata_block() {
+    var magic_number;
+    var seed;
+    var cipher;
+    var password = seed + cipher;
+    var pseudorandom_gen;
+    var total_physical_blocks;
+    var random_physical_block = pseudorandom_gen(seed) % total_physical_blocks;
+    var data;
+    var block_contents;
+    var hashed_contents;
+    var ciphered_block_contents;
+
+    while(is_used(random_physical_block)) {
+        random_physical_block = pseudorandom_gen(seed) % total_physical_blocks;
+    }
+    hashed_contents = hash(magic_number + data);
+    block_contents = magic_number + data + hashed_contents; 
+    ciphered_block_contents = encrypt(block_contents, cipher);
+    write_block(ciphered_block_contents, random_physical_block);
+}
+
+function retrieve_metadata_block() {
+    var magic_number;
+    var read_magic_number;
+    var password;
+    var seed = password.split()[0];
+    var cipher = password.split()[1];
+    var pseudorandom_gen;
+    var total_physical_blocks;
+    var data;
+    var block_contents;
+    var hashed_contents;
+    var read_hashed_contents;
+    var ciphered_block_contents;
+
+    while(true) {
+        random_physical_block = pseudorandom_gen(seed) % total_physical_blocks;
+        ciphered_block_contents = read_block(random_physical_block);
+        block_contents = decrypt(ciphered_block_contents, cipher);
+        read_magic_number = block_contents.split()[0];
+        data = block_contents.split()[1];
+        read_hashed_contents = block_contents.split()[2];
+        hashed_contents = hash(read_magic_number + data);
+        if (magic_number == read_magic_number &&
+                read_hashed_contents == hashed_contents) {
+            return data;
+        }
+    }
+    return null;
+}

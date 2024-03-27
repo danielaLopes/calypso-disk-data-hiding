@@ -1,0 +1,25 @@
+\begin{table}[!htb]
+	\centering
+\begin{adjustwidth}{0pt}{0pt}
+	\renewcommand{\arraystretch}{1.2}
+% spacing between columns
+\setlength{\tabcolsep}{2pt}
+	\begin{tabular}{@{}p{2.5cm}R{2.1cm}R{2.1cm}R{2.1cm}R{2.1cm}R{2.1cm}R{2.1cm}@{}}
+		\toprule
+			Type of files & Average $\pm$ error & Minimum & 1st Quartile & Mediane & 3rd Quartile & Maximum \\
+		\midrule
+			Plaintext & 4.4987 $\pm$ 0.1136 & 0.2613 & 4.4293 & 4.4876 & 4.5527 & 5.4699 \\
+		\midrule
+			Image & 7.8976 $\pm$ 0.3040 & 0.0000 & 7.9212 & 7.9303 & 7.9370 & 7.9591 \\
+		\midrule
+			Compressed & 7.8964 $\pm$ 0.3144 & 0.0000 & 7.9213 & 7.9303 & 7.9369 & 7.9612 \\
+		\midrule
+			Encrypted & 7.9546 $\pm$ 0.0040 & 7.9334 & 7.9520 & 7.9547 & 7.9574 & 7.9702 \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:entropy_overview_statistics}
+\end{adjustwidth}
+	\caption{Statistics on the entropy variation in the blocks of 1GB virtual disks simulating unused space, for multiple media file types}
+\end{table}
+
+

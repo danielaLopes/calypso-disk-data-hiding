@@ -1,0 +1,33 @@
+\begin{table}[!htb]
+	\centering
+\begin{adjustwidth}{0pt}{0pt}
+	\renewcommand{\arraystretch}{1.2}
+% spacing between columns
+\setlength{\tabcolsep}{2pt}
+	\begin{tabular}{@{}p{1.2cm}R{2.5cm}R{2.2cm}R{2.2cm}R{2.2cm}R{2.2cm}R{2.2cm}@{}}
+		\toprule
+			Threshold & Modified block count & Usable blocks (\%) & Storage Capacity (GB) & Average differential & Minimum differential & Maximum differential \\
+		\toprule
+			0 & 1048576 & 100.00\% & 4.00 & 0.11225 & 0.00000 & 1.00000 \\
+		\midrule
+			1 & 1048291 & 99.97\% & 4.00 & 0.11198 & 0.00000 & 0.87262 \\
+		\midrule
+			2 & 1048141 & 99.96\% & 4.00 & 0.11187 & 0.00000 & 0.74745 \\
+		\midrule
+			3 & 1047967 & 99.94\% & 4.00 & 0.11175 & 0.00000 & 0.62262 \\
+		\midrule
+			4 & 1047261 & 99.87\% & 3.99 & 0.11139 & 0.00000 & 0.49616 \\
+		\midrule
+			5 & 785484 & 74.91\% & 3.00 & 0.00306 & 0.00000 & 0.37172 \\
+		\midrule
+			6 & 784098 & 74.78\% & 2.99 & 0.00262 & 0.00000 & 0.24590 \\
+		\midrule
+			7 & 782983 & 74.67\% & 2.99 & 0.00244 & 0.00000 & 0.12039 \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:entropy_statistics_table}
+\end{adjustwidth}
+	\caption{Differential entropy statistics}
+\end{table}
+
+

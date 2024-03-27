@@ -1,0 +1,28 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  config.ssh.insert_key = false
+  config.vbguest.auto_update = true
+  config.vm.box_check_update = false
+
+  # create general purpose container
+  config.vm.define "container" do |container_config|
+    container_config.vm.box = "ubuntu/trusty64"
+    container_config.vm.hostname = "container"
+    #container_config.vm.network "private_network", ip: "192.168.56.10"
+    container_config.vm.provider "virtualbox" do |vb|
+      vb.name = "container"
+      vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+      vb.memory = "512"
+    end # of vb
+    # Shared folders
+    # Configuration for Unix/Linux hosts
+    container_config.vm.synced_folder "../../vboxshare/", "/home/vagrant/container",
+    mount_options: ["dmode=775", "fmode=664"]
+    #end # of shared folders
+    # Provisioning
+    #container_config.vm.provision "shell", path: "bootstrap-container.sh"
+  end # of container_config
+end # of config

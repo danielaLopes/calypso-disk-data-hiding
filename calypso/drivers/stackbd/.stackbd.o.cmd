@@ -1,0 +1,1 @@
+cmd_/home/daniela/vboxshare/thesis/calypso/drivers/stackbd/stackbd.o := ld -m elf_x86_64  -z max-page-size=0x200000    -r -o /home/daniela/vboxshare/thesis/calypso/drivers/stackbd/stackbd.o /home/daniela/vboxshare/thesis/calypso/drivers/stackbd/driver.o

@@ -1,0 +1,1 @@
+cmd_/home/daniela/vboxshare/thesis/kernel_modules/ram_drive/dor.mod := { echo  /home/daniela/vboxshare/thesis/kernel_modules/ram_drive/ram_block.o /home/daniela/vboxshare/thesis/kernel_modules/ram_drive/ram_device.o /home/daniela/vboxshare/thesis/kernel_modules/ram_drive/partition.o; echo; } > /home/daniela/vboxshare/thesis/kernel_modules/ram_drive/dor.mod

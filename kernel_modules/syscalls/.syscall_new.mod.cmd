@@ -1,0 +1,1 @@
+cmd_/home/daniela/vboxshare/thesis/kernel_modules/syscalls/syscall_new.mod := { echo  /home/daniela/vboxshare/thesis/kernel_modules/syscalls/syscall_new.o; echo; } > /home/daniela/vboxshare/thesis/kernel_modules/syscalls/syscall_new.mod

@@ -1,0 +1,1 @@
+cmd_/home/daniela/vboxshare/thesis/kernel_modules/block_dev_mq/test_blockdev.o := ld -m elf_x86_64  -z max-page-size=0x200000    -r -o /home/daniela/vboxshare/thesis/kernel_modules/block_dev_mq/test_blockdev.o /home/daniela/vboxshare/thesis/kernel_modules/block_dev_mq/blk_mq_driver.o
